@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Hero Section with Animation</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .hero {
+      background: url('images/company-header-image.png') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-text {
+      text-align: center;
+      color: white;
+      font-size: 2.5rem;
+      opacity: 0;
+      transform: translateY(100%);
+      animation: text-appear 2s ease-in-out forwards;
+    }
+
+    @keyframes text-appear {
+      0% {
+        opacity: 0;
+        transform: translateY(100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive styling */
+    @media (max-width: 768px) {
+      .hero-text {
+        font-size: 1.5rem;
+      }
+    }
+
+
+    .advisor-member {
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .advisor-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .advisor-member img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        .advisor-info {
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .advisor-member img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-text">
+      <p>We’re On A Mission To Transform How Everyone Learns</p>
+      <p>And How To Help Companies Apply That Knowledge To Yield Greater Success.</p>
+    </div>
+  </div>
+  <section style="background-color: #17A0A3; padding: 50px 20px;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: left;">
+        <h2 style="font-size: 36px; font-weight: bold; color: white; margin-bottom: 30px; border-bottom: 2px solid white; display: inline-block; padding-bottom: 10px;">
+            WHY WE BUILT AHURA
+        </h2>
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 250px; padding-right: 20px;">
+                <h3 style="color: white; font-size: 48px; font-weight: bold;">01</h3>
+                <h4 style="color: white; font-size: 22px; font-weight: 600;">For Businesses</h4>
+                <p style="color: white; font-size: 16px; line-height: 1.5;">
+                    The skillsets required to remain competitive are changing faster this decade. Sadly, current online solutions don’t have the responsiveness to drive necessary engagement and live instructors are too expensive to scale across organizations.
+                </p>
+            </div>
+            <div style="flex: 1; min-width: 250px; padding-right: 20px;">
+                <h3 style="color: white; font-size: 48px; font-weight: bold;">02</h3>
+                <h4 style="color: white; font-size: 22px; font-weight: 600;">For Employees</h4>
+                <p style="color: white; font-size: 16px; line-height: 1.5;">
+                    AI and advanced innovations are rapidly changing the nature of work across roles and industries. These workers will need to reinvent their skillsets to protect their livelihood.
+                </p>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+                <h3 style="color: white; font-size: 48px; font-weight: bold;">03</h3>
+                <h4 style="color: white; font-size: 22px; font-weight: 600;">For Society</h4>
+                <p style="color: white; font-size: 16px; line-height: 1.5;">
+                    Upskilling to maximize potential transcends corporate aspirations. It is key to driving the adoption of new technology, transforming how we solve society’s toughest challenges across energy, health, climate, and more.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2>People Are At The Center Of Our Mission. <br> Meet The Team.</h2>
+            <p class="lead">Ahura Leadership Team</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <!-- Team Member 1 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card text-center p-3 h-100">
+                    <img src="https://ahuraai.com/wp-content/uploads/2022/07/300x300-Bryan-Talebi-Circle.png" alt="Bryan Talebi" class="card-img-top mx-auto d-block rounded-circle" style="width: 100px; height: 100px;">
+                    <div class="card-body">
+                        <h5 class="card-title mt-3">Bryan Talebi</h5>
+                        <p class="card-text">CEO & Founder</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card text-center p-3 h-100">
+                    <img src="https://ahuraai.com/wp-content/uploads/2022/07/300x300-Alex-Tsado.png" alt="Alex Tsado" class="card-img-top mx-auto d-block rounded-circle" style="width: 100px; height: 100px;">
+                    <div class="card-body">
+                        <h5 class="card-title mt-3">Alex Tsado</h5>
+                        <p class="card-text">COO & Founder</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-blogger"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card text-center p-3 h-100">
+                    <img src="https://ahuraai.com/wp-content/uploads/2022/07/400x400-Dekai-Wu-Hexagon.jpg" alt="DeKai Wu" class="card-img-top mx-auto d-block rounded-circle" style="width: 100px; height: 100px;">
+                    <div class="card-body">
+                        <h5 class="card-title mt-3">DeKai Wu</h5>
+                        <p class="card-text">Technology Architect</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card text-center p-3 h-100">
+                    <img src="https://ahuraai.com/wp-content/uploads/2022/07/maria-laws-300x300-1.jpg" alt="Maria Laws" class="card-img-top mx-auto d-block rounded-circle" style="width: 100px; height: 100px;">
+                    <div class="card-body">
+                        <h5 class="card-title mt-3">Maria Laws</h5>
+                        <p class="card-text">Learning Experience Designer</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2>Meet The Experts Helping Us Imagine A New Future For Workforce Education</h2>
+            <p class="lead">Ahura Board Of Advisors</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <!-- Advisor 1 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="advisor-member p-3">
+                    <img src="https://ahuraai.com/wp-content/uploads/2022/07/Dan_Boyce.png" alt="Daniel Boyce">
+                    <h5 class="mt-3">Daniel Boyce</h5>
+                    <p class="advisor-info">Partner at Achieve Partners, <br> Board of Advisors to several EdTech companies</p>
+                </div>
+            </div>
+
+            <!-- Advisor 2 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="advisor-member p-3">
+                    <img src="https://ahuraai.com/wp-content/uploads/2022/07/SME-5.png" alt="Dr. Parissa Ballard">
+                    <h5 class="mt-3">Dr. Parissa Ballard</h5>
+                    <p class="advisor-info">Assistant Professor at Wake Forest School of Medicine</p>
+                </div>
+            </div>
+
+            <!-- Advisor 3 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="advisor-member p-3">
+                    <img src="https://ahuraai.com/wp-content/uploads/2022/07/hee-jin-bang.png" alt="Dr. Hee Jin Bang">
+                    <h5 class="mt-3">Dr. Hee Jin Bang</h5>
+                    <p class="advisor-info">PhD in Learning Sciences, Research in AI-based learning</p>
+                </div>
+            </div>
+
+            <!-- Add more advisors below by replicating the col-lg-3 structure as shown above -->
+
+            <!-- Advisor 4 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="advisor-member p-3">
+                    <img src="https://ahuraai.com/wp-content/uploads/2022/07/AndyRussell.png" alt="Andy Russell">
+                    <h5 class="mt-3">Andy Russell</h5>
+                    <p class="advisor-info">Digital education entrepreneur, founder of Inside Higher Ed</p>
+                </div>
+            </div>
+
+            <!-- Advisor 5 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="advisor-member p-3">
+                    <img src="https://ahuraai.com/wp-content/uploads/2022/07/nadya-higgins.png" alt="Nadya Higgins">
+                    <h5 class="mt-3">Nadya Higgins</h5>
+                    <p class="advisor-info">Executive Strategist in Digital Transformation</p>
+                </div>
+            </div>
+
+            <!-- Advisor 6 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="advisor-member p-3">
+                    <img src="https://ahuraai.com/wp-content/uploads/2022/07/NED2.png" alt="Dr. Ned Gandavadi">
+                    <h5 class="mt-3">Dr. Ned Gandavadi</h5>
+                    <p class="advisor-info">Pioneer Global Health Leader and CEO of GH Ventures</p>
+                </div>
+            </div>
+
+                <!-- Advisor 6 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="advisor-member p-3">
+                        <img src="https://ahuraai.com/wp-content/uploads/2022/07/Kunal-Sood-Headshot-v4-300x300.png" alt="Dr. Ned Gandavadi">
+                        <h5 class="mt-3">Dr. Ned Gandavadi</h5>
+                        <p class="advisor-info">Pioneer Global Health Leader and CEO of GH Ventures</p>
+                    </div>
+                </div>
+                    <!-- Advisor 6 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="advisor-member p-3">
+                    <img src="https://ahuraai.com/wp-content/uploads/2022/07/David-Martin-400x400-1.png" alt="Dr. Ned Gandavadi">
+                    <h5 class="mt-3">Dr. Ned Gandavadi</h5>
+                    <p class="advisor-info">Pioneer Global Health Leader and CEO of GH Ventures</p>
+                </div>
+            </div>
+                <!-- Advisor 6 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="advisor-member p-3">
+                        <img src="https://ahuraai.com/wp-content/uploads/2022/07/Reese-Jones-400x400-1-300x300.png" alt="Dr. Ned Gandavadi">
+                        <h5 class="mt-3">Dr. Ned Gandavadi</h5>
+                        <p class="advisor-info">Pioneer Global Health Leader and CEO of GH Ventures</p>
+                    </div>
+                </div>
+                    <!-- Advisor 6 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="advisor-member p-3">
+                    <img src="https://ahuraai.com/wp-content/uploads/2022/07/Monique-Giggy-400x400-1.png" alt="Dr. Ned Gandavadi">
+                    <h5 class="mt-3">Dr. Ned Gandavadi</h5>
+                    <p class="advisor-info">Pioneer Global Health Leader and CEO of GH Ventures</p>
+                </div>
+            </div>
+                <!-- Advisor 6 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="advisor-member p-3">
+                        <img src="https://ahuraai.com/wp-content/uploads/2022/07/Ria-Kapila-400x400-1.png" alt="Dr. Ned Gandavadi">
+                        <h5 class="mt-3">Dr. Ned Gandavadi</h5>
+                        <p class="advisor-info">Pioneer Global Health Leader and CEO of GH Ventures</p>
+                    </div>
+                </div>
+                <!-- Advisor 6 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="advisor-member p-3">
+                        <img src="https://ahuraai.com/wp-content/uploads/2022/07/Asanka-Pathiraja-400x400-1.png" alt="Dr. Ned Gandavadi">
+                        <h5 class="mt-3">Dr. Ned Gandavadi</h5>
+                        <p class="advisor-info">Pioneer Global Health Leader and CEO of GH Ventures</p>
+                    </div>
+                </div>
+                    <!-- Advisor 6 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="advisor-member p-3">
+                    <img src="https://ahuraai.com/wp-content/uploads/2022/07/Amit-Pradhan-400x400-1-300x300.png" alt="Dr. Ned Gandavadi">
+                    <h5 class="mt-3">Dr. Ned Gandavadi</h5>
+                    <p class="advisor-info">Pioneer Global Health Leader and CEO of GH Ventures</p>
+                </div>
+            </div>
+        <!-- Advisor 6 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="advisor-member p-3">
+                <img src="https://ahuraai.com/wp-content/uploads/2022/07/Peter-Sage-400x400-1-300x300.png" alt="Dr. Ned Gandavadi">
+                <h5 class="mt-3">Dr. Ned Gandavadi</h5>
+                <p class="advisor-info">Pioneer Global Health Leader and CEO of GH Ventures</p>
+            </div>
+        </div>        <!-- Advisor 6 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="advisor-member p-3">
+                <img src="https://ahuraai.com/wp-content/uploads/2022/07/Arthur-Mrozowski-400x400-1.png" alt="Dr. Ned Gandavadi">
+                <h5 class="mt-3">Dr. Ned Gandavadi</h5>
+                <p class="advisor-info">Pioneer Global Health Leader and CEO of GH Ventures</p>
+            </div>
+        </div>
+            <!-- Continue adding more advisors based on the layout -->
+        </div>
+    </div>
+</section>
+</body>
+
+<footer class="py-5" style="background-color: #0b0d20; color: #ffffff;">
+    <div class="container">
+        <div class="row">
+            <!-- Logo and Contact Info -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="https://via.placeholder.com/150x50" alt="Ahura Logo" class="mb-3">
+                <p>2000 Winter Wind Street, Las Vegas, NV 89134, United States</p>
+                <p>+01 949-322-4716</p>
+            </div>
+
+            <!-- Useful Links -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5>Useful Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" style="color: #ffffff; text-decoration: none;">Home</a></li>
+                    <li><a href="#" style="color: #ffffff; text-decoration: none;">Solutions</a></li>
+                    <ul class="list-unstyled ms-3">
+                        <li><a href="#" style="color: #ffffff; text-decoration: none;">Top Uses for Learners</a></li>
+                    </ul>
+                    <li><a href="#" style="color: #ffffff; text-decoration: none;">Company</a></li>
+                    <li><a href="#" style="color: #ffffff; text-decoration: none;">Thinking</a></li>
+                    <li><a href="#" style="color: #ffffff; text-decoration: none;">Get in touch</a></li>
+                    <li><a href="#" style="color: #ffffff; text-decoration: none;">Privacy Policy</a></li>
+                    <li><a href="#" style="color: #ffffff; text-decoration: none;">Terms of Use</a></li>
+                </ul>
+            </div>
+
+            <!-- Latest News -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <h5>Latest News</h5>
+                <div class="mb-3">
+                    <small>September 5, 2024</small>
+                    <p><a href="#" style="color: #ffffff; text-decoration: none;">Ahura AI: Where Personalized Learning Meets Scalable Workforce Development</a></p>
+                </div>
+                <div class="mb-3">
+                    <small>September 4, 2024</small>
+                    <p><a href="#" style="color: #ffffff; text-decoration: none;">Future Of Humanity Summit</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <p class="mb-0">© 2022 AHURA, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</html>

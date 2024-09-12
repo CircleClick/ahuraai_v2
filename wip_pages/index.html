@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahura</title>
+    <!-- Site using Bootsrap 4.5. boostrap 5 will break the page -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <style>
+        /* Anchor tags default to white */
+        a {
+            color: white;
+            text-decoration: none; /* Optional: Remove underline */
+        }
+        
+        /* Anchor tags when clicked (visited) */
+        a:visited {
+            color: inherit; /* Keeps the color unchanged */
+        }
+        
+        /* Optional: Add a hover effect */
+        a:hover {
+            color: #ccc; /* Change to desired hover color */
+        }
+        
+        /* Optional: Add active state styling */
+        a:active {
+            color: #ff5e62; /* Change to desired active color */
+        }
+        
+        /* Hero Section */
+        .hero {
+            width: 100vw; /* Ensure the hero section spans the full viewport width */
+            margin-left: calc(50% - 50vw) !important; /* Center align by adjusting margin */
+            height: 100vh; /* Full viewport height */
+            position: relative;
+            overflow: hidden;
+            color: white;
+            text-align: center;
+            background: url('https://ahuraai.com/wp-content/uploads/2024/02/HomepageHeroImage.png') no-repeat center center;
+            background-size: cover;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .hero h1 {
+            color: white; /* Set text color to white */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add a shadow to the text */
+            font-weight: bold; /* Optional: make the text bold */
+            font-size: 2.5rem; /* Optional: adjust the font size */
+            text-align: center; /* Center-align the text */
+        }
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .hero .content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .navbar {
+            width: 100vw; /* Make the navbar span the full viewport width */
+            margin-left: calc(50% - 50vw); /* Center align the navbar by adjusting margin */
+            background-color: black !important; /* Make the background color transparent */
+            position: fixed; /* Fix the navbar to the top */
+            top: 0; /* Stick to the top */
+            z-index: 1000; /* Ensure the navbar stays on top of other content */
+            box-sizing: border-box; /* Include padding/margin in the width calculation */
+            padding: 10px 0; /* Adjust padding as needed */
+        }
+        
+        /* Enforce the color of navbar links */
+        .navbar a {
+            color: white !important;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        
+        /* Optional: Add a subtle shadow to the navbar for better visibility */
+        .navbar {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Trusted By, Tailored Needs Section(s) */
+        #trusted-by-and-tailored-needs {
+            background: url('https://ahuraai.com/wp-content/uploads/2024/08/left_side_light_bg.png') no-repeat left top, 
+                        url('https://ahuraai.com/wp-content/uploads/2024/08/right_side_light_bg.png') no-repeat right top;
+            background-size: cover, cover;
+        }
+        
+        #contact-and-experts-section {
+            background: url('images/backgrounds/mid_bg.png') no-repeat center center; 
+            background-size: cover, cover;
+        }
+        
+        #innovative-approach-andleadership-skills-sections {
+            background: url('https://ahuraai.com/wp-content/uploads/2024/08/left_side_light_bg.png') no-repeat left top, 
+                        url('https://ahuraai.com/wp-content/uploads/2024/08/right_side_light_bg.png') no-repeat right top;
+            background-size: cover, cover;
+        }
+        
+        #footer {
+            background: url('https://ahuraai.com/wp-content/uploads/2024/08/bottom_bg.png') no-repeat center center; 
+            background-size: cover, cover;
+        }
+        
+        .gradient-border-tailored {
+            border-radius: 15px; /* To round the corners */
+            position: relative;
+            padding: 5px; /* Space for the border */
+            /* background: linear-gradient(to bottom right, #FF5E62, #FF9966, #FFD194);
+        } */
+        
+        .gradient-border-tailored .card {
+            background: white;
+            border-radius: 15px; /* To round the corners */
+            padding: 1rem;
+            --bs-card-border-color: pink;
+        }
+        
+        .gradient-border-experts {
+            position: relative;
+            display: inline-block;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .gradient-border-experts::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            /* background: linear-gradient(to bottom right, #FF5E62, #FF9966, #FFD194) !important; */
+            /* --bs-card-border-color: pink; */
+            z-index: -1;
+        }
+        
+        .gradient-border-experts img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+        
+        .fixed-img-size {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        /* Expert area */
+        @media (max-width: 768px) {
+            .bryan-text {
+                margin-left: 3%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .bryan-text {
+                margin-left: 3%;
+            }
+        }
+        
+        @media (min-width: 375px) {
+            .bryan-text {
+                margin-left: 5%;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .move-right-mobile {
+                margin-left: 2%;
+            }
+        }
+        
+        @media (min-width: 400px) {
+            .move-right-mobile {
+                margin-left: 2%;
+            }
+        }
+        
+        /* form area */
+        @media (min-width: 992px) {
+            .section-padding {
+                padding-right: 7%; /* Adjust the padding as needed */
+                padding-left: 7%;
+            }
+        }
+        
+        @media (min-width: 400px) {
+            .section-padding {
+                padding-right: 3%; /* Adjust the padding as needed */
+                padding-left: 3%;
+            }
+        }
+        
+        /* Adjust padding for different screen sizes */
+        #trusted-by, #tailored-needs, #contact-and-experts-section {
+            padding: 0 100px;
+        }
+        
+        @media (max-width: 1200px) {
+            #trusted-by, #tailored-needs {
+                padding: 0 50px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            #trusted-by, #tailored-needs {
+                padding: 0 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            #trusted-by, #tailored-needs {
+                padding: 0 10px;
+            }
+        }
+        
+        /* Innovative approach title needs more gap */
+        #innovative-approach h2 {
+            margin-bottom: 2rem;
+        }
+        
+        /* Assess needs closer to the number */
+        #innovative-approach .col-md-5.text-center p {
+            margin-top: 0;
+        }
+        
+        /* Leadership skills section adjustments */
+        #leadership-skills {
+            padding: 0 100px;
+        }
+        
+        #leadership-skills ul li {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+        }
+        
+        /* CTA button should be wider, taller, bolder contrast color */
+        .btn-primary {
+            padding: 1rem 2rem;
+            font-weight: bold;
+            background-color: #ff5e62;
+            border: none;
+            border-radius: 50px;
+        }
+        }
+        
+          /* Mobile-specific styles: targeting smaller screens */
+          @media (max-width: 800px) {
+            #trusted-by {
+                padding: 0 50px !important;
+            }
+            #tailored-needs {
+                padding: 0 50px !important;
+            }
+            #contact {
+                padding: 0 10px !important;
+            }
+            #innovative-approach-image {
+                padding-top: 4%;
+                padding-bottom: 4%;
+                padding-top: 10%;
+            }
+        }
+        
+        @media (min-width: 300px) and (max-width: 700px) {
+            #innovative-approach-image {
+                display: none;
+            }
+        
+            #design-curriculum {
+                padding-top: 50px;
+            }
+        
+            #bryan-talebi-expert-text {
+                width: 60%; 
+                padding: 0 20px !important;
+            }
+        
+            #dekai-expert-text {
+                width: 60%;
+                padding: 0 20px !important;
+            }
+        
+            #leadership-skills-list {
+                width: 100%;
+                padding: 0 1px !important;
+            }
+        }
+        
+        
+            /* @media (min-width: 820px ) {
+                #innovative-approach-image {
+                    padding-top: 2%;
+                }
+            } */
+        /* Add padding to the trusted-by section */
+        #trusted-by {
+            padding: 0 50px;
+        }
+        
+        /* Center content in the leadership-skills section */
+        #leadership-skills .text-center,
+        #leadership-skills-list,
+        #leadership-skills p {
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        
+        /* Reduce padding for smaller screens */
+        @media (max-width: 1200px) {
+            #trusted-by {
+                padding: 0 30px;
+            }
+            #leadership-skills,
+            #success-stories {
+                padding: 0 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            #trusted-by {
+                padding: 0 20px;
+            }
+            #leadership-skills,
+            #success-stories {
+                padding: 0 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            #trusted-by {
+                padding: 0 10px;
+            }
+            #leadership-skills,
+            #success-stories {
+                padding: 0 10px;
+            }
+        }
+        
+        /* Base styles for the cards */
+        .card {
+            transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+            border-radius: 10px;
+        }
+        
+        /* Hover effect for the cards with gradient shadow */
+        .card:hover {
+            box-shadow: 
+                0 4px 8px rgba(255, 94, 98, 0.3),
+                0 6px 12px rgba(255, 153, 102, 0.3),
+                0 8px 16px rgba(255, 209, 148, 0.3); /* Add gradient shadow on hover */
+        }
+        
+        
+        /* Custom CSS for nested dropdowns */
+        .dropdown-submenu {
+            position: relative;
+        }
+        
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -1px;
+        }
+        
+        /* Styling to match navbar dropdowns */
+        .navbar-dark .dropdown-menu {
+            background-color: rgba(0, 0, 0, 0.9);
+            border: none;
+        }
+        
+        .navbar-dark .dropdown-item {
+            color: #ffffff;
+        }
+        
+        .navbar-dark .dropdown-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+        
+        p {
+    font-weight: normal; /* Set text to non-bold */
+}
+
+li { font-weight: normal; }
+
+    /* Add margin to each form field to create space between them */
+        #contact-form .form-control {
+            margin-bottom: 15px;
+        }
+        
+        /* Adjust button styling if needed */
+        #contact-form button {
+            margin-top: 10px;
+}
+
+
+.hero .content {
+    z-index: 2;
+    color: white;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero-title .highlight {
+    color: #ff3e64; /* match with the pink/red tone from the screenshot */
+}
+
+.hero-button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+     </style>
+     
+     <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PGBJXGT');</script>
+
+<!-- LeadFeeder Tracking -->
+<script> (function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('3P1w24d20R98mY5n'); </script>
+
+
+<!-- Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-10986366392"></script>
+
+</head>
+
+<body>
+    <!-- Google: Body tracking script -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGBJXGT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Header -->
+    <header class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+			<div class="container">
+				<a class="navbar-brand" href="#">
+					<img src="https://ahuraai.com/wp-content/uploads/2022/07/Ahura-Logo-horiz300px-e1709095463614.png" alt="Ahura AI" style="width: 120px;">
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="https://ahura.ai/">Product</a>
+						</li>
+						<!-- Add more nav items as needed -->
+						<li class="nav-item">
+							<a class="nav-link" href="/solutions/">Solutions</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/team/">Team</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/privacy/">Privacy and Data</a>
+						</li>
+						<li style="padding-right: 90px;" class="nav-item">
+							<a class="nav-link" href="/ahura2.0/">Ahura 2.0</a>
+						</li>
+						<li class="nav-item">
+							<a class="btn btn-primary" href="/get-demo/" style="background: linear-gradient(45deg, #FF5E62, #FFD194);">Get A Demo</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <video autoplay muted loop>
+            <source src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/Landing%20page%20stinger%20draft%201.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content d-flex flex-column justify-content-center align-items-center h-100 text-center">
+            <h1 class="hero-title">
+                AI-Enhanced Workforce<br>Education 
+                <span class="highlight">At Scale.</span>
+            </h1>
+        </div>
+    </div>
+
+    <main>
+        <div id="trusted-by-and-tailored-needs">
+            <section class="hero-section">
+                <style>body {
+                    font-family: 'Poppins', sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    line-height: 1.6;
+                }
+                
+                .hero-section {
+                    padding: 50px 0;
+                }
+                
+                .small-heading {
+                    font-size: 1.25rem;
+                    font-weight: 400;
+                    color: #555;
+                }
+                
+                .main-heading {
+                    font-size: 3rem;
+                    font-weight: 300;
+                    margin-top: 20px;
+                    margin-bottom: 30px;
+                    color: #111;
+                }
+                
+                .main-heading strong {
+                    font-weight: 700;
+                }
+                
+                .lead-text {
+                    font-size: 1rem;
+                    color: #333;
+                    line-height: 1.8;
+                }
+                
+                .cta-button {
+                    padding: 10px 20px;
+                    border: 1px solid #888;
+                    border-radius: 25px;
+                    text-decoration: none;
+                    font-size: 1rem;
+                    color: #333;
+                    transition: background-color 0.3s ease, color 0.3s ease;
+                }
+                
+                .cta-button:hover {
+                    background-color: #333;
+                    color: #fff;
+                }
+                </style>
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-8 text-center">
+                        <h4 class="small-heading">AI-Enhanced Workforce Education At Scale.</h4>
+                        <h1 class="main-heading">The Future of <br> upskilling <strong>is here.</strong></h1>
+                        <p class="lead-text">
+                        In a world where the only constant is change, Ahura stands as a beacon of innovation in corporate learning. We've mastered the art of digital education, revolutionizing how enterprises train, upskill, and reskill their workforce. Our platform isn't just a learning tool; it's a gateway to the future of work, designed for today's dynamic business environment.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <a href="#" class="cta-button">Get a Demo</a>
+                    </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Part B -->
+            <section class="features-section">
+                <style>.features-section {
+                    padding: 50px 0;
+                  }
+                  
+                  .features-section .row {
+                    display: flex;
+                    flex-wrap: wrap;
+                  }
+                  
+                  .features-section .col-lg-6 {
+                    padding: 15px;
+                  }
+                  
+                  .features-section img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 8px;
+                  }
+                  
+                  .features-section p {
+                    margin-top: 15px;
+                    font-size: 1rem;
+                    color: #333;
+                    line-height: 1.6;
+                  }
+                  
+                  .features-section strong {
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                  }</style>
+                <div class="container">
+                  <div class="row">
+                    <!-- First Feature -->
+                    <div class="col-lg-6 mb-4">
+                      <img src="your-image-url-1.jpg" alt="Corporate Upskilling" class="img-fluid">
+                      <p>
+                        <strong>Corporate Upskilling Made Easy:</strong> From tech to management, our diverse courses are designed to empower your employees with tomorrow’s skills.
+                      </p>
+                    </div>
+              
+                    <!-- Second Feature -->
+                    <div class="col-lg-6 mb-4">
+                      <img src="your-image-url-2.jpg" alt="Cutting-Edge Learning Technology" class="img-fluid">
+                      <p>
+                        <strong>Cutting–Edge Learning Technology:</strong> Our AI-driven platform adapts to individual learning styles, ensuring your team not only learns but excels.
+                      </p>
+                    </div>
+              
+                    <!-- Third Feature -->
+                    <div class="col-lg-6 mb-4">
+                      <img src="your-image-url-3.jpg" alt="Data-Driven Insights" class="img-fluid">
+                      <p>
+                        <strong>Data–Driven Insights:</strong> Track progress and see tangible results. Our analytics help you make informed decisions about your workforce development.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section style="padding: 50px 20px; text-align: left; background-color: #F8F9FA;">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <p style="color: #D18B3E; font-size: 1.2rem; font-weight: 500; margin-bottom: 10px;">How it works</p>
+                    <h1 style="font-size: 3rem; font-weight: 700; margin: 0; color: #000;">
+                        Learn today.<br>
+                        <span style="background: linear-gradient(to right, #E7336A, #FF5A47, #FF7B01, #F2DE02, #AEF61C); -webkit-background-clip: text; color: transparent;">
+                            Lead tomorrow.
+                        </span>
+                    </h1>
+                    <p style="font-size: 1rem; color: #333; line-height: 1.7; margin-top: 20px;">
+                        At Ahura AI, we are redefining the boundaries of corporate learning. Our platform is an intersection of advanced technology and educational excellence, providing an engaging, customizable, and impactful learning experience. We are committed to not just equipping your team with knowledge but to fostering a culture of innovation and continuous improvement.
+                    </p>
+                    <a href="#" style="display: inline-block; padding: 12px 30px; background-color: #000; color: #FFF; border-radius: 30px; font-size: 1rem; font-weight: 600; text-decoration: none; margin-top: 20px; transition: background 0.3s ease;">
+                        Get a Demo
+                    </a>
+                </div>
+            </section>
+
+            <section style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; text-align: center; padding: 20px;">
+                <!-- First Row -->
+                <div style="flex: 1 1 50%; padding: 20px;">
+                    <h3 style="font-size: 18px; font-weight: bold;">Personalized Learning Experiences:</h3>
+                    <p style="font-size: 16px;">Every course is tailored to fit the unique needs and learning styles of each individual, ensuring maximum engagement and retention.</p>
+                </div>
+                <div style="flex: 1 1 50%; padding: 20px;">
+                    <img src="your-image-path" alt="3x faster learning" style="max-width: 100%; height: auto;">
+                    <p style="font-size: 20px; font-weight: bold;">Get up to <span style="font-size: 24px;">3x</span> faster learning</p>
+                </div>
+                
+                <!-- Second Row -->
+                <div style="flex: 1 1 50%; padding: 20px;">
+                    <h3 style="font-size: 18px; font-weight: bold;">Interactive and Immersive Content:</h3>
+                    <p style="font-size: 16px;">Our content is designed to be interactive and immersive, keeping learners engaged through real-world scenarios, gamification, and interactive assessments.</p>
+                </div>
+                <div style="flex: 1 1 50%; padding: 20px;">
+                    <h3 style="font-size: 18px; font-weight: bold;">Skills for the Future:</h3>
+                    <p style="font-size: 16px;">We focus on equipping your team with skills that are critical in the evolving business world, such as digital literacy, critical thinking, and adaptive leadership.</p>
+                </div>
+            </section>
+
+
+            <section style="display: flex; justify-content: space-around; padding: 40px 20px; text-align: center;">
+                <!-- First Column -->
+                <div style="flex: 1; max-width: 30%; padding: 10px;">
+                    <img src="your-icon-path" alt="Tailored Learning Icon" style="width: 60px; height: 60px; margin-bottom: 15px;">
+                    <h3 style="font-size: 20px; font-weight: bold;">Tailored Learning Journeys</h3>
+                    <p style="font-size: 16px;">Custom courses align with your business goals and employee career paths, ensuring relevant and impactful learning.</p>
+                </div>
+                <!-- Second Column -->
+                <div style="flex: 1; max-width: 30%; padding: 10px;">
+                    <img src="your-icon-path" alt="Engagement Icon" style="width: 60px; height: 60px; margin-bottom: 15px;">
+                    <h3 style="font-size: 20px; font-weight: bold;">Engagement & Motivation</h3>
+                    <p style="font-size: 16px;">Our interactive and immersive content keeps learners engaged and motivated, fostering a culture of continuous learning and improvement.</p>
+                </div>
+            
+                <!-- Third Column -->
+                <div style="flex: 1; max-width: 30%; padding: 10px;">
+                    <img src="your-icon-path" alt="Future-Proof Icon" style="width: 60px; height: 60px; margin-bottom: 15px;">
+                    <h3 style="font-size: 20px; font-weight: bold;">Future-Proof Your Workplace</h3>
+                    <p style="font-size: 16px;">Stay ahead in an ever-evolving business landscape with courses designed to equip your team with forward-thinking skills and knowledge.</p>
+                </div>
+            </section>
+            
+            <section style="position: relative; text-align: center; color: white;">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7016020b80dcb7778c9d29fd53b3b363f1f41415ef46a24d04983ba41cdf0653?apiKey=15589348c8884353aa1a6f32b20bd58b&width=2000" 
+                     alt="Astronaut in Space" 
+                     style="width: 100%; height: auto;">
+                
+                <div style="position: absolute; bottom: 30%; left: 5%; font-size: 48px; font-weight: bold;">
+                    Reach new heights
+                </div>
+            </section>
+            <section style="text-align: center; padding: 50px 20px; font-family: Arial, sans-serif;">
+                <p style="color: #b08d57; font-size: 18px; margin-bottom: 10px;">How it works</p>
+                <h1 style="font-size: 36px; font-weight: bold; margin: 10px 0;">
+                    Simple yet <span style="background: linear-gradient(90deg, #ff5e62, #ff9966); -webkit-background-clip: text; color: transparent;">Powerful features.</span>
+                </h1>
+                <p style="font-size: 18px; max-width: 800px; margin: 0 auto 30px;">
+                    At Ahura, our mission is to inspire, educate, and ignite your passion for the cosmos. We are your premier destination for all things related to space exploration, astronomy, and the mysteries of the universe. Whether you're a seasoned astronomer or a curious novice, join us on a journey to the furthest reaches of the cosmos.
+                </p>
+                <a href="#" style="display: inline-block; padding: 15px 30px; background-color: black; color: white; font-size: 16px; font-weight: bold; border-radius: 25px; text-decoration: none;">Get a Demo</a>
+            </section>
+            <section style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; padding: 40px 20px; font-family: Arial, sans-serif;">
+                <div style="flex: 1 1 50%; max-width: 50%; padding: 20px;">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/452cced90ceb7f7d74945b8457abc0458ef22abe5c1e9ac93455ccbe17108a7c?apiKey=15589348c8884353aa1a6f32b20bd58b&" alt="Golden Ratio" style="width: 100%; height: auto;">
+                </div>
+                <div style="flex: 1 1 50%; max-width: 50%; padding: 20px; text-align: left;">
+                    <p style="font-size: 18px; color: #333;">Our AI-powered solution optimizes your supply chain by analyzing data, identifying inefficiencies, and providing actionable insights.</p>
+                </div>
+            </section>
+            <section style="padding: 50px 20px; font-family: Arial, sans-serif; text-align: center;">
+                <p style="color: #b08d57; font-size: 18px; margin-bottom: 10px;">How it works</p>
+                <h1 style="font-size: 36px; font-weight: bold; margin: 10px 0;">
+                    Tomorrow's jobs need <span style="background: linear-gradient(90deg, #ff5e62, #ff9966); -webkit-background-clip: text; color: transparent;">Tomorrow's education.</span>
+                </h1>
+            
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 30px 0;">
+                    <!-- First Image and Text -->
+                    <div style="flex: 1 1 45%; padding: 10px;">
+                        <img src="https://ahuraai.com/wp-content/uploads/2024/01/Astro.png" alt="Astronaut Image" style="width: 100%; height: auto;">
+                        <p style="font-size: 16px; color: #333; text-align: left;">
+                            <strong>At Ahura,</strong> we focus on equipping your team with skills that are critical in the evolving business world, such as digital literacy, critical thinking, and adaptive leadership.
+                        </p>
+                    </div>
+            
+                    <!-- Second and Third Images with Text -->
+                    <div style="flex: 1 1 45%; padding: 10px;">
+                        <img src="https://ahuraai.com/wp-content/uploads/2024/01/Platform.webp" alt="Student at Laptop" style="width: 100%; height: auto;">
+                        <p style="font-size: 16px; color: #333; text-align: left;">
+                            Our platform is engineered for flexibility, offering 24/7 access to learning resources from any device.
+                        </p>
+                    
+                        <video controls style="width: 100%; height: auto; margin-top: 20px;">
+                            <source src="https://ahuraai.com/wp-content/react-app/iStock-939307278.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p style="font-size: 16px; color: #333; text-align: left;">
+                            Our extensive range of courses covers everything from emerging technologies to leadership development, designed to prepare your workforce for the challenges of the future.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            
+            
+        </div>
+
+
+        
+        
+    <footer id="footer" class="container-fluid py-4 bg-light">
+      
+    </footer>
+    
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</body>
+</html>
