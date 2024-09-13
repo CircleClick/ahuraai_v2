@@ -6,6 +6,7 @@
     <title>Ahura</title>
     <!-- Site using Bootsrap 4.5. boostrap 5 will break the page -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
     <!-- <link rel="stylesheet" href="style.css"> -->
      <style>
         /* Anchor tags default to white */
@@ -38,7 +39,7 @@
             overflow: hidden;
             color: white;
             text-align: center;
-            background: url('https://ahuraai.com/wp-content/uploads/2024/08/top_bg.png') no-repeat center center;
+            background: url('https://ahuraai.com/wp-content/uploads/2024/02/HomepageHeroImage.png') no-repeat center center;
             background-size: cover;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
@@ -407,6 +408,40 @@ li { font-weight: normal; }
 }
 
 
+.hero .content {
+    z-index: 2;
+    color: white;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero-title .highlight {
+    color: #ff3e64; /* match with the pink/red tone from the screenshot */
+}
+
+.hero-button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
      </style>
      
      <!-- Google Tag Manager -->
@@ -429,515 +464,616 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGBJXGT"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- Header -->
-    <header class="container-fluid">
-       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://ahura.ai/">Product</a>
-                </li>
-                <!-- Solutions Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Solutions
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                        <a class="dropdown-item" href="https://ahuraai.com/new-increase-retention/">Employee Retention
+
+
+
+
+<header class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:black;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!-- Product Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/product.html">Product</a>
+                    </li>
+                    <!-- Solutions Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Solutions
                         </a>
-                        <div class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#">AI Tutor</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="https://ahuraai.com/solutions/">Features & Use Cases</a></li>
-                                <li><a class="dropdown-item" href="https://ahuraai.com/solutions/top-uses-for-learners/">Benefits & Learning</a></li>
-                                <li><a class="dropdown-item" href="https://ahuraai.com/solutions/top-uses-for-managers/">Benefits For Supervisors</a></li>
-                            </ul>
+                        <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                            <a class="dropdown-item" href="pages/employee-retention.html">Employee Retention</a>
+                            <div class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">AI Tutor</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="pages/features-and-usecases.html">Features &amp; Use Cases</a></li>
+                                    <li><a class="dropdown-item" href="pages/benefits-and-learning.html">Benefits &amp; Learning</a></li>
+                                    <li><a class="dropdown-item" href="pages/benefits-for-supervisors.html">Benefits For Supervisors</a></li>
+                                </ul>
+                            </div>
+                            <a class="dropdown-item" href="pages/manager-gen-ai-training.html">Manager Gen AI Training</a>
+                            <div class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Events On Responsible Tech</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="pages/features-and-usecases.html">Features &amp; Use Cases</a></li>
+                                    <!-- <li><a class="dropdown-item" href="pages/benefits-and-learning.html">Benefits &amp; Learning</a></li> -->
+                                    <!-- <li><a class="dropdown-item" href="pages/benefits-for-supervisors.html">Benefits For Supervisors</a></li> -->
+                                    <li><a class="dropdown-item" href="pages/davos-2024-the-ai-and-crypto-lounge.html">Davos 2024: The AI &amp; Crypto Lounge</a></li>
+                                    <li><a class="dropdown-item" href="pages/necker-legacy-guardians.html">Necker Legacy Guardians</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <a class="dropdown-item" href="#">Manager Gen AI Training</a>
-                         <div class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#">Events On Responsible Tech</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="https://ahuraai.com/solutions/top-uses-for-learners/">Features & Use Cases</a></li>
-                                <li><a class="dropdown-item" href="https://ahuraai.com/solutions/top-uses-for-learners/">Benefits & Learning</a></li>
-                                <li><a class="dropdown-item" href="https://ahuraai.com/solutions/top-uses-for-managers/">Benefits For Supervisors</a></li>
-                                <li><a class="dropdown-item" href="https://info.ahuraai.com/davos2024?_gl=1*1u25wc7*_ga*ODg5Mzk0MTU1LjE3MjU0NzY1MTM.*_ga_9VQ37LC6S9*MTcyNTQ3NjUxMi4xLjAuMTcyNTQ3NjUxMi4wLjAuMA..*_ga_GLS0RMX4P2*MTcyNTQ3NjUxMi4xLjAuMTcyNTQ3NjUxMi42MC4wLjA.*_gcl_au*Mzg5NDA3OTEzLjE3MjU0NzY1MTM.">Davos 2024: The AI & Crypto Lounge</a></li>
-                                <li><a class="dropdown-item" href="https://info.ahuraai.com/legacyguardians?_gl=1*1u25wc7*_ga*ODg5Mzk0MTU1LjE3MjU0NzY1MTM.*_ga_9VQ37LC6S9*MTcyNTQ3NjUxMi4xLjAuMTcyNTQ3NjUxMi4wLjAuMA..*_ga_GLS0RMX4P2*MTcyNTQ3NjUxMi4xLjAuMTcyNTQ3NjUxMi42MC4wLjA.*_gcl_au*Mzg5NDA3OTEzLjE3MjU0NzY1MTM.">Necker Legacy Guardians</a></li>
-                            </ul>
+                    </li>
+                    <!-- Thinking Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="thinkingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Thinking
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="thinkingDropdown">
+                            <a class="dropdown-item" href="pages/success-stories.html">Success Stories</a>
+                            <a class="dropdown-item" href="https://www.ahuraai.com/blog">Blog</a>
+                            <a class="dropdown-item" href="https://www.ahuraai.com/blog/how-i-learn/">How We Learn</a>
                         </div>
+                    </li>
+                    <!-- Team Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/company">Team</a>
+                    </li>
+                    <!-- Privacy and Data Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="privacyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Privacy and Data
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="privacyDropdown">
+                            <a class="dropdown-item" href="pages/privacy-policy.html">Privacy Policy</a>
+                            <a class="dropdown-item" href="pages/terms-of-use.html">Terms of Service</a>
+                        </div>
+                    </li>
+                    <!-- Ahura 2.0 Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/ahura2.0.html">Ahura 2.0</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+ <!-- </main> -->
+
+
+
+
+<!-- TODO needs work -->
+<section class="davos-section py-5">
+    <!-- Custom Styles -->
+    <style>
+        .davos-section {
+            background: linear-gradient(45deg, #ff7b22, #e841c2);
+            color: #fff;
+            padding: 50px 0;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .davos-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .davos-section h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .davos-section .highlight {
+            color: #FFDD00;
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        .davos-section .description {
+            color: #fff;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .davos-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .davos-images img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-schedule {
+            background: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-size: 1rem;
+            transition: background 0.3s ease, color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-schedule:hover {
+            background: #fff;
+            color: #e841c2;
+        }
+
+        @media (max-width: 768px) {
+            .davos-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .davos-section .highlight {
+                font-size: 3rem;
+            }
+
+            .davos-images {
+                margin-top: 30px;
+            }
+        }
+    </style>
+
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Column (Text) -->
+            <div class="col-lg-6 col-md-12 mt-5">
+                <h1>WELCOME TO <span class="highlight">DAVOS 2024</span></h1>
+                <h3 class="font-weight-bold">LEADING THE GLOBAL CONVERSATION ON RESPONSIBLE AI</h3>
+                <p class="description">
+                    AI has been the talk of the town during the Annual Meeting of the World Economic Forum 2023, and the conversation has only accelerated since then. Today, there is an urgent need for a global discussion that includes policymakers, academics, civil society, venture, and industry.
+                </p>
+                <p class="description">
+                    To provide a platform for this global conversation, Ahura AI has initiated the Davos 2024 Ahura AI House. During the Annual Meeting of the World Economic Forum, the group will bring together leading figures across disciplines to engage in debates around the most critical issues around Artificial Intelligence and to discuss its potential for humankind.
+                </p>
+                <a href="#" class="mb-4 btn btn-schedule">Schedule</a>
+            </div>
+
+            <!-- Right Column (Images) -->
+            <div class="col-lg-6 col-md-12 davos-images">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/67cc20dab805e1c6ae87a6aa9da3929de40c765f4f3c8978f98ea2e493641575?apiKey=15589348c8884353aa1a6f32b20bd58b&width=2000" alt="Davos Image 1">
                     </div>
-                </li>
-                <!-- Thinking Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="thinkingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Thinking
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="thinkingDropdown">
-                        <a class="dropdown-item" href="https://ahuraai.com/success-stories/">Success-stories</a>
-                        <a class="dropdown-item" href="https://ahuraai.com/blog/">Blog</a>
-                        <a class="dropdown-item" href="https://ahuraai.com/blog/how-i-learn/">How We Learn</a>
+                    <div class="col-md-6">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c3f388de9790796407e3e78827f7cbdffc5292509132a88367913e1efe3b7e29?apiKey=15589348c8884353aa1a6f32b20bd58b&width=2000" alt="Davos Image 2">
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://ahuraai.com/company/">Team</a>
-                </li>
-                <!-- Privacy and Data Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="privacyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Privacy and Data
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="privacyDropdown">
-                        <a class="dropdown-item" href="https://ahura.ai/privacy-policy">Privacy Policy</a>
-                        <a class="dropdown-item" href="https://ahura.ai/terms-and-conditions">Terms of Service</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://info.ahuraai.com/product?_gl=1*1ar7ote*_ga*MTIxNzY3MjcwNi4xNzIyOTU0NzMy*_ga_GLS0RMX4P2*MTcyMzQ3NzEwOS42LjEuMTcyMzQ3NzE5NC41MS4wLjA.*_gcl_au*MTc2MTk1MjAzLjE3MjI5NTQxODE.">Ahura 2.0</a>
-                </li>
-            </ul>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
-    </header> 
-    <!-- </main> -->
+</section>
 
-
-
-    <section class="hero-banner">
+      
+      <section class="partners-section py-5">
+           <!-- Styles -->
+        <style>
+            .partners-section {
+            background-color: #fff;
+            }
+        
+            .partners-section img {
+            max-width: 100%;
+            height: auto;
+            }
+        </style>
         <div class="container text-center">
-          <h1 class="text-light display-4">Increasing Learning engagement across corporate learning use cases</h1>
+          <!-- Title -->
+          <h2 class="display-5 mb-4">Partners and Collaborators</h2>
+      
+          <!-- Partner Logos -->
+          <div class="row justify-content-center">
+            <div class="col-md-10">
+              <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/partners-1.png" class="img-fluid" alt="Partners and Collaborators">
+            </div>
+          </div>
         </div>
       </section>
       
-      <!-- Styles -->
+   
+      
+      <section class="venue-layout-section py-5">
+        <!-- Custom Styles -->
       <style>
-        .hero-banner {
-          background: url('/assets/images/company-hero.png') no-repeat center center/cover;
-          height: 300px; /* Adjust height as needed */
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        .venue-layout-section {
+          background: linear-gradient(120deg, #ff7a18, #ffb04a);
+          color: #333;
         }
       
-        .hero-banner h1 {
-          font-size: 2.5rem; /* Adjust the font size */
-          font-weight: bold;
-          color: white; /* Text color */
+        .venue-layout-section h1, 
+        .venue-layout-section h2 {
+          font-family: 'Arial', sans-serif;
         }
       
-        @media (max-width: 768px) {
-          .hero-banner h1 {
-            font-size: 1.8rem; /* Responsive font size for mobile */
-          }
-          .hero-banner {
-            height: 200px; /* Adjust the height for mobile */
-          }
+        .venue-layout-section p {
+          font-size: 1.2rem;
+        }
+      
+        .img-fluid {
+          border-radius: 15px;
         }
       </style>
+        <div class="container">
+          <div class="row">
+            <!-- Text and Title -->
+            <div class="col-md-7">
+              <h1 class="font-weight-bold">The Ahura AI House</h1>
+              <h2 class="text-danger">Venue & Layout</h2>
+              <p>
+                Ahura AI is proud to present the inaugural Ahura AI House! Over the course of five days, Ahura AI will gather decentralized thinkers, investors, corporations, startup founders, high profile individuals, and policymakers in one place to engage in meaningful discourse. We are excited to welcome you to network with top leaders and build meaningful connections and explore synergies in an interactive environment.
+              </p>
+              <p>
+                The Davos 2024 Ahura AI House is located in a premier location at Promenade 118 – in the heart of Davos! Doors will be open from 08:00 to 23:00 each day.
+              </p>
+            </div>
+            <!-- Image Map -->
+            <div class="col-md-5">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e32313d73a59da40ac43c5704ad846a348be0cecf4b123f45ce4553c6d2a3f1?apiKey=15589348c8884353aa1a6f32b20bd58b&width=2000" class="img-fluid rounded mb-3" alt="Map of the venue">
+            </div>
+          </div>
+      
+          <!-- Venue Image -->
+          <div class="row mt-4">
+            <div class="col-md-12">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/46370e69476f34ef0d9768e8075a5b6a5d208704a565414ff48f3dd2020e7964?apiKey=15589348c8884353aa1a6f32b20bd58b&width=2000" class="img-fluid rounded" alt="Venue Interior">
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+
+    <section class="davos-info-section py-5">
+          
+        <!-- Custom Styles -->
+        <style>
+            .davos-info-section {
+            background: linear-gradient(to right, #ffd700, #ffcc33, #ff9966);
+            color: #333;
+            }
+        
+            .font-weight-bold {
+            font-weight: bold;
+            }
+        
+            .davos-info-section p {
+            color: #666;
+            }
+        
+            .davos-info-section img {
+            max-width: 60px;
+            height: auto;
+            }
+        </style>
+        <div class="container">
+          <div class="row text-center">
+            <!-- Column 1 -->
+            <div class="col-md-4">
+              <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/davosBlurb1.png" class="img-fluid mb-3" alt="Multidisciplinary Initiative">
+              <h5 class="font-weight-bold">Multidisciplinary Initiative</h5>
+              <p>Bringing together leaders of top AI research institutions, tech, industry, politics and civil society.</p>
+            </div>
+            <!-- Column 2 -->
+            <div class="col-md-4">
+              <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/davosBlurb2.png" class="img-fluid mb-3" alt="Untapped Potential">
+              <h5 class="font-weight-bold">Untapped Potential</h5>
+              <p>Providing a venue and platform to discuss AI and Crypto technologies on neutral ground.</p>
+            </div>
+            <!-- Column 3 -->
+            <div class="col-md-4">
+              <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/davosBlurb3.png" class="img-fluid mb-3" alt="Long-term Scale">
+              <h5 class="font-weight-bold">Long-term Scale</h5>
+              <p>We are establishing a vital and enduring presence of community-minded thought leaders to impact the World Economic Forum annual meeting for years to come.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      
+
+      
       
 
 
-      <section class="ai-learning-section py-5" style="background-color: #00BFA5;">
+
+      <section class="form-section py-5">
+
          <!-- Custom Styles -->
       <style>
-        .ai-learning-section {
-          background-color: #00BFA5;
+        .form-section {
+          background: #fff;
         }
       
-        .card {
-          background-color: white;
-          border: none;
-          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-          height: 100%;
+        .gradient-text {
+          background: linear-gradient(90deg, #FF4B2B, #FF416C, #FFD700, #00BFA5);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
       
-        .icon-container {
-          display: flex;
-          justify-content: center;
+        .form-control {
+          border: 1px solid #ddd;
+          padding: 10px;
+          border-radius: 5px;
         }
       
-        .card img {
-          max-width: 60px;
-        }
-      
-        h5 {
-          font-weight: bold;
-        }
-      
-        .btn-lg {
-          font-size: 1.25rem;
-          padding: 0.75rem 1.5rem;
+        .btn-dark {
+          background-color: #000;
+          color: #fff;
+          padding: 15px 25px;
+          font-size: 1.2rem;
+          border-radius: 50px;
         }
       </style>
-      
-      
         <div class="container">
-          <div class="text-center mb-5">
-            <h2 class="text-light mb-4">Companies Are Using Ahura AI To Upskill Learners In Powerful Ways</h2>
-          </div>
-          <div class="row text-center">
-            <!-- Personalized LMS -->
-            <div class="col-md-4 mb-4">
-              <div class="card p-4">
-                <div class="icon-container mb-3">
-                  <img src="https://ahuraai.com/wp-content/uploads/2022/07/Personalized-LMS.png" alt="Personalized LMS" class="img-fluid">
-                </div>
-                <h5 class="text-dark">Personalized LMS</h5>
-                <p>Organize your existing learning resources and personalize employees’ home pages to topics that are most interesting to them.</p>
-              </div>
-            </div>
-            <!-- On-Boarding -->
-            <div class="col-md-4 mb-4">
-              <div class="card p-4">
-                <div class="icon-container mb-3">
-                  <img src="https://ahuraai.com/wp-content/uploads/2022/07/Onboarding.png" alt="On-Boarding" class="img-fluid">
-                </div>
-                <h5 class="text-dark">On-Boarding</h5>
-                <p>Help new employees stay engaged and connect with their teams with in-platform communication and personalized modalities.</p>
-              </div>
-            </div>
-            <!-- Upskilling -->
-            <div class="col-md-4 mb-4">
-              <div class="card p-4">
-                <div class="icon-container mb-3">
-                  <img src="https://ahuraai.com/wp-content/uploads/2022/07/Upskilling.png" alt="Upskilling" class="img-fluid">
-                </div>
-                <h5 class="text-dark">Upskilling</h5>
-                <p>Allow employees to advance their careers by acquiring new skills and communicating that proficiency to their managers.</p>
-              </div>
-            </div>
-            <!-- Reskilling -->
-            <div class="col-md-4 mb-4">
-              <div class="card p-4">
-                <div class="icon-container mb-3">
-                  <img src="https://ahuraai.com/wp-content/uploads/2022/07/Reskilling.png" alt="Reskilling" class="img-fluid">
-                </div>
-                <h5 class="text-dark">Reskilling</h5>
-                <p>Provide employees with tools to adapt to new roles as business changes shift the skill sets required by various functions.</p>
-              </div>
-            </div>
-            <!-- On-Going Training -->
-            <div class="col-md-4 mb-4">
-              <div class="card p-4">
-                <div class="icon-container mb-3">
-                  <img src="https://ahuraai.com/wp-content/uploads/2022/07/Training.png" alt="On-Going Training" class="img-fluid">
-                </div>
-                <h5 class="text-dark">On-Going Training</h5>
-                <p>Ensure employees stay engaged and efficient in completing regular training updates with augmented live-streaming.</p>
-              </div>
-            </div>
-            <!-- On-Going Personal Development -->
-            <div class="col-md-4 mb-4">
-              <div class="card p-4">
-                <div class="icon-container mb-3">
-                  <img src="https://ahuraai.com/wp-content/uploads/2022/07/Ongoing-Personal-Development.png" alt="On-Going Personal Development" class="img-fluid">
-                </div>
-                <h5 class="text-dark">On-Going Personal Development</h5>
-                <p>Cultivate a culture of lifelong learning to give employees a sense of purpose and belonging in their teams.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Button -->
           <div class="row">
-            <div class="col text-center">
-              <a href="https://ahuraai.com/signup/" class="btn btn-light btn-lg">Get In Touch</a>
+            <!-- Left Column (Text) -->
+            <div class="col-md-6 d-flex align-items-center">
+              <div>
+                <h2 class="display-4 font-weight-bold">
+                  Let us know how you would like to
+                  <span class="gradient-text"> participate, speak, or sponsor.</span>
+                </h2>
+              </div>
+            </div>
+      
+            <!-- Right Column (Form) -->
+            <div class="col-md-6">
+              <form>
+                <div class="form-group">
+                  <label for="email">Email*</label>
+                  <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <label for="firstName">First Name*</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name*</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                </div>
+                <div class="form-group">
+                  <label for="phoneNumber">Phone Number*</label>
+                  <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone Number">
+                </div>
+                <div class="form-group">
+                  <label for="companyName">Company Name*</label>
+                  <input type="text" class="form-control" id="companyName" placeholder="Company Name">
+                </div>
+                <button type="submit" class="btn btn-dark btn-lg mt-4">Join our Davos 2024 Ahura AI House</button>
+              </form>
             </div>
           </div>
         </div>
       </section>
       
      
+      
+
+      <section class="event-agenda-section py-5">
+          <!-- Custom Styles -->
+      <style>
+        .event-agenda-section {
+          background-color: #f7f7f7;
+        }
+        .call-to-action {
+          background: linear-gradient(90deg, #FF416C, #FFD700);
+          color: white;
+          border-radius: 10px;
+          display: inline-block;
+          padding: 20px;
+        }
+        .call-to-action h2 {
+          font-size: 1.75rem;
+        }
+        .btn-dark {
+          background-color: #333;
+          color: #fff;
+          padding: 10px 20px;
+          border-radius: 50px;
+        }
+        .agenda-day h4 {
+          background-color: #00BFA5;
+          color: #fff;
+        }
+        .table th, .table td {
+          text-align: center;
+          vertical-align: middle;
+        }
+        .table a {
+          color: #00BFA5;
+          text-decoration: underline;
+        }
+      </style>
+      
+        <div class="container">
+          <!-- Call to action for sponsorship -->
+          <div class="row mb-5">
+            <div class="col-md-12 text-center">
+              <div class="call-to-action p-4">
+                <h2 class="font-weight-bold">Interested in becoming part of the AI & Blockchain Lounge?</h2>
+                <p>We are excited to welcome you to network with top leaders and build meaningful connections and explore synergies in an interactive environment.</p>
+                <a href="#" class="btn btn-dark btn-lg">Download Sponsorship Deck</a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Event Agenda -->
+          <h3 class="text-center mb-3">Program at Ahura AI House: Events</h3>
+      
+          <!-- Day 1 -->
+          <div class="agenda-day mb-4">
+            <h4 class="bg-primary text-white p-2">Day 1 - Monday, Jan 15, 2024</h4>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Event</th>
+                    <th>Session Titles</th>
+                    <th>Timing</th>
+                    <th>RSVP</th>
+                    <th>Speakers</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Opening Talk</td>
+                    <td>Opening from Ahura CEO</td>
+                    <td>10:00 AM to 10:30 AM</td>
+                    <td><a href="#">Luma</a></td>
+                    <td>Bryan Talebi</td>
+                  </tr>
+                  <tr>
+                    <td>Exec coaching with Peter Kovacs</td>
+                    <td>Get the Most Out of Davos 2024</td>
+                    <td>10:45 AM to 11:30 AM</td>
+                    <td><a href="#">Luma</a></td>
+                    <td>Peter Kovacs</td>
+                  </tr>
+                  <tr>
+                    <td>Private lunch event</td>
+                    <td>Private lunch event</td>
+                    <td>12:00 PM to 02:00 PM</td>
+                    <td><a href="#">Luma</a></td>
+                    <td>Matt Kuta - Voyager Space</td>
+                  </tr>
+                  <!-- More rows for Day 1 -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+      
+          <!-- Day 2 -->
+          <div class="agenda-day">
+            <h4 class="bg-primary text-white p-2">Day 2 - Tuesday, Jan 16, 2024</h4>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Event</th>
+                    <th>Session Titles</th>
+                    <th>Timing</th>
+                    <th>RSVP</th>
+                    <th>Speakers</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Masterclass: Gen AI for Marketing</td>
+                    <td>Unleash your creativity in the age of AI</td>
+                    <td>10:45 AM to 11:30 AM</td>
+                    <td><a href="#">Luma</a></td>
+                    <td>Jennifer de Broglie, Massimo Moretti</td>
+                  </tr>
+                  <tr>
+                    <td>Speech and Fireside chat with Google GenAI</td>
+                    <td>What Do You Do with Gen AI tools?</td>
+                    <td>1:00 PM to 2:00 PM</td>
+                    <td><a href="#">Luma</a></td>
+                    <td>Hitesh Wadhwa, MC: Keith Keating</td>
+                  </tr>
+                  <!-- More rows for Day 2 -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      
     
 
 
 
-<!-- TODO needs woork -->
-
-<section class="partner-section py-5">
-    <!-- Custom Styles -->
-    <style>
-      .partner-section {
-        background-color: #f9f9f9;
-        text-align: left;
-      }
-  
-      .partner-section h2 {
-        color: #212529;
-      }
-  
-      .partner-section p {
-        color: #6c757d;
-      }
-  
-      .partner-section img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
-  
-      .btn-outline-primary {
-        border: 2px solid #00BFA5;
-        color: #00BFA5;
-      }
-  
-      .btn-outline-primary:hover {
-        background-color: #00BFA5;
-        color: #fff;
-      }
-    </style>
-  
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Text Section -->
-        <div class="col-md-6">
-          <h2 class="font-weight-bold">Potential-maximizing Personalization</h2>
-          <p class="mb-4">
-            Boost learning engagement to spark career growth.
-          </p>
-          <a href="https://ahuraai.com/signup/" class="btn btn-outline-primary btn-lg">Get In Touch</a>
-        </div>
-  
-        <!-- Image Section -->
-        <div class="col-md-6 text-center">
-          <img src="https://ahuraai.com/wp-content/uploads/2022/07/ahura-dashboard.png" class="img-fluid" alt="Partnering with Ahura AI">
-        </div>
-      </div>
-    </div>
-  </section>
-  
-      
-   
-
-
-
-      
-<section class="learning-analytics-section py-5">
-    <!-- Custom Styles -->
-  <style>
-    .learning-analytics-section {
-      background-color: #f9f9f9;
-      text-align: left;
-    }
-  
-    .learning-analytics-section h2 {
-      color: #212529;
-    }
-  
-    .learning-analytics-section p {
-      color: #6c757d;
-    }
-  
-    .learning-analytics-section img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-  
-    .btn-outline-primary {
-      border: 2px solid #00BFA5;
-      color: #00BFA5;
-    }
-  
-    .btn-outline-primary:hover {
-      background-color: #00BFA5;
-      color: white;
-    }
-  </style>
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Text Section -->
-        <div class="col-md-6">
-          <h2 class="font-weight-bold">Supportive Learning Analytics</h2>
-          <p class="mb-4">
-            Post-Learning Session Analytics inform learners of their movements, emotions, and browsing activity habits and suggest options to improve focus and retention over time.
-          </p>
-          <a href="https://ahuraai.com/signup/" class="btn btn-outline-primary btn-lg">Get In Touch</a>
-        </div>
-  
-        <!-- Image Section -->
-        <div class="col-md-6 text-center">
-          <img src="https://ahuraai.com/wp-content/uploads/2022/07/ahura-dashboard2.jpg" class="img-fluid" alt="Learning Analytics Dashboard">
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  
-  <section class="skillset-insights-section py-5">
-    <!-- Custom Styles -->
-    <style>
-      .skillset-insights-section {
-        background-color: #fff;
-      }
-  
-      .skillset-insights-section h2 {
-        font-weight: bold;
-        color: #212529;
-      }
-  
-      .skillset-insights-section p {
-        color: #6c757d;
-      }
-  
-      .skillset-insights-section img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
-  
-      .btn-outline-primary {
-        border: 2px solid #00BFA5;
-        color: #00BFA5;
-      }
-  
-      .btn-outline-primary:hover {
-        background-color: #00BFA5;
-        color: #fff;
-      }
-    </style>
-  
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Image Section -->
-        <div class="col-md-6 text-center">
-          <img src="https://ahuraai.com/wp-content/uploads/2022/07/dashboard-3.jpg" class="img-fluid" alt="Critical Skillset Insights">
-        </div>
-  
-        <!-- Text Section -->
-        <div class="col-md-6">
-          <h2 class="font-weight-bold">Critical Skillset Insights</h2>
-          <p>
-            Aggregated Analytics Inform Supervisors Of Reactions To Learning Plans To Improve Curriculum Design; Skills Gap Analysis Helps Managers Tailor Training Priorities And Identify Talent For Knowledge-Based Project Deployment.
-          </p>
-          <a href="https://ahuraai.com/signup/" class="btn btn-outline-primary btn-lg">Get In Touch</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-
-    
-
-
-  <section class="category-approach-section py-5">
-    <!-- Custom Styles -->
-    <style>
-      .category-approach-section {
-        background-color: #f8f9fa;
-      }
-  
-      .category-approach-section h2 {
-        font-weight: bold;
-        color: #212529;
-      }
-  
-      .category-approach-section p {
-        color: #6c757d;
-      }
-  
-      .category-approach-section img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
-  
-      .btn-outline-primary {
-        border: 2px solid #00BFA5;
-        color: #00BFA5;
-      }
-  
-      .btn-outline-primary:hover {
-        background-color: #00BFA5;
-        color: #fff;
-      }
-    </style>
-  
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Text Section -->
-        <div class="col-md-6">
-          <h2 class="font-weight-bold">Category-Defining Approach</h2>
-          <p>
-            Our Nascent Technology Blends Industry-Leading Expertise In Cognitive Science (How People Learn), Artificial Intelligence (Behavior Identification And Intervention) And Web3 (Decentralized Data Storage And Ownership) To Redefine Continuous Employee Learning.
-          </p>
-          <a href="https://ahuraai.com/signup/" class="btn btn-outline-primary btn-lg">Get In Touch</a>
-        </div>
-  
-        <!-- Image Section -->
-        <div class="col-md-6 text-center">
-          <img src="https://ahuraai.com/wp-content/uploads/2022/07/image04.jpeg" class="img-fluid" alt="Category Defining Approach">
-        </div>
-      </div>
-    </div>
-  </section>
-  
 
 
 
 
 
 
-  <section class="values-technology-section py-5">
-    <!-- Custom Styles -->
-    <style>
-      .values-technology-section {
-        background-color: #fff;
-      }
-  
-      .values-technology-section h2 {
-        font-weight: bold;
-        color: #212529;
-      }
-  
-      .values-technology-section p {
-        color: #6c757d;
-      }
-  
-      .values-technology-section img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
-  
-      .btn-outline-primary {
-        border: 2px solid #00BFA5;
-        color: #00BFA5;
-      }
-  
-      .btn-outline-primary:hover {
-        background-color: #00BFA5;
-        color: #fff;
-      }
-    </style>
-  
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Image Section -->
-        <div class="col-md-6">
-          <img src="https://ahuraai.com/wp-content/uploads/2022/07/image05.jpeg" class="img-fluid" alt="Values-Based Technology">
-        </div>
-  
-        <!-- Text Section -->
-        <div class="col-md-6">
-          <h2 class="font-weight-bold">Values-Based Technology</h2>
-          <p>
-            Responsible AI is at the heart of what we do. Ahura is committed to deploying advanced technologies to empower, rather than monitor, people and is active in industry conversations around the ethical use of AI.
-          </p>
-          <a href="https://ahuraai.com/signup/" class="btn btn-outline-primary btn-lg">Get In Touch</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
