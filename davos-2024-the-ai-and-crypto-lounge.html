@@ -6,6 +6,7 @@
     <title>Ahura</title>
     <!-- Site using Bootsrap 4.5. boostrap 5 will break the page -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
     <!-- <link rel="stylesheet" href="style.css"> -->
      <style>
         /* Anchor tags default to white */
@@ -38,7 +39,7 @@
             overflow: hidden;
             color: white;
             text-align: center;
-            background: url('https://ahuraai.com/wp-content/uploads/2024/08/top_bg.png') no-repeat center center;
+            background: url('https://ahuraai.com/wp-content/uploads/2024/02/HomepageHeroImage.png') no-repeat center center;
             background-size: cover;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
@@ -407,6 +408,40 @@ li { font-weight: normal; }
 }
 
 
+.hero .content {
+    z-index: 2;
+    color: white;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero-title .highlight {
+    color: #ff3e64; /* match with the pink/red tone from the screenshot */
+}
+
+.hero-button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
      </style>
      
      <!-- Google Tag Manager -->
@@ -424,15 +459,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-10986366392"></script>
 
 </head>
- <!-- Header -->
- <
+<body>
+    <!-- Google: Body tracking script -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGBJXGT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
- <header class="container-fluid">
+
+
+
+<header class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:black;">
         <div class="container">
-              <!-- Add the logo here -->
-              <a class="navbar-brand" href="#">
+             <!-- Add the logo here -->
+             <a class="navbar-brand" href="#">
                 <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/Ahura-Logo-horiz300px.png" alt="Ahura Logo" width="100" height="50">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -442,7 +482,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <ul class="navbar-nav">
                     <!-- Product Link -->
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/product.html">Product</a>
+                        <a class="nav-link" href="product.html">Product</a>
                     </li>
                     <!-- Solutions Dropdown -->
                     <li class="nav-item dropdown">
@@ -450,24 +490,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             Solutions
                         </a>
                         <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                            <a class="dropdown-item" href="pages/employee-retention.html">Employee Retention</a>
+                            <a class="dropdown-item" href="employee-retention.html">Employee Retention</a>
                             <div class="dropdown-submenu">
                                 <a class="dropdown-item dropdown-toggle" href="#">AI Tutor</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="pages/features-and-usecases.html">Features &amp; Use Cases</a></li>
-                                    <li><a class="dropdown-item" href="pages/benefits-and-learning.html">Benefits &amp; Learning</a></li>
-                                    <li><a class="dropdown-item" href="pages/benefits-for-supervisors.html">Benefits For Supervisors</a></li>
+                                    <li><a class="dropdown-item" href="features-and-usecases.html">Features &amp; Use Cases</a></li>
+                                    <li><a class="dropdown-item" href="benefits-and-learning.html">Benefits &amp; Learning</a></li>
+                                    <li><a class="dropdown-item" href="benefits-for-supervisors.html">Benefits For Supervisors</a></li>
                                 </ul>
                             </div>
-                            <a class="dropdown-item" href="pages/manager-gen-ai-training.html">Manager Gen AI Training</a>
+                            <a class="dropdown-item" href="manager-gen-ai-training.html">Manager Gen AI Training</a>
                             <div class="dropdown-submenu">
                                 <a class="dropdown-item dropdown-toggle" href="#">Events On Responsible Tech</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="pages/features-and-usecases.html">Features &amp; Use Cases</a></li>
-                                    <!-- <li><a class="dropdown-item" href="pages/benefits-and-learning.html">Benefits &amp; Learning</a></li> -->
-                                    <!-- <li><a class="dropdown-item" href="pages/benefits-for-supervisors.html">Benefits For Supervisors</a></li> -->
-                                    <li><a class="dropdown-item" href="pages/davos-2024-the-ai-and-crypto-lounge.html">Davos 2024: The AI &amp; Crypto Lounge</a></li>
-                                    <li><a class="dropdown-item" href="pages/necker-legacy-guardians.html">Necker Legacy Guardians</a></li>
+                                    <li><a class="dropdown-item" href="features-and-usecases.html">Features &amp; Use Cases</a></li>
+                                    <li><a class="dropdown-item" href="davos-2024-the-ai-and-crypto-lounge.html">Davos 2024: The AI &amp; Crypto Lounge</a></li>
+                                    <li><a class="dropdown-item" href="necker-legacy-guardians.html">Necker Legacy Guardians</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -478,14 +516,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             Thinking
                         </a>
                         <div class="dropdown-menu" aria-labelledby="thinkingDropdown">
-                            <a class="dropdown-item" href="pages/success-stories.html">Success Stories</a>
+                            <a class="dropdown-item" href="success-stories.html">Success Stories</a>
                             <a class="dropdown-item" href="https://www.ahuraai.com/blog">Blog</a>
                             <a class="dropdown-item" href="https://www.ahuraai.com/blog/how-i-learn/">How We Learn</a>
                         </div>
                     </li>
                     <!-- Team Link -->
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/company">Team</a>
+                        <a class="nav-link" href="company">Team</a>
                     </li>
                     <!-- Privacy and Data Dropdown -->
                     <li class="nav-item dropdown">
@@ -493,132 +531,560 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             Privacy and Data
                         </a>
                         <div class="dropdown-menu" aria-labelledby="privacyDropdown">
-                            <a class="dropdown-item" href="pages/privacy-policy.html">Privacy Policy</a>
-                            <a class="dropdown-item" href="pages/terms-of-use.html">Terms of Service</a>
+                            <a class="dropdown-item" href="privacy-policy.html">Privacy Policy</a>
+                            <a class="dropdown-item" href="terms-of-use.html">Terms of Service</a>
                         </div>
                     </li>
                     <!-- Ahura 2.0 Link -->
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/ahura2.0.html">Ahura 2.0</a>
+                        <a class="nav-link" href="ahura2.0.html">Ahura 2.0</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-<!-- </main> -->
-<body>
 
-    <div class="container my-5">
-        <section id="section1" class="mb-5">
-            <h2 class="mb-3">AHURA PRIVACY POLICY</h2>
-            <p><strong>Last Updated and Effective Date: Jan 2023</strong></p>
-            <p>Welcome to Ahura! Ahura is a business-to-business (or "B2B") corporate learning platform that provides employers and educators with software licenses that enable them to personalize the digital learning experiences they deliver. Ahura uses artificial intelligence to accompany learners on their learning journeys by providing personalized guidance on how to improve and speed up their time dedicated to learning.</p>
-            <p>Ahura offers its services to both Individual Users (a user who creates an account using a personal email address) and Corporate Users (people whose employer or educator has entered into an agreement with Ahura to use our services). If you are a Corporate User, the agreements between Ahura and your employer, such as your employer’s employee privacy notice, supersede some practices outlined in this Privacy Policy.</p>
-            <p>This Privacy Policy explains how Ahura ("Ahura," "we," or "us") collects, uses, and discloses information about you, both as an individual user and a corporate user. This Privacy Policy applies when you use our product, websites, other online products and services (collectively, our "Services"), contact our customer service team, engage with us on social media, or otherwise interact with us.</p>
-            <p>We may change this Privacy Policy from time to time. If we make changes, we will notify you by revising the date at the top of this policy and, in some cases, we may provide you with additional notice (such as adding a statement to our website or sending you a notification). We encourage you to review this Privacy Policy regularly to stay informed about our information practices and the choices available to you.</p>
-        </section>
-        
-        <section id="section2" class="mb-5">
-            <h2 class="mb-3">Collection of Information</h2>
-            <h3 class="mb-2">Information You Provide to Us</h3>
-            <p>We collect information you provide directly to us. For example, you share information directly with us when you create an account, fill out a form, use our Services (for example, audio, video and images), make a purchase from or donation towards Ahura, communicate with us via third-party platforms, request customer support, or otherwise communicate with us. The types of personal information we may collect include your name, email address, postal address, phone number, profile image, credit card and other payment information, and any other information you choose to provide including employment and professional information as provided through any applications.</p>
-            
-            <h3 class="mb-2">Information We Collect Automatically When You Interact with Us</h3>
-            <ul class="list-unstyled">
-                <li class="mb-2"><strong>Learning Activity Information:</strong> In order to provide insights and recommendations that personalize and improve your learning experience, our AI analyzes your video and browsing history once you initiate the learning session, and stops this analysis once you pause or stop the learning session.</li>
-                <li class="mb-2"><strong>Device and Usage Information:</strong> We collect information about how you access our Services, including data about the device and network you use, such as your hardware model, operating system version, mobile network, IP address, unique device identifiers, browser type, and app version. We also collect information about your activity on our Services, such as access times, pages viewed, links clicked, and the page you visited before navigating to our Services.</li>
-                <li class="mb-2"><strong>Location Information:</strong> In accordance with your device permissions, we may collect information about the precise location of your device. You may stop the collection of precise location information at any time.</li>
-                <li class="mb-2"><strong>Information Collected by Cookies and Similar Tracking Technologies:</strong> We (and our service providers) use tracking technologies, such as cookies and web beacons, to collect information about you.</li>
-            </ul>
-        </section>
-        
-        <section id="section3" class="mb-5">
-            <h2 class="mb-3">Information We Collect from Other Sources</h2>
-            <p>We obtain information from third-party sources. For example, we may collect information about you from data analytics providers and others. Additionally, if you create or log into your Ahura account through a third-party platform (such as LinkedIn, Facebook, or Google), we will have access to certain information from that platform, such as your name, birthday, and profile picture, in accordance with the authorization procedures determined by such platform.</p>
-        
-            <h3 class="mb-2">Information We Derive</h3>
-            <p>We may derive information or draw inferences about you based on the information we collect. For example, we may make inferences about your location based on your IP address and based on your browsing behavior.</p>
-        
-            <h3 class="mb-2">Use of Information</h3>
-            <ul class="list-unstyled">
-                <li class="mb-2">Personalize and improve your learning experience on our Services, e.g., by creating a personalized education plan</li>
-                <li class="mb-2">Provide, maintain, and improve our products and services</li>
-                <li class="mb-2">Process transactions and send you related information, including confirmations, receipts, offers, and customer experience surveys</li>
-                <li class="mb-2">Send you technical notices, security alerts, and support and administrative messages</li>
-                <li class="mb-2">Respond to your comments and questions and provide customer service</li>
-                <li class="mb-2">Personalize the advertisements you see on third-party platforms and websites</li>
-            </ul>
-        </section>
 
-        <!-- New Sections -->
-        <section id="section4" class="mb-5">
-            <h2 class="mb-3">Sharing of Information</h2>
-            <p>We share personal information in the following circumstances or as otherwise described in this policy:</p>
-            <ul class="list-unstyled">
-                <li class="mb-2">We may share personal information with vendors, service providers, and consultants that need access to personal information in order to perform services for us.</li>
-                <li class="mb-2">We may disclose personal information if we believe it is necessary to meet legal requirements or protect the rights, property, and safety of Ahura or others.</li>
-                <li class="mb-2">We may share personal information with your consent or at your direction.</li>
-            </ul>
-        </section>
 
-        <section id="section5" class="mb-5">
-            <h2 class="mb-3">Storing and Securing Information We Collect</h2>
-            <p>We take appropriate security measures to protect your information from unauthorized access and store it for as long as necessary to fulfill the purposes outlined in this Privacy Policy. You can control the collection and storage of some information through your device settings or account preferences.</p>
-        </section>
 
-        <section id="section6" class="mb-5">
-            <h2 class="mb-3">Your Choices and Control Over Your Information</h2>
-            <p>You have choices regarding the collection, storage, and use of your personal information. You can adjust your browser settings to refuse cookies or delete your account at any time.</p>
-        </section>
+<!-- TODO needs work -->
+<section class="davos-section py-5">
+    <!-- Custom Styles -->
+    <style>
+        .davos-section {
+            background: linear-gradient(45deg, #ff7b22, #e841c2);
+            color: #fff;
+            padding: 50px 0;
+            position: relative;
+            border-radius: 10px;
+        }
 
-        <section id="section7" class="mb-5">
-            <h2 class="mb-3">Notice to End Users</h2>
-            <p>Many of our products are intended for use by organizations. Where the Services are made available to you through an organization (e.g. your employer), that organization is the administrator of the Services and is responsible for the accounts and/or Service sites over which it has control. If this is the case, please direct your data privacy questions to your administrator, as your use of the Services is subject to that organization’s policies. We are not responsible for the privacy or security practices of an administrator’s organization, which may be different than this policy.</p>
-            <h4 class="mb-2">Administrators are able to:</h4>
-            <ul class="list-unstyled">
-                <li>Require you to reset your account password;</li>
-                <li>Restrict, suspend, or terminate your access to the Services;</li>
-                <li>Access to non-protected information in and about your account;</li>
-                <li>Access or retain information stored as part of your account;</li>
-                <li>Install or uninstall third-party apps or other integrations.</li>
-            </ul>
-            <p>In some cases, administrators can also:</p>
-            <ul class="list-unstyled">
-                <li>Restrict, suspend, or terminate your account access;</li>
-                <li>Change the email address associated with your account;</li>
-                <li>Change your information, including profile information;</li>
-                <li>Restrict your ability to edit, restrict, modify, or delete information.</li>
-            </ul>
-        </section>
-        
-        <!-- Section 8 -->
-        <section id="section8" class="mb-5">
-            <h2 class="mb-3">Advertising and Analytics</h2>
-            <p>We allow others to provide analytics services [and serve advertisements] on our behalf across the web and in mobile apps. These entities may use cookies, web beacons, device identifiers, and other technologies to collect information about your use of our Services and other websites and applications, including your IP address, web browser, mobile network information, pages viewed, time spent on pages or in mobile apps, links clicked, and conversion information.</p>
-            <p>This information may be used by Ahura and others to, among other things, analyze and track data, determine the popularity of certain content, [deliver advertising and content targeted to your interests on our Services and other websites], and better understand your online activity.</p>
-            <p>We also work with third parties to serve ads to you as part of customized campaigns on third-party platforms (such as Facebook and Instagram). As part of these ad campaigns, we or the third-party platforms may convert information about you, such as your email address and phone number, into a unique value that can be matched with a user account on these platforms to allow us to learn about your interests and serve you advertising that is customized to your interests.</p>
-        </section>
-        
-        <!-- Section 9 -->
-        <section id="section9" class="mb-5">
-            <h2 class="mb-3">Transfer of Information to the United States and Other Countries</h2>
-            <p>Ahura is based in the United States, and we have operations and service providers in the United States and other countries. Therefore, we and our service providers may transfer your personal information to, or store or access it in, jurisdictions that may not provide levels of data protection that are equivalent to those of your home jurisdiction.</p>
-            
-            <h3 class="mb-3">Do Not Track Notice</h3>
-            <p>This website does not currently support certain browser settings or otherwise respond to Do Not Track requests.</p>
-        
-            <h3 class="mb-3">Children</h3>
-            <p>This website is not intended for or directed at children under the age of 13. In addition, we do not knowingly collect personal information from children under the age of 13.</p>
-        
-            <h3 class="mb-3">Contact Us</h3>
-            <p>If you have any questions about this Privacy Policy, please contact us at hi@Ahuraai.com.</p>
-        </section>
-        
-        
+        .davos-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .davos-section h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .davos-section .highlight {
+            color: #FFDD00;
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        .davos-section .description {
+            color: #fff;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .davos-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .davos-images img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-schedule {
+            background: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-size: 1rem;
+            transition: background 0.3s ease, color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-schedule:hover {
+            background: #fff;
+            color: #e841c2;
+        }
+
+        @media (max-width: 768px) {
+            .davos-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .davos-section .highlight {
+                font-size: 3rem;
+            }
+
+            .davos-images {
+                margin-top: 30px;
+            }
+        }
+    </style>
+
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Column (Text) -->
+            <div class="col-lg-6 col-md-12 mt-5">
+                <h1>WELCOME TO <span class="highlight">DAVOS 2024</span></h1>
+                <h3 class="font-weight-bold">LEADING THE GLOBAL CONVERSATION ON RESPONSIBLE AI</h3>
+                <p class="description">
+                    AI has been the talk of the town during the Annual Meeting of the World Economic Forum 2023, and the conversation has only accelerated since then. Today, there is an urgent need for a global discussion that includes policymakers, academics, civil society, venture, and industry.
+                </p>
+                <p class="description">
+                    To provide a platform for this global conversation, Ahura AI has initiated the Davos 2024 Ahura AI House. During the Annual Meeting of the World Economic Forum, the group will bring together leading figures across disciplines to engage in debates around the most critical issues around Artificial Intelligence and to discuss its potential for humankind.
+                </p>
+                <a href="#" class="mb-4 btn btn-schedule">Schedule</a>
+            </div>
+
+            <!-- Right Column (Images) -->
+            <div class="col-lg-6 col-md-12 davos-images">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/67cc20dab805e1c6ae87a6aa9da3929de40c765f4f3c8978f98ea2e493641575?apiKey=15589348c8884353aa1a6f32b20bd58b&width=2000" alt="Davos Image 1">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c3f388de9790796407e3e78827f7cbdffc5292509132a88367913e1efe3b7e29?apiKey=15589348c8884353aa1a6f32b20bd58b&width=2000" alt="Davos Image 2">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
+</section>
+
+      
+      <section class="partners-section py-5">
+           <!-- Styles -->
+        <style>
+            .partners-section {
+            background-color: #fff;
+            }
+        
+            .partners-section img {
+            max-width: 100%;
+            height: auto;
+            }
+        </style>
+        <div class="container text-center">
+          <!-- Title -->
+          <h2 class="display-5 mb-4">Partners and Collaborators</h2>
+      
+          <!-- Partner Logos -->
+          <div class="row justify-content-center">
+            <div class="col-md-10">
+              <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/partners-1.png" class="img-fluid" alt="Partners and Collaborators">
+            </div>
+          </div>
+        </div>
+      </section>
+      
    
+      
+      <section class="venue-layout-section py-5">
+        <!-- Custom Styles -->
+      <style>
+        .venue-layout-section {
+          background: linear-gradient(120deg, #ff7a18, #ffb04a);
+          color: #333;
+        }
+      
+        .venue-layout-section h1, 
+        .venue-layout-section h2 {
+          font-family: 'Arial', sans-serif;
+        }
+      
+        .venue-layout-section p {
+          font-size: 1.2rem;
+        }
+      
+        .img-fluid {
+          border-radius: 15px;
+        }
+      </style>
+        <div class="container">
+          <div class="row">
+            <!-- Text and Title -->
+            <div class="col-md-7">
+              <h1 class="font-weight-bold">The Ahura AI House</h1>
+              <h2 class="text-danger">Venue & Layout</h2>
+              <p>
+                Ahura AI is proud to present the inaugural Ahura AI House! Over the course of five days, Ahura AI will gather decentralized thinkers, investors, corporations, startup founders, high profile individuals, and policymakers in one place to engage in meaningful discourse. We are excited to welcome you to network with top leaders and build meaningful connections and explore synergies in an interactive environment.
+              </p>
+              <p>
+                The Davos 2024 Ahura AI House is located in a premier location at Promenade 118 – in the heart of Davos! Doors will be open from 08:00 to 23:00 each day.
+              </p>
+            </div>
+            <!-- Image Map -->
+            <div class="col-md-5">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e32313d73a59da40ac43c5704ad846a348be0cecf4b123f45ce4553c6d2a3f1?apiKey=15589348c8884353aa1a6f32b20bd58b&width=2000" class="img-fluid rounded mb-3" alt="Map of the venue">
+            </div>
+          </div>
+      
+          <!-- Venue Image -->
+          <div class="row mt-4">
+            <div class="col-md-12">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/46370e69476f34ef0d9768e8075a5b6a5d208704a565414ff48f3dd2020e7964?apiKey=15589348c8884353aa1a6f32b20bd58b&width=2000" class="img-fluid rounded" alt="Venue Interior">
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+
+    <section class="davos-info-section py-5">
+          
+        <!-- Custom Styles -->
+        <style>
+            .davos-info-section {
+            background: linear-gradient(to right, #ffd700, #ffcc33, #ff9966);
+            color: #333;
+            }
+        
+            .font-weight-bold {
+            font-weight: bold;
+            }
+        
+            .davos-info-section p {
+            color: #666;
+            }
+        
+            .davos-info-section img {
+            max-width: 60px;
+            height: auto;
+            }
+        </style>
+        <div class="container">
+          <div class="row text-center">
+            <!-- Column 1 -->
+            <div class="col-md-4">
+              <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/davosBlurb1.png" class="img-fluid mb-3" alt="Multidisciplinary Initiative">
+              <h5 class="font-weight-bold">Multidisciplinary Initiative</h5>
+              <p>Bringing together leaders of top AI research institutions, tech, industry, politics and civil society.</p>
+            </div>
+            <!-- Column 2 -->
+            <div class="col-md-4">
+              <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/davosBlurb2.png" class="img-fluid mb-3" alt="Untapped Potential">
+              <h5 class="font-weight-bold">Untapped Potential</h5>
+              <p>Providing a venue and platform to discuss AI and Crypto technologies on neutral ground.</p>
+            </div>
+            <!-- Column 3 -->
+            <div class="col-md-4">
+              <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/davosBlurb3.png" class="img-fluid mb-3" alt="Long-term Scale">
+              <h5 class="font-weight-bold">Long-term Scale</h5>
+              <p>We are establishing a vital and enduring presence of community-minded thought leaders to impact the World Economic Forum annual meeting for years to come.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      
+
+      
+      
+
+
+
+      <section class="form-section py-5">
+
+         <!-- Custom Styles -->
+      <style>
+        .form-section {
+          background: #fff;
+        }
+      
+        .gradient-text {
+          background: linear-gradient(90deg, #FF4B2B, #FF416C, #FFD700, #00BFA5);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      
+        .form-control {
+          border: 1px solid #ddd;
+          padding: 10px;
+          border-radius: 5px;
+        }
+      
+        .btn-dark {
+          background-color: #000;
+          color: #fff;
+          padding: 15px 25px;
+          font-size: 1.2rem;
+          border-radius: 50px;
+        }
+      </style>
+        <div class="container">
+          <div class="row">
+            <!-- Left Column (Text) -->
+            <div class="col-md-6 d-flex align-items-center">
+              <div>
+                <h2 class="display-4 font-weight-bold">
+                  Let us know how you would like to
+                  <span class="gradient-text"> participate, speak, or sponsor.</span>
+                </h2>
+              </div>
+            </div>
+      
+            <!-- Right Column (Form) -->
+            <div class="col-md-6">
+              <form>
+                <div class="form-group">
+                  <label for="email">Email*</label>
+                  <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <label for="firstName">First Name*</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name*</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                </div>
+                <div class="form-group">
+                  <label for="phoneNumber">Phone Number*</label>
+                  <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone Number">
+                </div>
+                <div class="form-group">
+                  <label for="companyName">Company Name*</label>
+                  <input type="text" class="form-control" id="companyName" placeholder="Company Name">
+                </div>
+                <button type="submit" class="btn btn-dark btn-lg mt-4">Join our Davos 2024 Ahura AI House</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+     
+      
+
+      <section class="event-agenda-section py-5">
+          <!-- Custom Styles -->
+      <style>
+        .event-agenda-section {
+          background-color: #f7f7f7;
+        }
+        .call-to-action {
+          background: linear-gradient(90deg, #FF416C, #FFD700);
+          color: white;
+          border-radius: 10px;
+          display: inline-block;
+          padding: 20px;
+        }
+        .call-to-action h2 {
+          font-size: 1.75rem;
+        }
+        .btn-dark {
+          background-color: #333;
+          color: #fff;
+          padding: 10px 20px;
+          border-radius: 50px;
+        }
+        .agenda-day h4 {
+          background-color: #00BFA5;
+          color: #fff;
+        }
+        .table th, .table td {
+          text-align: center;
+          vertical-align: middle;
+        }
+        .table a {
+          color: #00BFA5;
+          text-decoration: underline;
+        }
+      </style>
+      
+        <div class="container">
+          <!-- Call to action for sponsorship -->
+          <div class="row mb-5">
+            <div class="col-md-12 text-center">
+              <div class="call-to-action p-4">
+                <h2 class="font-weight-bold">Interested in becoming part of the AI & Blockchain Lounge?</h2>
+                <p>We are excited to welcome you to network with top leaders and build meaningful connections and explore synergies in an interactive environment.</p>
+                <a href="#" class="btn btn-dark btn-lg">Download Sponsorship Deck</a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Event Agenda -->
+          <h3 class="text-center mb-3">Program at Ahura AI House: Events</h3>
+      
+          <!-- Day 1 -->
+          <div class="agenda-day mb-4">
+            <h4 class="bg-primary text-white p-2">Day 1 - Monday, Jan 15, 2024</h4>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Event</th>
+                    <th>Session Titles</th>
+                    <th>Timing</th>
+                    <th>RSVP</th>
+                    <th>Speakers</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Opening Talk</td>
+                    <td>Opening from Ahura CEO</td>
+                    <td>10:00 AM to 10:30 AM</td>
+                    <td><a href="#">Luma</a></td>
+                    <td>Bryan Talebi</td>
+                  </tr>
+                  <tr>
+                    <td>Exec coaching with Peter Kovacs</td>
+                    <td>Get the Most Out of Davos 2024</td>
+                    <td>10:45 AM to 11:30 AM</td>
+                    <td><a href="#">Luma</a></td>
+                    <td>Peter Kovacs</td>
+                  </tr>
+                  <tr>
+                    <td>Private lunch event</td>
+                    <td>Private lunch event</td>
+                    <td>12:00 PM to 02:00 PM</td>
+                    <td><a href="#">Luma</a></td>
+                    <td>Matt Kuta - Voyager Space</td>
+                  </tr>
+                  <!-- More rows for Day 1 -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+      
+          <!-- Day 2 -->
+          <div class="agenda-day">
+            <h4 class="bg-primary text-white p-2">Day 2 - Tuesday, Jan 16, 2024</h4>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Event</th>
+                    <th>Session Titles</th>
+                    <th>Timing</th>
+                    <th>RSVP</th>
+                    <th>Speakers</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Masterclass: Gen AI for Marketing</td>
+                    <td>Unleash your creativity in the age of AI</td>
+                    <td>10:45 AM to 11:30 AM</td>
+                    <td><a href="#">Luma</a></td>
+                    <td>Jennifer de Broglie, Massimo Moretti</td>
+                  </tr>
+                  <tr>
+                    <td>Speech and Fireside chat with Google GenAI</td>
+                    <td>What Do You Do with Gen AI tools?</td>
+                    <td>1:00 PM to 2:00 PM</td>
+                    <td><a href="#">Luma</a></td>
+                    <td>Hitesh Wadhwa, MC: Keith Keating</td>
+                  </tr>
+                  <!-- More rows for Day 2 -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
     <footer id="footer" class="container-fluid py-4 bg-light">
         <div class="success-call-to-action text-center mt-4">
             <h3>Start Customizing Your AI Training Today</h3>
