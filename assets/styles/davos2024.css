@@ -1,0 +1,358 @@
+/* Apply the gradient to the section with id="first" */
+#first {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, rgba(184,202,204,1) 0%, rgba(231,246,121,1) 40%, rgba(246,205,96,1) 70%, rgba(255,123,1,1) 100%);
+    display: flex;
+    align-items: center;
+}
+
+/* Container for text on the left */
+.content-container {
+    width: 50%;
+    padding: 40px;
+    color: black;
+    margin-left: 5%;
+}
+
+/* Main heading styles */
+h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 0;
+}
+
+/* Multi-colored text for Davos 2024 */
+.highlight-text {
+    color: #ff007f;
+    background: linear-gradient(to right, #ff007f, #ffda00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Subheading styles */
+h2 {
+    font-size: 2rem;
+    color: #ff007f;
+    margin-top: 0;
+}
+
+/* Text paragraph styles */
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Schedule button styles */
+.schedule-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: black;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.schedule-btn:hover {
+    background-color: #ff007f;
+    color: white;
+}
+
+/* General styling for the animated squares */
+.animated-dots {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 5px;
+    animation: move-up-down 5s ease-in-out infinite;
+}
+
+/* Individual dot styling */
+.dot {
+    width: 5px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+}
+
+/* Animation for moving the dots */
+@keyframes move-up-down {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+/* First square positioning */
+.first-square {
+    top: 25%;
+    right: 5%;
+}
+
+/* Second square positioning - 2% left and below the first */
+.second-square {
+    top: calc(25% + 160px); /* Below the first square */
+    right: calc(5% + 20px); /* 2% left from the first */
+}
+
+/* venue section */
+.venue-layout h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.venue-layout p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.venue-map img, .venue-image img {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+}
+
+/* Adjusted padding for the icons and text */
+.venue-layout h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.venue-layout p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.venue-layout .row .col-md-4 img {
+    width: 50px;
+    height: 50px;
+}
+
+.venue-layout h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.venue-layout p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #f9f9f9; /* Adjust background color as necessary */
+}
+
+.text-section h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.text-section .highlight-text {
+    background: -webkit-linear-gradient(45deg, #ff4081, #ff9800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #000;
+}
+
+.form-group input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.btn-black {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-black:hover {
+    background-color: #333;
+}
+
+/* Section containing the map */
+.map-section {
+    position: relative;
+    margin: 50px 0;
+}
+
+.map-container img {
+    width: 100%;
+    height: auto;
+}
+
+.location-info {
+    top: 20px;
+    left: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.location-info img.location-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.location-info .location-text {
+    font-size: 1rem;
+    color: #000;
+}
+
+.location-info a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.location-info a:hover {
+    text-decoration: underline;
+}
+
+/* General styling for the Blockchain Lounge section */
+.blockchain-lounge-section {
+    background: linear-gradient(90deg, #ff5722 0%, #ff9800 100%);
+    border-radius: 20px;
+    padding: 40px;
+    color: white;
+    margin: 50px 0;
+}
+
+.blockchain-lounge-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.blockchain-lounge-section .highlight {
+    color: #fff;
+    font-weight: 700;
+}
+
+.blockchain-lounge-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.btn-dark {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #333;
+}
+
+/* General container styling for the section */
+#events-section {
+    padding: 40px 0;
+}
+
+/* Responsive iframe container to maintain aspect ratio */
+.responsive-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio (can adjust depending on your needs) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #eeeeee; /* Optional: adds background color */
+    border-radius: 15px; /* Optional: adds rounded corners */
+}
+
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+    #events-section {
+        padding: 20px 0;
+    }
+
+    .responsive-iframe-container {
+        padding-bottom: 75%; /* Adjust for mobile screens */
+    }
+}
+
+    .footer-section {
+        background-color: #121212;
+    }
+
+    .footer-section a {
+        transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+        color: #40e0d0; /* Turquoise color on hover */
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+    }
+
+    .footer-section img {
+        max-width: 100%;
+    }
+
+    h5 {
+        font-weight: bold;
+    }
+
+    address {
+        font-style: normal;
+        line-height: 1.6;
+    }

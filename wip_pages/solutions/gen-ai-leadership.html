@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahura</title>
+    <!-- Site using Bootsrap 4.5. boostrap 5 will break the page -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <style>
+        /* Anchor tags default to white */
+        a {
+            color: white;
+            text-decoration: none; /* Optional: Remove underline */
+        }
+        
+        /* Anchor tags when clicked (visited) */
+        a:visited {
+            color: inherit; /* Keeps the color unchanged */
+        }
+        
+        /* Optional: Add a hover effect */
+        a:hover {
+            color: #ccc; /* Change to desired hover color */
+        }
+        
+        /* Optional: Add active state styling */
+        a:active {
+            color: #ff5e62; /* Change to desired active color */
+        }
+        
+        /* Hero Section */
+        .hero {
+            width: 100vw; /* Ensure the hero section spans the full viewport width */
+            margin-left: calc(50% - 50vw) !important; /* Center align by adjusting margin */
+            height: 100vh; /* Full viewport height */
+            position: relative;
+            overflow: hidden;
+            color: white;
+            text-align: center;
+            background: url('https://ahuraai.com/wp-content/uploads/2024/08/top_bg.png') no-repeat center center;
+            background-size: cover;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .hero h1 {
+            color: white; /* Set text color to white */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add a shadow to the text */
+            font-weight: bold; /* Optional: make the text bold */
+            font-size: 2.5rem; /* Optional: adjust the font size */
+            text-align: center; /* Center-align the text */
+        }
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .hero .content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .navbar {
+            width: 100vw; /* Make the navbar span the full viewport width */
+            margin-left: calc(50% - 50vw); /* Center align the navbar by adjusting margin */
+            background-color: black !important; /* Make the background color transparent */
+            position: fixed; /* Fix the navbar to the top */
+            top: 0; /* Stick to the top */
+            z-index: 1000; /* Ensure the navbar stays on top of other content */
+            box-sizing: border-box; /* Include padding/margin in the width calculation */
+            padding: 10px 0; /* Adjust padding as needed */
+        }
+        
+        /* Enforce the color of navbar links */
+        .navbar a {
+            color: white !important;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        
+        /* Optional: Add a subtle shadow to the navbar for better visibility */
+        .navbar {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Trusted By, Tailored Needs Section(s) */
+        #trusted-by-and-tailored-needs {
+            background: url('https://ahuraai.com/wp-content/uploads/2024/08/left_side_light_bg.png') no-repeat left top, 
+                        url('https://ahuraai.com/wp-content/uploads/2024/08/right_side_light_bg.png') no-repeat right top;
+            background-size: cover, cover;
+        }
+        
+        #contact-and-experts-section {
+            background: url('images/backgrounds/mid_bg.png') no-repeat center center; 
+            background-size: cover, cover;
+        }
+        
+        #innovative-approach-andleadership-skills-sections {
+            background: url('https://ahuraai.com/wp-content/uploads/2024/08/left_side_light_bg.png') no-repeat left top, 
+                        url('https://ahuraai.com/wp-content/uploads/2024/08/right_side_light_bg.png') no-repeat right top;
+            background-size: cover, cover;
+        }
+        
+        #footer {
+            background: url('https://ahuraai.com/wp-content/uploads/2024/08/bottom_bg.png') no-repeat center center; 
+            background-size: cover, cover;
+        }
+        
+        .gradient-border-tailored {
+            border-radius: 15px; /* To round the corners */
+            position: relative;
+            padding: 5px; /* Space for the border */
+            /* background: linear-gradient(to bottom right, #FF5E62, #FF9966, #FFD194);
+        } */
+        
+        .gradient-border-tailored .card {
+            background: white;
+            border-radius: 15px; /* To round the corners */
+            padding: 1rem;
+            --bs-card-border-color: pink;
+        }
+        
+        .gradient-border-experts {
+            position: relative;
+            display: inline-block;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .gradient-border-experts::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            /* background: linear-gradient(to bottom right, #FF5E62, #FF9966, #FFD194) !important; */
+            /* --bs-card-border-color: pink; */
+            z-index: -1;
+        }
+        
+        .gradient-border-experts img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+        
+        .fixed-img-size {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        /* Expert area */
+        @media (max-width: 768px) {
+            .bryan-text {
+                margin-left: 3%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .bryan-text {
+                margin-left: 3%;
+            }
+        }
+        
+        @media (min-width: 375px) {
+            .bryan-text {
+                margin-left: 5%;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .move-right-mobile {
+                margin-left: 2%;
+            }
+        }
+        
+        @media (min-width: 400px) {
+            .move-right-mobile {
+                margin-left: 2%;
+            }
+        }
+        
+        /* form area */
+        @media (min-width: 992px) {
+            .section-padding {
+                padding-right: 7%; /* Adjust the padding as needed */
+                padding-left: 7%;
+            }
+        }
+        
+        @media (min-width: 400px) {
+            .section-padding {
+                padding-right: 3%; /* Adjust the padding as needed */
+                padding-left: 3%;
+            }
+        }
+        
+        /* Adjust padding for different screen sizes */
+        #trusted-by, #tailored-needs, #contact-and-experts-section {
+            padding: 0 100px;
+        }
+        
+        @media (max-width: 1200px) {
+            #trusted-by, #tailored-needs {
+                padding: 0 50px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            #trusted-by, #tailored-needs {
+                padding: 0 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            #trusted-by, #tailored-needs {
+                padding: 0 10px;
+            }
+        }
+        
+        /* Innovative approach title needs more gap */
+        #innovative-approach h2 {
+            margin-bottom: 2rem;
+        }
+        
+        /* Assess needs closer to the number */
+        #innovative-approach .col-md-5.text-center p {
+            margin-top: 0;
+        }
+        
+        /* Leadership skills section adjustments */
+        #leadership-skills {
+            padding: 0 100px;
+        }
+        
+        #leadership-skills ul li {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+        }
+        
+        /* CTA button should be wider, taller, bolder contrast color */
+        .btn-primary {
+            padding: 1rem 2rem;
+            font-weight: bold;
+            background-color: #ff5e62;
+            border: none;
+            border-radius: 50px;
+        }
+        }
+        
+          /* Mobile-specific styles: targeting smaller screens */
+          @media (max-width: 800px) {
+            #trusted-by {
+                padding: 0 50px !important;
+            }
+            #tailored-needs {
+                padding: 0 50px !important;
+            }
+            #contact {
+                padding: 0 10px !important;
+            }
+            #innovative-approach-image {
+                padding-top: 4%;
+                padding-bottom: 4%;
+                padding-top: 10%;
+            }
+        }
+        
+        @media (min-width: 300px) and (max-width: 700px) {
+            #innovative-approach-image {
+                display: none;
+            }
+        
+            #design-curriculum {
+                padding-top: 50px;
+            }
+        
+            #bryan-talebi-expert-text {
+                width: 60%; 
+                padding: 0 20px !important;
+            }
+        
+            #dekai-expert-text {
+                width: 60%;
+                padding: 0 20px !important;
+            }
+        
+            #leadership-skills-list {
+                width: 100%;
+                padding: 0 1px !important;
+            }
+        }
+        
+        
+            /* @media (min-width: 820px ) {
+                #innovative-approach-image {
+                    padding-top: 2%;
+                }
+            } */
+        /* Add padding to the trusted-by section */
+        #trusted-by {
+            padding: 0 50px;
+        }
+        
+        /* Center content in the leadership-skills section */
+        #leadership-skills .text-center,
+        #leadership-skills-list,
+        #leadership-skills p {
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        
+        /* Reduce padding for smaller screens */
+        @media (max-width: 1200px) {
+            #trusted-by {
+                padding: 0 30px;
+            }
+            #leadership-skills,
+            #success-stories {
+                padding: 0 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            #trusted-by {
+                padding: 0 20px;
+            }
+            #leadership-skills,
+            #success-stories {
+                padding: 0 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            #trusted-by {
+                padding: 0 10px;
+            }
+            #leadership-skills,
+            #success-stories {
+                padding: 0 10px;
+            }
+        }
+        
+        /* Base styles for the cards */
+        .card {
+            transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+            border-radius: 10px;
+        }
+        
+        /* Hover effect for the cards with gradient shadow */
+        .card:hover {
+            box-shadow: 
+                0 4px 8px rgba(255, 94, 98, 0.3),
+                0 6px 12px rgba(255, 153, 102, 0.3),
+                0 8px 16px rgba(255, 209, 148, 0.3); /* Add gradient shadow on hover */
+        }
+        
+        
+        /* Custom CSS for nested dropdowns */
+        .dropdown-submenu {
+            position: relative;
+        }
+        
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -1px;
+        }
+        
+        /* Styling to match navbar dropdowns */
+        .navbar-dark .dropdown-menu {
+            background-color: rgba(0, 0, 0, 0.9);
+            border: none;
+        }
+        
+        .navbar-dark .dropdown-item {
+            color: #ffffff;
+        }
+        
+        .navbar-dark .dropdown-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+        
+        p {
+    font-weight: normal; /* Set text to non-bold */
+}
+
+li { font-weight: normal; }
+
+    /* Add margin to each form field to create space between them */
+        #contact-form .form-control {
+            margin-bottom: 15px;
+        }
+        
+        /* Adjust button styling if needed */
+        #contact-form button {
+            margin-top: 10px;
+}
+
+
+     </style>
+     
+     <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PGBJXGT');</script>
+
+<!-- LeadFeeder Tracking -->
+<script> (function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('3P1w24d20R98mY5n'); </script>
+
+
+<!-- Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-10986366392"></script>
+
+</head>
+<body>
+    <!-- Google: Body tracking script -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGBJXGT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Header -->
+    <header class="container-fluid">
+       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://ahura.ai/">Product</a>
+                </li>
+                <!-- Solutions Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Solutions
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                        <a class="dropdown-item" href="https://ahuraai.com/new-increase-retention/">Employee Retention
+                        </a>
+                        <div class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">AI Tutor</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="https://ahuraai.com/solutions/">Features & Use Cases</a></li>
+                                <li><a class="dropdown-item" href="https://ahuraai.com/solutions/top-uses-for-learners/">Benefits & Learning</a></li>
+                                <li><a class="dropdown-item" href="https://ahuraai.com/solutions/top-uses-for-managers/">Benefits For Supervisors</a></li>
+                            </ul>
+                        </div>
+                        <a class="dropdown-item" href="#">Manager Gen AI Training</a>
+                         <div class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Events On Responsible Tech</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="https://ahuraai.com/solutions/top-uses-for-learners/">Features & Use Cases</a></li>
+                                <li><a class="dropdown-item" href="https://ahuraai.com/solutions/top-uses-for-learners/">Benefits & Learning</a></li>
+                                <li><a class="dropdown-item" href="https://ahuraai.com/solutions/top-uses-for-managers/">Benefits For Supervisors</a></li>
+                                <li><a class="dropdown-item" href="https://info.ahuraai.com/davos2024?_gl=1*1u25wc7*_ga*ODg5Mzk0MTU1LjE3MjU0NzY1MTM.*_ga_9VQ37LC6S9*MTcyNTQ3NjUxMi4xLjAuMTcyNTQ3NjUxMi4wLjAuMA..*_ga_GLS0RMX4P2*MTcyNTQ3NjUxMi4xLjAuMTcyNTQ3NjUxMi42MC4wLjA.*_gcl_au*Mzg5NDA3OTEzLjE3MjU0NzY1MTM.">Davos 2024: The AI & Crypto Lounge</a></li>
+                                <li><a class="dropdown-item" href="https://info.ahuraai.com/legacyguardians?_gl=1*1u25wc7*_ga*ODg5Mzk0MTU1LjE3MjU0NzY1MTM.*_ga_9VQ37LC6S9*MTcyNTQ3NjUxMi4xLjAuMTcyNTQ3NjUxMi4wLjAuMA..*_ga_GLS0RMX4P2*MTcyNTQ3NjUxMi4xLjAuMTcyNTQ3NjUxMi42MC4wLjA.*_gcl_au*Mzg5NDA3OTEzLjE3MjU0NzY1MTM.">Necker Legacy Guardians</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- Thinking Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="thinkingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Thinking
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="thinkingDropdown">
+                        <a class="dropdown-item" href="https://ahuraai.com/success-stories/">Success-stories</a>
+                        <a class="dropdown-item" href="https://ahuraai.com/blog/">Blog</a>
+                        <a class="dropdown-item" href="https://ahuraai.com/blog/how-i-learn/">How We Learn</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://ahuraai.com/company/">Team</a>
+                </li>
+                <!-- Privacy and Data Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="privacyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Privacy and Data
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="privacyDropdown">
+                        <a class="dropdown-item" href="https://ahura.ai/privacy-policy">Privacy Policy</a>
+                        <a class="dropdown-item" href="https://ahura.ai/terms-and-conditions">Terms of Service</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://info.ahuraai.com/product?_gl=1*1ar7ote*_ga*MTIxNzY3MjcwNi4xNzIyOTU0NzMy*_ga_GLS0RMX4P2*MTcyMzQ3NzEwOS42LjEuMTcyMzQ3NzE5NC41MS4wLjA.*_gcl_au*MTc2MTk1MjAzLjE3MjI5NTQxODE.">Ahura 2.0</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <video autoplay muted loop>
+            <source src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/Landing%20page%20stinger%20draft%201.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content d-flex flex-column justify-content-center align-items-center h-100">
+            <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/ahura_logo_top.png" alt="Ahura Logo" class="img-fluid mb-3" style="width: 100px;">
+            <h1 class="mb-5">Future-Proof Your Leadership <br> Get Custom GenAI Manager Training with Ahura</h1>
+            <!-- <p>Get Custom GenAI Manager Training with Ahura</p> -->
+            <button class="btn-lg btn-primary" style="background: linear-gradient(to right, #ff5e62, #ff9966); border-color: yellow; border-radius: 50px;">
+                <a style="text-decoration: none;" href="#contact-and-experts-section">
+                    Let's talk
+                </a>
+            </button>
+        </div>
+    </div>
+
+    <main>
+        <div id="trusted-by-and-tailored-needs">
+            <!-- Trusted By Section -->
+            <section id="trusted-by" class="container-fluid text-center py-5" style="padding: 0 100px;">
+                <h1 class="py-5">Trusted by</h1>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-4 mb-3">
+                        <div class="card shadow-sm h-100 card-fixed-height">
+                            <div class="card-body d-flex align-items-center justify-content-center">
+                                <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/salesforce_logo.png" alt="Salesforce Logo" class="img-fluid logo-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-3">
+                        <div class="card shadow-sm h-100 card-fixed-height">
+                            <div class="card-body d-flex align-items-center justify-content-center">
+                                <img src="https://ahuraai.com/wp-content/uploads/2024/08/wayfinder-logo-green.png" alt="Wayfinder Logo" class="img-fluid logo-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-3">
+                        <div class="card shadow-sm h-100 card-fixed-height">
+                            <div class="card-body d-flex align-items-center justify-content-center">
+                                <img src="https://ahuraai.com/wp-content/uploads/2024/08/SJSU-logo-bldg.jpg" alt="San Jose State University Logo" class="img-fluid logo-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-3">
+                        <div class="card shadow-sm h-100 card-fixed-height">
+                            <div class="card-body d-flex align-items-center justify-content-center">
+                                <img src="https://ahuraai.com/wp-content/uploads/2024/08/alchemist_logo.png" alt="Alchemist Accelerator Logo" class="img-fluid logo-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-3">
+                        <div class="card shadow-sm h-100 card-fixed-height">
+                            <div class="card-body d-flex align-items-center justify-content-center">
+                                <img src="https://ahuraai.com/wp-content/uploads/2024/08/cbba_logo.png" alt="Carlos Beltran Baseball Academy Logo" class="img-fluid logo-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Tailored Needs Section -->
+            <section id="tailored-needs" class="container-fluid text-center py-5" style="padding: 0 100px;">
+                <h2 class="py-5">Tailored for Your Needs</h2>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-4 mb-3 d-flex align-items-stretch">
+                        <div class="card shadow-sm h-100 gradient-border-tailored">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Salesforce Success</h3>
+                                <p class="card-text">Our AI training has empowered Salesforce's sales team to work smarter and close more deals.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-3 d-flex align-items-stretch">
+                        <div class="card shadow-sm h-100 gradient-border-tailored">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Wayfinder Transformation</h3>
+                                <p class="card-text">School district leaders have leveraged our AI insights to improve student outcomes with Wayfinder.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-3 d-flex align-items-stretch">
+                        <div class="card shadow-sm h-100 gradient-border-tailored">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">World Economic Forum Impact</h3>
+                                <p class="card-text">Business executives at the World Economic Forum in Davos have gained a competitive edge through our innovative AI solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div id="contact-and-experts-section">
+            <!-- Contact Section -->
+            <section id="contact" class="container-fluid py-5 px-4 mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-6 mb-3 section-padding" style="padding: 0 50px;">
+                        <h2 class="text-center">Start Customizing Your AI Training Today</h2>
+                        <div class="form-left mt-4 mb-5 mx-auto">
+                            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                            <script>
+                              hbspt.forms.create({
+                                region: "na1",
+                                portalId: "21472314",
+                                formId: "8ae57044-a5ac-4dfd-a9ec-d22e1efac7b2"
+                              });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 mb-3 section-padding" style="padding:0 50px;">
+                        <div class="personalized-learning">
+                            <h2>Personalized Learning for Every Team Member</h2>
+                            <p>Ahura AI’s adaptive learning program tailors the GenAI training experience to each individual, ensuring they gain skills most critical to their role.</p>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <strong>1-day executive masterclass:</strong> Equip your leaders with a foundational understanding of GenAI and its strategic applications.
+                                </li>
+                                <li>
+                                    <strong>4-week manager cohort intensive:</strong> Deepen your managers' GenAI expertise through collaborative learning and real-world scenario application.
+                                </li>
+                                <li>
+                                    <strong>Enterprise wide async training at scale:</strong> Use our asynchronous learning platform to scale up GenAI knowledge across your workforce.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experts Section -->
+                <section id="experts" class="container-fluid mt-5">
+                    <h1 class="text-center mb-5">Our Experts</h1>
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-8 d-flex align-items-center justify-content-center">
+                            <div class="expert-img-wrapper mt-2" style="width: 40%;">
+                                <div class="gradient-border-experts">
+                                    <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/bryan_talebi.png" alt="Bryan Talebi" class="img-fluid rounded-circle">
+                                </div>
+                            </div>
+                            <div id="bryan-talebi-expert-text" class="text-start bryan-text move-right-mobile" style="width: 60%; padding-left: 25%;">
+                                <h3>Bryan Talebi</h3>
+                                <p>Chief Executive Officer | Co-founder</p>
+                                <p>NASA at Age 16, <br>Sales lead for 2 Unicorns</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-8 d-flex align-items-center justify-content-center">
+                            <div class="text-end" style="width: 60%;">
+                                <h3>Alex Tsado</h3>
+                                <p>Chief Operations & Product Officer | Co-founder</p>
+                                <p>2024 Top 100 Futurists of African Descent <br> Led Nvidia's first Cloud AI team<br> 2020 Keynote speaker at the UN</p>
+                            </div>
+                            <div class="expert-img-wrapper ms-4" style="width: 40%;">
+                                <div class="gradient-border">
+                                    <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/alex_tsado.png" alt="Alex Tsado" class="img-fluid rounded-circle">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-8 d-flex align-items-center justify-content-center">
+                            <div class="expert-img-wrapper me-4" style="width: 40%;">
+                                <div class="gradient-border">
+                                    <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/de_kai.png" alt="De Kai" class="img-fluid rounded-circle">
+                                </div>
+                            </div>
+                            <div id="dekai-expert-text" class="text-start move-right-mobile" style="width: 60%; padding-left: 25%;">
+                                <h3>De Kai</h3>
+                                <p>Chief Technology Officer</p>
+                                <p>Top 20 Global AI expert <br>Built pioneer models behind Google Translate<br> Taught AI PhDs for 35 years</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center mt-4 mb-5">
+                        <div class="col-md-8 d-flex align-items-center justify-content-center">
+                            <div class="text-end" style="width: 60%;">
+                                <h3>Maria Laws</h3>
+                                <p>Vice President of Learning & Development</p>
+                                <p>Outstanding Leadership in Education Award 2023 <br>International Educator of Merit 2021<br> Former UC Berkeley CalTeach faculty</p>
+                            </div>
+                            <div class="expert-img-wrapper ms-4" style="width: 40%;">
+                                <div class="gradient-border">
+                                    <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/maria_laws.png" alt="Maria Laws" class="img-fluid rounded-circle">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+            
+        <div id="innovative-approach-andleadership-skills-sections">
+            <!-- Innovative Approach Section -->
+            <section id="innovative-approach" class="container-fluid py-5" style="padding: 0 50px;">
+                <h1 class="text-center mb-3">Our Innovative Approach</h1>
+                <div class="row justify-content-center mt-5 pt-3">
+                    <div class="col-md-5 text-center">
+                        <h3>Assess Needs</h3>
+                        <p>We deeply understand your specific challenges and goals to craft a tailored AI solution.</p>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <h3>Deliver Results</h3>
+                        <p>Our cutting-edge AI training empowers your team to unlock new levels of efficiency and innovation.</p>
+                    </div>
+                </div>
+                <div id="innovative-approach-image" class="row justify-content-center" style="margin-top: -80px;">
+                    <div class="col-12 text-center">
+                        <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/approach.png" alt="Line Separator" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row justify-content-center" style="margin-top: -50px;">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4 text-center">
+                        <h3 id="design-curriculum">Design Curriculum</h3>
+                        <p>Our expert team designs a bespoke training program to upskill your workforce.</p>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </section>
+
+            <!-- Leadership Skills Section -->
+            <section id="leadership-skills" class="container-fluid py-5" style="padding: 0 50px;">
+                <div class="text-center">
+                    <h1 class="mb-2">Leadership Skills for the Digital Age</h1>
+                    <p class="mt-5">Ahura's training program gives your team the skills and confidence to succeed in the GenAI world. <br>This personalized, data-driven guide goes beyond basic AI skills. We focus on building core competencies critical for today’s leaders:</p>
+                </div>
+                <ul id="leadership-skills-list" class="list-unstyled px-5 mt-5 mx-auto" style="max-width: 800px;">
+                    <li class="my-3 px-3"><img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/dot.png" alt="dot"> <strong>Discovery & Analysis:</strong> Our experts assess your current leadership landscape and identify GenAI integration opportunities.</li>
+                    <li class="my-3 px-3"><img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/dot.png" alt="dot"> <strong>Strategic Innovation:</strong> Leverage GenAI to identify growth opportunities and disrupt your industry.</li>
+                    <li class="my-3 px-3"><img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/dot.png" alt="dot"> <strong>Virtual Team Leadership:</strong> Motivate and empower dispersed teams for peak performance.</li>
+                    <li class="my-3 px-3"><img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/dot.png" alt="dot"> <strong>Change Management:</strong> Foster a culture of digital adoption and navigate complex transitions.</li>
+                    <li class="my-3 px-3"><img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/dot.png" alt="dot"> <strong>Data-Driven Decision Making:</strong> Harness GenAI insights to make informed strategic choices.</li>
+                    <li class="my-3 px-3"><img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/dot.png" alt="dot"> <strong>Bespoke Department Use Cases:</strong> Explore tailored applications of GenAI across your organization, maximizing the return on investment.</li>
+                </ul>
+                <p class="text-center"><strong>Create</strong> your team's personalized leadership plan with Ahura today and <strong>unlock</strong> their full potential for the digital future.</p>
+            </section>
+            </div>
+            <!-- Success Stories Section -->
+            <section id="success-stories" class="container-fluid py-5 px-5" style="padding:0 100px;">
+                <h2 class="text-center mb-5">Success Stories</h2>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
+                        <div class="card" style="width: 100%; border-radius: 10px;">
+                            <img src="https://ahuraai.com/wp-content/uploads/2024/08/nevada_partners.png" alt="Nevada Partners Logo" class="card-img-top img-fluid" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Nevada Partners</h5>
+                                <p class="card-text">How Nevada Partners reimagined online education for workforce development.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
+                        <div class="card" style="width: 100%; border-radius: 10px;">
+                            <img src="https://ahuraai.com/wp-content/uploads/2024/08/spurt-1.png" alt="Spurt Logo" class="card-img-top img-fluid" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Spurt!</h5>
+                                <p class="card-text">Building an even more impressive learning culture at Spurt!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
+                        <div class="card" style="width: 100%; border-radius: 10px;">
+                            <img src="https://ahuraai.com/wp-content/uploads/2024/08/SJSU-logo-bldg.jpg" alt="SJSU Logo" class="card-img-top img-fluid" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">SJSU</h5>
+                                <p class="card-text">SJSU plays a significant role in Silicon Valley, contributing to the local tech industry and economy through its programs and partnerships.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 d-flex align-items-stretch">
+                        <div class="card" style="width: 100%; border-radius: 10px;">
+                            <img src="https://ahuraai.com/wp-content/uploads/2024/08/wayfinder-logo-green.png" alt="Wayfinder Logo" class="card-img-top img-fluid" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Wayfinder</h5>
+                                <p class="card-text">Supporting K12 education leaders to create an AI strategy for their school communities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>    
+    </main>
+
+    <footer id="footer" class="container-fluid py-4 bg-light">
+        <div class="success-call-to-action text-center mt-4">
+            <h3>Start Customizing Your AI Training Today</h3>
+            <button class="mt-4 btn-lg btn-primary" style="background: linear-gradient(to right, #ff5e62, #ff9966); border-color: yellow; border-radius: 50px;">
+                <a href="#contact-and-experts-section" style="text-decoration: none !important;">
+                    Fill Out The Form
+                </a>
+            </button>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/ahura_logo_bottom.png" alt="Ahura Logo" class="img-fluid">
+            </div>
+          <div class="col-md-4 text-center">
+    <p class="mb-0" style="color: yellow; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Boost your learning power. Meet your future.</p>
+</div>
+
+            <div class="col-md-4 text-center text-md-end mt-2 mt-md-0">
+                <a href="https://www.facebook.com/ahuraai/"><img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/fb.png" alt="Facebook" class="img-fluid mx-1" style="width: 30px;"></a>
+                <a href="https://twitter.com/AhuraAi"><img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/twitter.png" alt="Twitter" class="img-fluid mx-1" style="width: 30px;"></a>
+                <a href="https://www.linkedin.com/company/ahuraai/"><img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/in.png" alt="LinkedIn" class="img-fluid mx-1" style="width: 30px;"></a>
+                <!--<a href="#"><img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/IG.png" alt="Instagram" class="img-fluid mx-1" style="width: 30px;"></a>-->
+                <!--<a href="#"><img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/yt.png" alt="YouTube" class="img-fluid mx-1" style="width: 30px;"></a>-->
+            </div>
+        </div>
+    </footer>
+    
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- Popper.js, then Bootstrap JS for Bootstrap 4.5 -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- jQuery Script to Prevent Dropdown from Closing on Click -->
+<script>
+    $(document).ready(function () {
+        // Prevent dropdown from closing when clicking on items inside it
+        $('.dropdown-menu').on('click', function (e) {
+            e.stopPropagation();
+        });
+    });
+</script>
+
+<!-- Enable smooth scrolling on anchor link clicks -->
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+<!-- Lazy Loading images for page load optimization -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const lazyLoadInstance = new LazyLoad({
+            elements_selector: ".lazy"
+        });
+    });
+</script>
+
+<!-- Script for drop down menu operability -->
+<script>
+    $(document).ready(function () {
+        // Add slideDown animation to Bootstrap dropdown when expanding.
+        $('.dropdown').on('show.bs.dropdown', function () {
+            $(this).find('.dropdown-menu').first().stop(true, true).slideDown(200);
+        });
+
+        // Add slideUp animation to Bootstrap dropdown when collapsing.
+        $('.dropdown').on('hide.bs.dropdown', function () {
+            $(this).find('.dropdown-menu').first().stop(true, true).slideUp(200);
+        });
+
+        // Submenu handling
+        $('.dropdown-submenu a.dropdown-toggle').on("click", function(e) {
+            var $subMenu = $(this).next(".dropdown-menu");
+            if (!$subMenu.hasClass('show')) {
+                $subMenu.parents('.dropdown-menu').first().find('.show').removeClass("show");
+            }
+            $subMenu.toggleClass('show');
+            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+                $('.dropdown-submenu .show').removeClass("show");
+            });
+            return false;
+        });
+    });
+</script>
+
+<!-- Tracking codes -->
+<!-- Google Tag Manager -->
+<iframe allow="join-ad-interest-group" data-tagging-id="G-GLS0RMX4P2" data-load-time="1723557527106" height="0" width="0" src="https://td.doubleclick.net/td/ga/rul?tid=G-GLS0RMX4P2&amp;gacid=1217672706.1722954732&amp;gtm=45je4880v879701635z8844799991za200zb844799991&amp;dma=0&amp;gcd=13l3l3l3l1&amp;npa=0&amp;pscdl=noapi&amp;aip=1&amp;fledge=1&amp;frm=0&amp;tag_exp=0&amp;z=951862986" data-lf-form-tracking-inspected-3p1w24d20r98my5n="true" data-lf-vimeo-playback-inspected-3p1w24d20r98my5n="true" data-lf-yt-playback-inspected-3p1w24d20r98my5n="true" style="display: none; visibility: hidden;">
+</iframe>
+<!-- Google Ads Remarketing -->
+<iframe allow="join-ad-interest-group" data-tagging-id="AW-10986366392" data-load-time="1723557523188" height="0" width="0" src="https://td.doubleclick.net/td/rul/10986366392?random=1723557523181&amp;cv=11&amp;fst=1723557523181&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be4880za200zb892237101&amp;gcd=13l3l3l3l1&amp;dma=0&amp;tag_exp=0&amp;u_w=2560&amp;u_h=1440&amp;url=https%3A%2F%2Fahuraai.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Adaptive%20Learning%20Platform%20-%20Ahura%20AI&amp;did=dZTNiMT%2CdZTQ1Zm&amp;gdid=dZTNiMT.dZTQ1Zm&amp;npa=0&amp;pscdl=noapi&amp;auid=176195203.1722954181&amp;uaa=arm&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B127.0.6533.73%7CChromium%3B127.0.6533.73&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=14.5.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config" data-lf-form-tracking-inspected-3p1w24d20r98my5n="true" data-lf-vimeo-playback-inspected-3p1w24d20r98my5n="true" data-lf-yt-playback-inspected-3p1w24d20r98my5n="true" style="display: none; visibility: hidden;"></iframe>
+<!-- Form Tracking -->
+<script type="text/javascript" id="">
+    document.addEventListener("wpcf7mailsent", function(a) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            event: "cf7submission",
+            formId: a.detail.contactFormId,
+            response: a.detail.inputs
+        });
+    });
+</script>
+
+<!-- Google Ads Remarketing and Conversion Tracking -->
+<script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/10986366392/?random=1723557523181&amp;cv=11&amp;fst=1723557523181&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be4880za200zb892237101&amp;gcd=13l3l3l3l1&amp;dma=0&amp;tag_exp=0&amp;u_w=2560&amp;u_h=1440&amp;url=https%3A%2F%2Fahuraai.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Adaptive%20Learning%20Platform%20-%20Ahura%20AI&amp;did=dZTNiMT%2CdZTQ1Zm&amp;gdid=dZTNiMT.dZTQ1Zm&amp;npa=0&amp;pscdl=noapi&amp;auid=176195203.1722954181&amp;uaa=arm&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B127.0.6533.73%7CChromium%3B127.0.6533.73&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=14.5.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
+
+<script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/16541462698/?random=1723557523204&amp;cv=11&amp;fst=1723557523204&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be4880za200zb892237101&amp;gcd=13l3l3l3l1&amp;dma=0&amp;tag_exp=0&amp;u_w=2560&amp;u_h=1440&amp;url=https%3A%2F%2Fahuraai.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Adaptive%20Learning%20Platform%20-%20Ahura%20AI&amp;did=dZTNiMT%2CdZTQ1Zm&amp;gdid=dZTNiMT.dZTQ1Zm&amp;npa=0&amp;pscdl=noapi&amp;auid=176195203.1722954181&amp;uaa=arm&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B127.0.6533.73%7CChromium%3B127.0.6533.73&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=14.5.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
+
+
+</body>
+</html>
