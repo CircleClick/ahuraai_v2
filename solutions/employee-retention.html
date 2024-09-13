@@ -6,6 +6,7 @@
     <title>Ahura</title>
     <!-- Site using Bootsrap 4.5. boostrap 5 will break the page -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
     <!-- <link rel="stylesheet" href="style.css"> -->
      <style>
         /* Anchor tags default to white */
@@ -38,11 +39,10 @@
             overflow: hidden;
             color: white;
             text-align: center;
-            background: url('https://ahuraai.com/wp-content/uploads/2024/08/top_bg.png') no-repeat center center;
+            background: url('https://ahuraai.com/wp-content/uploads/2024/02/HomepageHeroImage.png') no-repeat center center;
             background-size: cover;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
-
         .hero h1 {
             color: white; /* Set text color to white */
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add a shadow to the text */
@@ -50,7 +50,6 @@
             font-size: 2.5rem; /* Optional: adjust the font size */
             text-align: center; /* Center-align the text */
         }
-        
         .hero video {
             position: absolute;
             top: 0;
@@ -408,6 +407,40 @@ li { font-weight: normal; }
             margin-top: 10px;
 }
 
+
+.hero .content {
+    z-index: 2;
+    color: white;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero-title .highlight {
+    color: #ff3e64; /* match with the pink/red tone from the screenshot */
+}
+
+.hero-button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
 
      </style>
      
