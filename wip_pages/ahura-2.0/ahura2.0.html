@@ -1,248 +1,461 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Product</title>
-    <meta name="description" content="With the latest enhancements to our AI-driven learning platform, Ahura is excited to present a product that reaches new heights in empowering learners for success in the workplace of the future.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Include external CSS and JavaScript files here -->
-    <style>
-        /* Responsive styles */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-        /* Navigation styles */
-        .navbar {
-            background-color: rgba(0, 0, 0, 0.8);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar a {
-            color: #FFF;
-            text-decoration: none;
-            padding: 8px 16px;
-            font-size: 1rem;
-        }
-
-        .navbar a:hover {
-            background-color: rgba(0, 0, 0, 0.9);
-            border-radius: 4px;
-        }
-
-        .navbar .logo img {
-            height: 40px;
-        }
-
-        /* Hero section */
-        .hero {
-            background: linear-gradient(rgb(161, 161, 161), white, white);
-            padding-top: 60px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 2rem;
-            margin: 20px;
-            font-weight: lighter;
-            color: #1F1F1F;
-        }
-
-        .hero img {
-            max-width: 90%;
-            height: auto;
-        }
-
-        /* Features section */
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .feature {
-            border: 1px solid #1F1F1F;
-            margin: 10px;
-            padding: 20px;
-            width: 90%;
-            max-width: 800px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .feature img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .feature p {
-            text-align: left;
-            font-size: 1rem;
-            color: #1F1F1F;
-        }
-
-        /* Video section */
-        .video-section {
-            margin: 40px 0;
-            text-align: center;
-        }
-
-        .video-section h2 {
-            font-size: 2rem;
-            color: #1F1F1F;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        /* Form section */
-        .form-section {
-            background-color: #F5F5F5;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .form-section h2 {
-            font-size: 2rem;
-            color: #1F1F1F;
-            margin-bottom: 20px;
-        }
-
-        /* Footer styles */
-        .footer {
-            background-color: #A5BCBD;
-            padding: 20px;
-            text-align: center;
-            color: #1D1D1F;
-        }
-
-        .footer a {
-            color: #1D1D1F;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .navbar a {
-                font-size: 0.9rem;
-            }
-
-            .hero h1 {
-                font-size: 1.5rem;
-            }
-
-            .feature {
-                width: 100%;
-            }
-
-            .feature img {
-                max-height: 200px;
-            }
-
-            .video-section h2 {
-                font-size: 1.5rem;
-            }
-
-            .form-section h2 {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <a href="#" class="logo"><img src="images/ahura-product.png" alt="Ahura AI"></a>
-        <div class="nav-links">
-            <a href="#">Solutions</a>
-            <a href="#">Privacy and Data</a>
-            <a href="#">Thinking</a>
-            <a href="#">Product</a>
-            <a href="#">Team</a>
-        </div>
-        <a href="#" class="cta-button">Get A Demo</a>
-    </nav>
+    <!-- Navbar -->
+<header class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:black;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!-- Product Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://ahura.ai/">Product</a>
+                    </li>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Introducing Ahura AI 2.0</h1>
-        <img src="images/ahura-product.png" alt="Ahura AI 2.0">
-    </section>
+                    <!-- Solutions Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Solutions
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                            <a class="dropdown-item" href="https://ahuraai.com/new-increase-retention/">Employee Retention</a>
+                            <div class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">AI Tutor</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="https://ahuraai.com/solutions/">Features &amp; Use Cases</a></li>
+                                    <li><a class="dropdown-item" href="https://ahuraai.com/solutions/top-uses-for-learners/">Benefits &amp; Learning</a></li>
+                                    <li><a class="dropdown-item" href="https://ahuraai.com/solutions/top-uses-for-managers/">Benefits For Supervisors</a></li>
+                                </ul>
+                            </div>
+                            <a class="dropdown-item" href="#">Manager Gen AI Training</a>
+                            <div class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Events On Responsible Tech</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="https://ahuraai.com/solutions/top-uses-for-learners/">Features &amp; Use Cases</a></li>
+                                    <li><a class="dropdown-item" href="https://ahuraai.com/solutions/top-uses-for-learners/">Benefits &amp; Learning</a></li>
+                                    <li><a class="dropdown-item" href="https://ahuraai.com/solutions/top-uses-for-managers/">Benefits For Supervisors</a></li>
+                                    <li><a class="dropdown-item" href="https://info.ahuraai.com/davos2024">Davos 2024: The AI &amp; Crypto Lounge</a></li>
+                                    <li><a class="dropdown-item" href="https://info.ahuraai.com/legacyguardians">Necker Legacy Guardians</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="feature">
-            <img src="images/feature1.png" alt="Early Learning Interventions">
-            <p><strong>Early Learning Interventions.</strong><br>
-            Teachers no longer need to wait for exam results! Ahura AI 2.0 identifies at-risk students from day one, allowing instructors and coaches to proactively offer targeted support and prevent knowledge gaps from widening.</p>
-        </div>
-        <div class="feature">
-            <img src="images/feature2.png" alt="Real-time AI Learning Coach">
-            <p><strong>Real-time AI Learning Coach.</strong><br>
-            Sensors and real-time notifications to keep your attention glued, transforming learning from a chore to a captivating adventure.</p>
-        </div>
-        <div class="feature">
-            <img src="images/feature3.png" alt="Make Learning Fun & Accessible">
-            <p><strong>Make Learning Fun & Accessible.</strong><br>
-            Supercharge any online content, from dry textbooks to engaging videos. Our latest release will adapt to your preferred learning style whether it is auditory, visual, kinesthetic, and everything in between.</p>
-        </div>
-    </section>
+                    <!-- Thinking Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="thinkingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Thinking
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="thinkingDropdown">
+                            <a class="dropdown-item" href="https://ahuraai.com/success-stories/">Success Stories</a>
+                            <a class="dropdown-item" href="https://ahuraai.com/blog/">Blog</a>
+                            <a class="dropdown-item" href="https://ahuraai.com/blog/how-i-learn/">How We Learn</a>
+                        </div>
+                    </li>
 
-    <!-- Video Section -->
-    <section class="video-section">
-        <h2>Take a Journey to an Empowered Tomorrow</h2>
-        <div class="video-container">
-            <iframe src="https://player.vimeo.com/video/899504821?h=5a1cf3ba04&autoplay=1&loop=1&muted=1&byline=false&controls=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
-        </div>
-    </section>
+                    <!-- Team Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://ahuraai.com/company/">Team</a>
+                    </li>
 
-    <!-- Form Section -->
-    <section class="form-section">
-        <h2>Sign up for our 2.0 beta to discover what we can do for you.</h2>
-        <!-- Embed your form here -->
-        <div id="hubspotFormContainer">
-            <base href="https://info.ahuraai.com/product?_gl=1*p0t8jg*_ga*MTIxNzY3MjcwNi4xNzIyOTU0NzMy*_ga_9VQ37LC6S9*MTcyNjIxODQ3NS4xMS4xLjE3MjYyMjAzMzcuMC4wLjA.*_gcl_au*MTc2MTk1MjAzLjE3MjI5NTQxODEuMTA4NDY3NDIwNC4xNzIzNTU5NzQ1LjE3MjM1NTk3NDQ.*_ga_GLS0RMX4P2*MTcyNjIxODQ3NS43MC4xLjE3MjYyMjAzMzcuNTcuMC4w" target="_parent">
-            <!-- Form code goes here -->
-        </div>
-    </section>
+                    <!-- Privacy and Data Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="privacyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Privacy and Data
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="privacyDropdown">
+                            <a class="dropdown-item" href="https://ahura.ai/privacy-policy">Privacy Policy</a>
+                            <a class="dropdown-item" href="https://ahura.ai/terms-and-conditions">Terms of Service</a>
+                        </div>
+                    </li>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p>© 2023 AHURA. All Rights Reserved.</p>
-            <div class="social-links">
-                <a href="https://www.facebook.com/ahuraai/" target="_blank">Facebook</a> |
-                <a href="https://twitter.com/AhuraAi" target="_blank">Twitter</a> |
-                <a href="https://www.linkedin.com/company/ahura-a-i/about/" target="_blank">LinkedIn</a>
+                    <!-- Ahura 2.0 Link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://info.ahuraai.com/product">Ahura 2.0</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </footer>
+    </nav>
+</header>
+
+
+
+    <section class="hero py-5 mt-5 pt-5">
+        <div class="container">
+          <!-- First Row: Text and Button in one line -->
+          <div class="row align-items-center justify-content-between mt-3 mb-4">
+            <div class="col-md-8 mb-3 mb-md-0">
+              <h3 class="">AI-enhanced workforce education at scale.</h3>
+            </div>
+            <div class="col-md-4 d-flex justify-content-md-end justify-content-center flex-md-row flex-column">
+              <button style="padding-left: -10px !important;" class="btn demo-btn me-md-3 mb-2 mb-md-0">Get a Demo</button>
+            </div>
+          </div>
+          
+          <style>
+            .demo-btn {
+              border: 2px solid #000;
+              border-radius: 50px;
+              background-color: transparent;
+              color: #000;
+              padding: 10px 20px;
+              /* margin-left: -90px; */
+              font-weight: bold;
+            }
+          
+            @media (max-width: 768px) {
+              .demo-btn {
+                margin-top: 10px;
+              }
+            }
+          </style>
+          
+          <!-- Second Row: Introducing Ahura AI 2.0 -->
+          <div class="row mt-4">
+            <div class="col-12 text-center">
+              <h1 style="font-size: 40px;  font-weight: 900;">Introducing Ahura AI 2.0</h1>
+            </div>
+          </div>
+          
+          <!-- Image -->
+          <div class="mt-4 text-center">
+            <img src="../../assets/images/ahura-product.png" alt="Ahura AI 2.0" class="img-fluid">
+          </div>
+        </div>
+      </section>
+      
+      <style>
+        .hero {
+          background: linear-gradient(to right, #f1c40f, #e67e22); /* Example gradient background */
+          padding: 50px 0;
+        }
+      
+        .demo-btn {
+          border: 2px solid #000; /* Black border */
+          border-radius: 50px; /* Pill shape */
+          background-color: transparent; /* Transparent background */
+          color: #000; /* Text color */
+          padding: 10px 30px; /* Padding for the pill shape */
+          font-size: 1rem; /* Adjust text size */
+          font-weight: bold;
+        }
+      
+        .fs-4 {
+          font-size: 1.5rem; /* Adjust the font size for the text */
+          font-weight: 400; /* Ensure the text isn't bold */
+        }
+      
+        /* Ensure proper alignment and responsiveness */
+        @media (max-width: 768px) {
+          .row {
+            text-align: center;
+          }
+      
+          .col-md-4 {
+            text-align: center;
+            margin-top: 10px;
+          }
+        }
+      </style>
+      
+<!-- Features Section -->
+<section class="features py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <!-- Feature 1 (Text) -->
+        <div class="col-md-6">
+          <h3 class="fw-bold">Early Learning Interventions</h3>
+          <p>Teachers no longer need to wait for exam results! Ahura AI 2.0 identifies at-risk students from day one, allowing instructors and coaches to proactively offer targeted support and prevent knowledge gaps from widening.</p>
+        </div>
+  
+        <!-- Feature 2 (Image) -->
+        <div class="col-md-6 text-center">
+          <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/raw_assets/public/staging-react/images/ProductGrid1.png" alt="Blockchain 101" class="img-fluid" style="max-height: 250px;">
+        </div>
+  
+        <!-- Feature 3 (Image) -->
+        <div class="col-md-6 text-center">
+          <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/raw_assets/public/staging-react/images/Group%2010378.png" alt="Emotion Stats" class="img-fluid" style="max-height: 250px;">
+        </div>
+  
+        <!-- Feature 4 (Text) -->
+        <div class="col-md-6">
+          <h3 class="fw-bold">Real-time AI Learning Coach</h3>
+          <p>Ahura AI 2.0 identifies at-risk students from day one, allowing instructors and coaches to proactively offer targeted support and prevent knowledge gaps from widening.</p>
+        </div>
+  
+        <!-- Feature 5 (Text) -->
+        <div class="col-md-6">
+          <h3 class="fw-bold">Make Learning Fun & Accessible</h3>
+          <p>Sensors and real-time notifications keep your attention glued, transforming learning from a chore to a captivating adventure.</p>
+        </div>
+  
+        <!-- Feature 6 (Image) -->
+        <div class="col-md-6 text-center">
+          <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/raw_assets/public/staging-react/images/Group%2010380.png" alt="Crypto Knowledge" class="img-fluid" style="max-height: 250px;">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  
+
+
+
+
+
+
+   <!-- Video Section -->
+<section class="video-section py-5 text-center">
+    <div class="container">
+      <!-- Heading with gradient effect -->
+      <h2 class="display-4">
+        Take a Journey to an <br>
+        <span class="text-gradient">Empowered <br>Tomorrow</span>
+      </h2>
+      
+      <!-- Video Embed -->
+      <div class="video-container mt-4">
+        <iframe 
+          src="https://player.vimeo.com/video/899504821?h=5a1cf3ba04&autoplay=1&loop=1&muted=1&byline=false&controls=0" 
+          frameborder="0" 
+          allow="autoplay; fullscreen; picture-in-picture" 
+          allowfullscreen
+          style="width: 100%; height: 400px;">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Custom CSS for gradient text -->
+  <style>
+    .text-gradient {
+      background: linear-gradient(90deg, #e841c2, #ff7b22);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 ratio */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      background-color: #f8f9fa; /* Light gray background */
+    }
+  
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
+  
+    @media (max-width: 768px) {
+      .video-container iframe {
+        height: 250px;
+      }
+      .display-4 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+  
+
+    <!-- Form Section -->
+<section class="form-section py-5">
+    <div class="container d-flex justify-content-center">
+      <div class="col-md-8">
+        <!-- Gradient Text Heading -->
+        <h2 class="display-5 fw-bold text-start">
+          Sign up for our 2.0 beta to <br>
+          <span class="text-gradient">discover what we can do for you.</span>
+        </h2>
+  
+        <!-- Form Fields -->
+        <form class="mt-4">
+          <div class="row g-3">
+            <!-- Email -->
+            <div class="col-12">
+              <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
+              <input type="email" class="form-control form-control-lg rounded-pill" id="email" required>
+            </div>
+  
+            <!-- First Name -->
+            <div class="col-12">
+              <label for="firstName" class="form-label">First Name<span class="text-danger">*</span></label>
+              <input type="text" class="form-control form-control-lg rounded-pill" id="firstName" required>
+            </div>
+  
+            <!-- Last Name -->
+            <div class="col-12">
+              <label for="lastName" class="form-label">Last Name<span class="text-danger">*</span></label>
+              <input type="text" class="form-control form-control-lg rounded-pill" id="lastName" required>
+            </div>
+  
+            <!-- Company Name -->
+            <div class="col-12">
+              <label for="companyName" class="form-label">Company Name<span class="text-danger">*</span></label>
+              <input type="text" class="form-control form-control-lg rounded-pill" id="companyName" required>
+            </div>
+          </div>
+  
+          <!-- Submit Button -->
+          <div class="row mt-4">
+            <div class="col-12">
+              <button type="submit" class="btn btn-dark btn-lg w-100 rounded-pill">Sign up for 2.0 beta</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Gradient Text and Styling -->
+  <style>
+    .text-gradient {
+      background: linear-gradient(90deg, #e841c2, #ff7b22, #b1ff3d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  
+    .form-label {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  
+    .form-control {
+      background-color: #f5f7fa;
+      border: 1px solid #d8dee2;
+    }
+  
+    .btn-dark {
+      background-color: #000;
+      font-weight: bold;
+    }
+    
+    .rounded-pill {
+      border-radius: 50px;
+    }
+  
+    .text-start {
+      text-align: left !important;
+    }
+  
+    /* Media query for mobile responsiveness */
+    @media (max-width: 768px) {
+      .form-section h2 {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Footer -->
+<footer class="py-5" style="background-color: #0b0d20; color: #ffffff;">
+    <div class="container">
+        <div class="row">
+            <!-- Logo and Contact Info -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="https://via.placeholder.com/150x50" alt="Ahura Logo" class="mb-3">
+                <p>2000 Winter Wind Street, Las Vegas, NV 89134, United States</p>
+                <p>+01 949-322-4716</p>
+            </div>
+
+            <!-- Useful Links -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5>Useful Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" style="color: #ffffff; text-decoration: none;">Home</a></li>
+                    <li><a href="#" style="color: #ffffff; text-decoration: none;">Solutions</a></li>
+                    <ul class="list-unstyled ms-3">
+                        <li><a href="#" style="color: #ffffff; text-decoration: none;">Top Uses for Learners</a></li>
+                    </ul>
+                    <li><a href="#" style="color: #ffffff; text-decoration: none;">Company</a></li>
+                    <li><a href="#" style="color: #ffffff; text-decoration: none;">Thinking</a></li>
+                    <li><a href="#" style="color: #ffffff; text-decoration: none;">Get in Touch</a></li>
+                    <li><a href="#" style="color: #ffffff; text-decoration: none;">Privacy Policy</a></li>
+                    <li><a href="#" style="color: #ffffff; text-decoration: none;">Terms of Use</a></li>
+                </ul>
+            </div>
+
+            <!-- Latest News -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <h5>Latest News</h5>
+                <div class="mb-3">
+                    <small>September 5, 2024</small>
+                    <p><a href="#" style="color: #ffffff; text-decoration: none;">Ahura AI: Where Personalized Learning Meets Scalable Workforce Development</a></p>
+                </div>
+                <div class="mb-3">
+                    <small>September 4, 2024</small>
+                    <p><a href="#" style="color: #ffffff; text-decoration: none;">Future Of Humanity Summit</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <p class="mb-0">© 2022 AHURA, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    $(document).ready(function () {
+        // Add slideDown animation to Bootstrap dropdown when expanding.
+        $('.dropdown').on('show.bs.dropdown', function () {
+            $(this).find('.dropdown-menu').first().stop(true, true).slideDown(200);
+        });
+
+        // Add slideUp animation to Bootstrap dropdown when collapsing.
+        $('.dropdown').on('hide.bs.dropdown', function () {
+            $(this).find('.dropdown-menu').first().stop(true, true).slideUp(200);
+        });
+
+        // Submenu handling
+        $('.dropdown-submenu a.dropdown-toggle').on("click", function(e) {
+            var $subMenu = $(this).next(".dropdown-menu");
+            if (!$subMenu.hasClass('show')) {
+                $subMenu.parents('.dropdown-menu').first().find('.show').removeClass("show");
+            }
+            $subMenu.toggleClass('show');
+            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+                $('.dropdown-submenu .show').removeClass("show");
+            });
+            return false;
+        });
+    });
+</script>
+
 </body>
 </html>
