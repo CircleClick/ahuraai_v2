@@ -7,89 +7,182 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
+    <style>
+      /* Navbar */
+    .navbar {
+        width: 100vw; /* Make the navbar span the full viewport width */
+        margin-left: calc(50% - 50vw); /* Center align the navbar by adjusting margin */
+        background-color: black !important; /* Set the navbar background color */
+        position: fixed; /* Fix the navbar to the top */
+        top: 0; /* Stick to the top */
+        z-index: 1000; /* Ensure the navbar stays on top of other content */
+        box-sizing: border-box; /* Include padding/margin in the width calculation */
+        padding: 10px 0; /* Adjust padding */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for visibility */
+    }
+    
+    /* Enforce the color of navbar links */
+    .navbar a {
+        color: white !important;
+        padding: 10px 15px;
+        display: inline-block;
+    }
+    
+    /* Dropdown menu styling */
+    .navbar-dark .dropdown-menu {
+        background-color: rgba(0, 0, 0, 0.9);
+        border: none;
+    }
+    
+    .navbar-dark .dropdown-item {
+        color: #ffffff;
+    }
+    
+    .navbar-dark .dropdown-item:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+    }
+    
+    /* Dropdown submenu styling */
+    .dropdown-submenu {
+        position: relative;
+    }
+    
+    .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+    }
+    
+    /* Logo styling */
+    .logo-img {
+        max-width: 200px;  /* Set a max width */
+        height: auto;      /* Ensures the height adjusts to maintain aspect ratio */
+        object-fit: contain; /* Ensures the image fits inside the container without stretching */
+    }
+    
+    /* Navbar-toggler (for mobile view) */
+    .navbar-toggler {
+        border: none;
+    }
+    
+    /* Navbar link hover effect */
+    .navbar-nav .nav-link:hover {
+        color: #ccc !important; /* Lighten the link color on hover */
+    }
+    
+    /* Navbar toggler icon */
+    .navbar-toggler-icon {
+        filter: brightness(0) invert(1); /* Ensure icon remains visible on dark background */
+    }
+    
+    /* Dropdown toggle (nested dropdown styling) */
+    .dropdown-toggle::after {
+        display: none; /* Remove default arrow */
+    }
+    
+    /* Smooth dropdown animation */
+    .dropdown-menu {
+        transition: all 0.3s ease;
+    }
+    
+    .navbar-nav .dropdown-menu .show {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .navbar-nav .dropdown-menu {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    /* Add slideDown animation to Bootstrap dropdown */
+    .navbar-nav .dropdown:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease;
+    }
+    
+    </style>
 </head>
 <body>  
   <header class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:black;">
-        <div class="container">
-             <!-- Add the logo here -->
-                 <!-- Add the logo here -->
-                 <a class="navbar-brand" href="index.html">
-                  <img src="assets/images/ahura-logo.png" alt="Ahura Logo" class="logo-img"> <style> .logo-img {
-                  max-width: 200px;  /* Set a max width */
-                  height: auto;      /* Ensures the height adjusts to maintain aspect ratio */
-                  object-fit: contain; /* Ensures the image fits inside the container without stretching */
-              }</style>
-              </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <!-- Product Link -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="product.html">Product</a>
-                    </li>
-                    <!-- Solutions Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Solutions
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                            <a class="dropdown-item" href="employee-retention.html">Employee Retention</a>
-                            <div class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#">AI Tutor</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="features-and-usecases.html">Features &amp; Use Cases</a></li>
-                                    <li><a class="dropdown-item" href="benefits-and-learning.html">Benefits &amp; Learning</a></li>
-                                    <li><a class="dropdown-item" href="benefits-for-supervisors.html">Benefits For Supervisors</a></li>
-                                </ul>
-                            </div>
-                            <a class="dropdown-item" href="manager-gen-ai-training.html">Manager Gen AI Training</a>
-                            <div class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#">Events On Responsible Tech</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="features-and-usecases.html">Features &amp; Use Cases</a></li>
-                                    <li><a class="dropdown-item" href="davos-2024-the-ai-and-crypto-lounge.html">Davos 2024: The AI &amp; Crypto Lounge</a></li>
-                                    <li><a class="dropdown-item" href="necker-legacy-guardians.html">Necker Legacy Guardians</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- Thinking Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="thinkingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Learn
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="thinkingDropdown">
-                            <a class="dropdown-item" href="success-stories.html">Success Stories</a>
-                            <a class="dropdown-item" href="https://blog.ahuraai.com">Blog</a>
-                            <a class="dropdown-item" href="https://blog.ahuraai.com/how-i-learn/">How We Learn</a>
-                        </div>
-                    </li>
-                    <!-- Team Link -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="company.html">Team</a>
-                    </li>
-                    <!-- Privacy and Data Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="privacyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Privacy and Data
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="privacyDropdown">
-                            <a class="dropdown-item" href="privacy-policy.html">Privacy Policy</a>
-                            <a class="dropdown-item" href="terms-of-use.html">Terms of Service</a>
-                        </div>
-                    </li>
-                    <!-- Ahura 2.0 Link -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="ahura2.0.html">Ahura 2.0</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+          <!-- Add the logo here -->
+          <a class="navbar-brand" href="index.html">
+              <img src="assets/images/ahura-logo.png" alt="Ahura Logo" class="logo-img">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+              <ul class="navbar-nav">
+                  <!-- Product Link -->
+                  <li class="nav-item">
+                      <a class="nav-link" href="https://ahura.ai/" target="_blank" rel="noopener noreferrer">Product</a>
+                  </li>
+                  <!-- Solutions Dropdown -->
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Solutions
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                          <a class="dropdown-item" href="employee-retention.html">Employee Retention</a>
+                          <div class="dropdown-submenu">
+                              <a class="dropdown-item dropdown-toggle" href="#">AI Tutor</a>
+                              <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="features-and-usecases.html">Features &amp; Use Cases</a></li>
+                                  <li><a class="dropdown-item" href="benefits-and-learning.html">Benefits &amp; Learning</a></li>
+                                  <li><a class="dropdown-item" href="benefits-for-supervisors.html">Benefits For Supervisors</a></li>
+                              </ul>
+                          </div>
+                          <a class="dropdown-item" href="manager-gen-ai-training.html">Manager Gen AI Training</a>
+                          <div class="dropdown-submenu">
+                              <a class="dropdown-item dropdown-toggle" href="#">Events On Responsible Tech</a>
+                              <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="features-and-usecases.html">Features &amp; Use Cases</a></li>
+                                  <li><a class="dropdown-item" href="davos-2024-the-ai-and-crypto-lounge.html">Davos 2024: The AI &amp; Crypto Lounge</a></li>
+                                  <li><a class="dropdown-item" href="necker-legacy-guardians.html">Necker Legacy Guardians</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </li>
+                  <!-- Thinking Dropdown -->
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="thinkingDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Learn
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="thinkingDropdown">
+                          <a class="dropdown-item" href="success-stories.html">Success Stories</a>
+                          <a class="dropdown-item" href="https://blog.ahuraai.com" target="_blank" rel="noopener noreferrer">Blog</a>
+                          <a class="dropdown-item" href="https://blog.ahuraai.com/how-i-learn/" target="_blank" rel="noopener noreferrer">How We Learn</a>
+                      </div>
+                  </li>
+                  <!-- Team Link -->
+                  <li class="nav-item">
+                      <a class="nav-link" href="company.html">Team</a>
+                  </li>
+                  <!-- Privacy and Data Dropdown -->
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="privacyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Privacy and Data
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="privacyDropdown">
+                          <a class="dropdown-item" href="privacy-policy.html">Privacy Policy</a>
+                          <a class="dropdown-item" href="terms-of-use.html">Terms of Service</a>
+                      </div>
+                  </li>
+                  <!-- Ahura 2.0 Link -->
+                  <li class="nav-item">
+                      <a class="nav-link" href="ahura2.0.html">Ahura 2.0</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
 </header>
 
 
