@@ -6,7 +6,8 @@
     <title>Ahura</title>
     <!-- Site using Bootsrap 4.5. boostrap 5 will break the page -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="assets/styles/nav.css">
+    <link rel="stylesheet" href="assets/styles/footer.css">
      <style>
         /* Anchor tags default to white */
         a {
@@ -38,7 +39,7 @@
             overflow: hidden;
             color: white;
             text-align: center;
-            background: url('https://ahuraai.com/wp-content/uploads/2024/08/top_bg.png') no-repeat center center;
+            background: url('https://blog.ahuraai.com/wp-content/uploads/2024/08/top_bg.png') no-repeat center center;
             background-size: cover;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
@@ -64,33 +65,10 @@
             z-index: 1;
         }
         
-        .navbar {
-            width: 100vw; /* Make the navbar span the full viewport width */
-            margin-left: calc(50% - 50vw); /* Center align the navbar by adjusting margin */
-            background-color: black !important; /* Make the background color transparent */
-            position: fixed; /* Fix the navbar to the top */
-            top: 0; /* Stick to the top */
-            z-index: 1000; /* Ensure the navbar stays on top of other content */
-            box-sizing: border-box; /* Include padding/margin in the width calculation */
-            padding: 10px 0; /* Adjust padding as needed */
-        }
-        
-        /* Enforce the color of navbar links */
-        .navbar a {
-            color: white !important;
-            padding: 10px 15px;
-            display: inline-block;
-        }
-        
-        /* Optional: Add a subtle shadow to the navbar for better visibility */
-        .navbar {
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        
         /* Trusted By, Tailored Needs Section(s) */
         #trusted-by-and-tailored-needs {
-            background: url('https://ahuraai.com/wp-content/uploads/2024/08/left_side_light_bg.png') no-repeat left top, 
-                        url('https://ahuraai.com/wp-content/uploads/2024/08/right_side_light_bg.png') no-repeat right top;
+            background: url('https://blog.ahuraai.com/wp-content/uploads/2024/08/left_side_light_bg.png') no-repeat left top, 
+                        url('https://blog.ahuraai.com/wp-content/uploads/2024/08/right_side_light_bg.png') no-repeat right top;
             background-size: cover, cover;
         }
         
@@ -100,16 +78,11 @@
         }
         
         #innovative-approach-andleadership-skills-sections {
-            background: url('https://ahuraai.com/wp-content/uploads/2024/08/left_side_light_bg.png') no-repeat left top, 
-                        url('https://ahuraai.com/wp-content/uploads/2024/08/right_side_light_bg.png') no-repeat right top;
+            background: url('https://blog.ahuraai.com/wp-content/uploads/2024/08/left_side_light_bg.png') no-repeat left top, 
+                        url('https://blog.ahuraai.com/wp-content/uploads/2024/08/right_side_light_bg.png') no-repeat right top;
             background-size: cover, cover;
         }
-        
-        #footer {
-            background: url('https://ahuraai.com/wp-content/uploads/2024/08/bottom_bg.png') no-repeat center center; 
-            background-size: cover, cover;
-        }
-        
+            
         .gradient-border-tailored {
             border-radius: 15px; /* To round the corners */
             position: relative;
@@ -362,41 +335,14 @@
                 0 6px 12px rgba(255, 153, 102, 0.3),
                 0 8px 16px rgba(255, 209, 148, 0.3); /* Add gradient shadow on hover */
         }
-        
-        
-        /* Custom CSS for nested dropdowns */
-        .dropdown-submenu {
-            position: relative;
-        }
-        
-        .dropdown-submenu .dropdown-menu {
-            top: 0;
-            left: 100%;
-            margin-top: -1px;
-        }
-        
-        /* Styling to match navbar dropdowns */
-        .navbar-dark .dropdown-menu {
-            background-color: rgba(0, 0, 0, 0.9);
-            border: none;
-        }
-        
-        .navbar-dark .dropdown-item {
-            color: #ffffff;
-        }
-        
-        .navbar-dark .dropdown-item:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #ffffff;
-        }
-        
+                
         p {
-    font-weight: normal; /* Set text to non-bold */
-}
+            font-weight: normal; /* Set text to non-bold */
+        }
 
-li { font-weight: normal; }
+        li { font-weight: normal; }
 
-    /* Add margin to each form field to create space between them */
+        /* Add margin to each form field to create space between them */
         #contact-form .form-control {
             margin-bottom: 15px;
         }
@@ -404,19 +350,16 @@ li { font-weight: normal; }
         /* Adjust button styling if needed */
         #contact-form button {
             margin-top: 10px;
-}
+        }
 
-#footer {
-            background: url('https://blog.ahuraai.com/wp-content/uploads/2024/08/bottom_bg.png') no-repeat center center; 
-   }
-     </style>
+    </style>
      
-     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PGBJXGT');</script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PGBJXGT');</script>
 
 <!-- LeadFeeder Tracking -->
 <script> (function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('3P1w24d20R98mY5n'); </script>
@@ -649,58 +592,58 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
     </footer>
     
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-<!-- Popper.js, then Bootstrap JS for Bootstrap 4.5 -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!-- jQuery Script to Prevent Dropdown from Closing on Click -->
-<script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+    <!-- Popper.js, then Bootstrap JS for Bootstrap 4.5 -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- jQuery Script to Prevent Dropdown from Closing on Click -->
+    <script>
     $(document).ready(function () {
         // Prevent dropdown from closing when clicking on items inside it
         $('.dropdown-menu').on('click', function (e) {
             e.stopPropagation();
         });
     });
-</script>
-
-<!-- Enable smooth scrolling on anchor link clicks -->
-<script>
+    </script>
+    
+    <!-- Enable smooth scrolling on anchor link clicks -->
+    <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-
+    
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
         });
     });
-</script>
-
-<!-- Lazy Loading images for page load optimization -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
-<script>
+    </script>
+    
+    <!-- Lazy Loading images for page load optimization -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
+    <script>
     document.addEventListener("DOMContentLoaded", function() {
         const lazyLoadInstance = new LazyLoad({
             elements_selector: ".lazy"
         });
     });
-</script>
-
-<!-- Script for drop down menu operability -->
-<script>
+    </script>
+    
+    <!-- Script for drop down menu operability -->
+    <script>
     $(document).ready(function () {
         // Add slideDown animation to Bootstrap dropdown when expanding.
         $('.dropdown').on('show.bs.dropdown', function () {
             $(this).find('.dropdown-menu').first().stop(true, true).slideDown(200);
         });
-
+    
         // Add slideUp animation to Bootstrap dropdown when collapsing.
         $('.dropdown').on('hide.bs.dropdown', function () {
             $(this).find('.dropdown-menu').first().stop(true, true).slideUp(200);
         });
-
+    
         // Submenu handling
         $('.dropdown-submenu a.dropdown-toggle').on("click", function(e) {
             var $subMenu = $(this).next(".dropdown-menu");
@@ -714,16 +657,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             return false;
         });
     });
-</script>
-
-<!-- Tracking codes -->
-<!-- Google Tag Manager -->
-<iframe allow="join-ad-interest-group" data-tagging-id="G-GLS0RMX4P2" data-load-time="1723557527106" height="0" width="0" src="https://td.doubleclick.net/td/ga/rul?tid=G-GLS0RMX4P2&amp;gacid=1217672706.1722954732&amp;gtm=45je4880v879701635z8844799991za200zb844799991&amp;dma=0&amp;gcd=13l3l3l3l1&amp;npa=0&amp;pscdl=noapi&amp;aip=1&amp;fledge=1&amp;frm=0&amp;tag_exp=0&amp;z=951862986" data-lf-form-tracking-inspected-3p1w24d20r98my5n="true" data-lf-vimeo-playback-inspected-3p1w24d20r98my5n="true" data-lf-yt-playback-inspected-3p1w24d20r98my5n="true" style="display: none; visibility: hidden;">
-</iframe>
-<!-- Google Ads Remarketing -->
-<iframe allow="join-ad-interest-group" data-tagging-id="AW-10986366392" data-load-time="1723557523188" height="0" width="0" src="https://td.doubleclick.net/td/rul/10986366392?random=1723557523181&amp;cv=11&amp;fst=1723557523181&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be4880za200zb892237101&amp;gcd=13l3l3l3l1&amp;dma=0&amp;tag_exp=0&amp;u_w=2560&amp;u_h=1440&amp;url=https%3A%2F%2Fahuraai.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Adaptive%20Learning%20Platform%20-%20Ahura%20AI&amp;did=dZTNiMT%2CdZTQ1Zm&amp;gdid=dZTNiMT.dZTQ1Zm&amp;npa=0&amp;pscdl=noapi&amp;auid=176195203.1722954181&amp;uaa=arm&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B127.0.6533.73%7CChromium%3B127.0.6533.73&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=14.5.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config" data-lf-form-tracking-inspected-3p1w24d20r98my5n="true" data-lf-vimeo-playback-inspected-3p1w24d20r98my5n="true" data-lf-yt-playback-inspected-3p1w24d20r98my5n="true" style="display: none; visibility: hidden;"></iframe>
-<!-- Form Tracking -->
-<script type="text/javascript" id="">
+    </script>
+    
+    <!-- Tracking codes -->
+    <!-- Google Tag Manager -->
+    <iframe allow="join-ad-interest-group" data-tagging-id="G-GLS0RMX4P2" data-load-time="1723557527106" height="0" width="0" src="https://td.doubleclick.net/td/ga/rul?tid=G-GLS0RMX4P2&amp;gacid=1217672706.1722954732&amp;gtm=45je4880v879701635z8844799991za200zb844799991&amp;dma=0&amp;gcd=13l3l3l3l1&amp;npa=0&amp;pscdl=noapi&amp;aip=1&amp;fledge=1&amp;frm=0&amp;tag_exp=0&amp;z=951862986" data-lf-form-tracking-inspected-3p1w24d20r98my5n="true" data-lf-vimeo-playback-inspected-3p1w24d20r98my5n="true" data-lf-yt-playback-inspected-3p1w24d20r98my5n="true" style="display: none; visibility: hidden;">
+    </iframe>
+    <!-- Google Ads Remarketing -->
+    <iframe allow="join-ad-interest-group" data-tagging-id="AW-10986366392" data-load-time="1723557523188" height="0" width="0" src="https://td.doubleclick.net/td/rul/10986366392?random=1723557523181&amp;cv=11&amp;fst=1723557523181&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be4880za200zb892237101&amp;gcd=13l3l3l3l1&amp;dma=0&amp;tag_exp=0&amp;u_w=2560&amp;u_h=1440&amp;url=https%3A%2F%2Fahuraai.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Adaptive%20Learning%20Platform%20-%20Ahura%20AI&amp;did=dZTNiMT%2CdZTQ1Zm&amp;gdid=dZTNiMT.dZTQ1Zm&amp;npa=0&amp;pscdl=noapi&amp;auid=176195203.1722954181&amp;uaa=arm&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B127.0.6533.73%7CChromium%3B127.0.6533.73&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=14.5.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config" data-lf-form-tracking-inspected-3p1w24d20r98my5n="true" data-lf-vimeo-playback-inspected-3p1w24d20r98my5n="true" data-lf-yt-playback-inspected-3p1w24d20r98my5n="true" style="display: none; visibility: hidden;"></iframe>
+    <!-- Form Tracking -->
+    <script type="text/javascript" id="">
     document.addEventListener("wpcf7mailsent", function(a) {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
@@ -732,13 +675,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             response: a.detail.inputs
         });
     });
-</script>
-
-<!-- Google Ads Remarketing and Conversion Tracking -->
-<script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/10986366392/?random=1723557523181&amp;cv=11&amp;fst=1723557523181&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be4880za200zb892237101&amp;gcd=13l3l3l3l1&amp;dma=0&amp;tag_exp=0&amp;u_w=2560&amp;u_h=1440&amp;url=https%3A%2F%2Fahuraai.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Adaptive%20Learning%20Platform%20-%20Ahura%20AI&amp;did=dZTNiMT%2CdZTQ1Zm&amp;gdid=dZTNiMT.dZTQ1Zm&amp;npa=0&amp;pscdl=noapi&amp;auid=176195203.1722954181&amp;uaa=arm&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B127.0.6533.73%7CChromium%3B127.0.6533.73&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=14.5.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
-
-<script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/16541462698/?random=1723557523204&amp;cv=11&amp;fst=1723557523204&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be4880za200zb892237101&amp;gcd=13l3l3l3l1&amp;dma=0&amp;tag_exp=0&amp;u_w=2560&amp;u_h=1440&amp;url=https%3A%2F%2Fahuraai.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Adaptive%20Learning%20Platform%20-%20Ahura%20AI&amp;did=dZTNiMT%2CdZTQ1Zm&amp;gdid=dZTNiMT.dZTQ1Zm&amp;npa=0&amp;pscdl=noapi&amp;auid=176195203.1722954181&amp;uaa=arm&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B127.0.6533.73%7CChromium%3B127.0.6533.73&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=14.5.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
-
-
-</body>
-</html>
+    </script>
+    
+    <!-- Google Ads Remarketing and Conversion Tracking -->
+    <script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/10986366392/?random=1723557523181&amp;cv=11&amp;fst=1723557523181&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be4880za200zb892237101&amp;gcd=13l3l3l3l1&amp;dma=0&amp;tag_exp=0&amp;u_w=2560&amp;u_h=1440&amp;url=https%3A%2F%2Fahuraai.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Adaptive%20Learning%20Platform%20-%20Ahura%20AI&amp;did=dZTNiMT%2CdZTQ1Zm&amp;gdid=dZTNiMT.dZTQ1Zm&amp;npa=0&amp;pscdl=noapi&amp;auid=176195203.1722954181&amp;uaa=arm&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B127.0.6533.73%7CChromium%3B127.0.6533.73&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=14.5.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
+    
+    <script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/16541462698/?random=1723557523204&amp;cv=11&amp;fst=1723557523204&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be4880za200zb892237101&amp;gcd=13l3l3l3l1&amp;dma=0&amp;tag_exp=0&amp;u_w=2560&amp;u_h=1440&amp;url=https%3A%2F%2Fahuraai.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Adaptive%20Learning%20Platform%20-%20Ahura%20AI&amp;did=dZTNiMT%2CdZTQ1Zm&amp;gdid=dZTNiMT.dZTQ1Zm&amp;npa=0&amp;pscdl=noapi&amp;auid=176195203.1722954181&amp;uaa=arm&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B127.0.6533.73%7CChromium%3B127.0.6533.73&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=14.5.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
+    
+    
+    </body>
+    </html>
