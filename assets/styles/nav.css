@@ -1,0 +1,46 @@
+/* Navbar Styles */
+.navbar {
+    width: 100vw; /* Make the navbar span the full viewport width */
+    margin-left: calc(50% - 50vw); /* Center align the navbar by adjusting margin */
+    background-color: black !important; /* Set the background color */
+    position: fixed; /* Fix the navbar to the top */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure the navbar stays on top of other content */
+    box-sizing: border-box; /* Include padding/margin in the width calculation */
+    padding: 10px 0; /* Adjust padding as needed */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for visibility */
+}
+
+/* Navbar Links */
+.navbar a {
+    color: white !important;
+    padding: 10px 15px;
+    display: inline-block;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Custom CSS for nested dropdowns */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+/* Navbar Dropdown Styling */
+.navbar-dark .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: none;
+}
+
+.navbar-dark .dropdown-item {
+    color: #ffffff;
+}
+
+.navbar-dark .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}

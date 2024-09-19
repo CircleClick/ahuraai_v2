@@ -1,0 +1,32 @@
+/* Footer Styles */
+#footer {
+    background: url('https://blog.ahuraai.com/wp-content/uploads/2024/08/bottom_bg.png') no-repeat center center; 
+    background-size: cover;
+    padding: 20px 0;
+}
+
+.footer .success-call-to-action h3 {
+    color: #003366;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer .btn-lg.btn-primary {
+    background: linear-gradient(to right, black, #ff9966);
+    border-color: yellow;
+    border-radius: 50px;
+}
+
+.footer .btn-lg.btn-primary a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer p {
+    color: #003366;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer img {
+    width: 30px;
+    margin: 0 5px;
+}
