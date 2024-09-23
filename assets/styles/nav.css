@@ -1,14 +1,14 @@
-/* Navbar Styles */
+/* General Navbar Styles */
 .navbar {
-    width: 100vw; /* Make the navbar span the full viewport width */
-    margin-left: calc(50% - 50vw); /* Center align the navbar by adjusting margin */
-    background-color: black !important; /* Set the background color */
-    position: fixed; /* Fix the navbar to the top */
-    top: 0; /* Stick to the top */
-    z-index: 1000; /* Ensure the navbar stays on top of other content */
-    box-sizing: border-box; /* Include padding/margin in the width calculation */
-    padding: 10px 0; /* Adjust padding as needed */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for visibility */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    background-color: black !important;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Navbar Links */
@@ -16,31 +16,112 @@
     color: white !important;
     padding: 10px 15px;
     display: inline-block;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-/* Custom CSS for nested dropdowns */
-.dropdown-submenu {
-    position: relative;
+/* Hover Effect for Navbar Links */
+.navbar a:hover {
+    color: #68c2b7 !important; /* Turquoise color on hover */
 }
 
-.dropdown-submenu .dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-top: -1px;
+/* Flexbox for contact info and Request Demo button */
+.navbar-contact-demo {
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .navbar-contact-demo {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-contact-demo .contact-info,
+    .navbar-contact-demo .request-demo {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navbar-contact-demo .request-demo {
+        width: 100%;
+    }
+}
+
+/* Request Demo Button Styles */
+.request-demo {
+    background-color: #68c2b7;
+    background-image: linear-gradient(90deg, #68c2b7, #3db5c2);
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: background-image 0.3s ease, border 0.3s ease;
+}
+
+.request-demo:hover {
+    background-image: linear-gradient(135deg, #FFDDC1 0%, #FF8192 50%, #FFEC85 100%);
+    color: white;
+    border-color: transparent;
+}
+
+/* Smaller button on mobile */
+@media (max-width: 768px) {
+    .request-demo {
+        padding: 8px 16px; /* Reduce padding */
+        font-size: 14px; /* Make the text smaller */
+        border-radius: 30px; /* Smaller border radius */
+    }
+}
+
+/* Icon Styles for Phone */
+.phone-icon-wrapper {
+    background-color: transparent;
+    border: 2px solid #68c2b7;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.phone-icon-wrapper i {
+    color: #68c2b7;
+}
+
+/* Hover Effect for Phone Icon */
+.phone-icon-wrapper:hover {
+    background: linear-gradient(135deg, #FFDDC1 0%, #FF8192 50%, #FFEC85 100%);
+    border-color: transparent;
+    color: white;
+}
+
+/* Gradient hover effect for both elements */
+.request-demo:hover, .phone-icon-wrapper:hover {
+    background: linear-gradient(135deg, #FFDDC1 0%, #FF8192 50%, #FFEC85 100%);
+    color: white;
+    border-color: transparent;
 }
 
 /* Navbar Dropdown Styling */
 .navbar-dark .dropdown-menu {
-    background-color: rgba(0, 0, 0, 0.9);
-    border: none;
+    background-color: rgba(0, 0, 0, 0.9) !important; /* Set dropdown background to black */
+    border: none; /* Remove border */
 }
 
+/* Navbar Dropdown Text */
 .navbar-dark .dropdown-item {
-    color: #ffffff;
+    color: #ffffff !important; /* Set dropdown text to white */
 }
 
+/* Navbar Dropdown Text Hover */
 .navbar-dark .dropdown-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1) !important; /* Slight hover effect */
+    color: #68c2b7 !important; /* Change text color to turquoise on hover */
 }
