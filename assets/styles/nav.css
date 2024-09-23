@@ -1,7 +1,7 @@
 /* General Navbar Styles */
 .navbar {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
+    width: 100%; /* Ensure the navbar spans the full width */
+    margin-left: 0; /* Remove the margin to ensure it aligns with the screen */
     background-color: black !important;
     position: fixed;
     top: 0;
@@ -29,9 +29,10 @@
 .navbar-contact-demo {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Align elements with space between */
 }
 
-/* Responsive Styles */
+/* Responsive Styles for Tablet and Mobile */
 @media (max-width: 1200px) {
     .navbar-contact-demo {
         flex-direction: column;
@@ -47,7 +48,7 @@
     }
 
     .navbar-contact-demo .request-demo {
-        width: 100%;
+        width: 100%; /* Full width on smaller screens */
     }
 }
 
@@ -73,9 +74,11 @@
 /* Smaller button on mobile */
 @media (max-width: 768px) {
     .request-demo {
-        padding: 8px 16px; /* Reduce padding */
-        font-size: 14px; /* Make the text smaller */
-        border-radius: 30px; /* Smaller border radius */
+        padding: 6px 12px; /* Reduce padding for smaller screens */
+        font-size: 12px; /* Smaller text size */
+        border-radius: 25px; /* Smaller border radius */
+        width: 50%; /* Smaller button width on mobile */
+        max-width: 200px; /* Set a max-width */
     }
 }
 
