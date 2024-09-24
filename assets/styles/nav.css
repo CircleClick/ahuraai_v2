@@ -172,14 +172,11 @@
   animation: slideUp 0.2s forwards;
 }
 
-/* hide this button */
-.contact-info {
-    display: none !important;
-}
 
-.small-button {
-    padding: 5px 15px;
-    font-size: 12px;
-    border-radius: 20px;
-}
-
+@media (max-width: 1024px) {
+    .navbar-contact-demo {
+      display: none !important;
+    }
+  }
+  
+  
