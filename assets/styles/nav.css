@@ -134,3 +134,41 @@
     height: auto;      /* Ensures the height adjusts to maintain aspect ratio */
     object-fit: contain; /* Ensures the image fits inside the container without stretching */
 }
+
+/* Slide down animation */
+@keyframes slideDown {
+    0% {
+      transform: translateY(-10%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Slide up animation */
+  @keyframes slideUp {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-10%);
+      opacity: 0;
+    }
+  }
+  
+  .dropdown-menu {
+    display: none;
+  }
+  
+  .dropdown-menu.slide-down {
+    display: block;
+    animation: slideDown 0.2s forwards;
+  }
+  
+  .dropdown-menu.slide-up {
+    animation: slideUp 0.2s forwards;
+  }
+  

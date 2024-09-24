@@ -386,3 +386,105 @@
         padding: 10px 20px;
         }
     }
+
+    .small-heading {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: #333;
+    }
+
+    .main-heading {
+        font-size: 8vw;
+        line-height: 8vw;
+        font-weight: 600;
+        color: #111;
+        margin-top: 20px;
+    }
+
+    .main-heading strong {
+        font-weight: 800;
+    }
+
+    .lead-text {
+        font-size: 1.2rem;
+        color: #333;
+        line-height: 1.8;
+        margin-bottom: 50px;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        background-color: transparent;
+        border: 2px solid #333;
+        border-radius: 60px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: #333;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .main-heading {
+            font-size: 2.5rem;
+            line-height: 3rem;
+        }
+        .lead-text {
+            font-size: 1rem;
+        }
+        .cta-button {
+            font-size: 1rem;
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+    }
+
+    .features-section {
+        padding: 50px 0;
+    }
+    
+    .features-section .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .features-section .col-lg-6 {
+        padding: 15px;
+    }
+
+    .features-section img,
+    .features-section video {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    
+    .features-section p {
+        margin-top: 15px;
+        font-size: 1rem;
+        color: #333;
+        line-height: 1.6;
+    }
+    
+    .features-section strong {
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    /* Ensures video and image stack vertically on the right side */
+    .right-side {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* For mobile responsiveness */
+    @media (max-width: 768px) {
+        .features-section .row {
+            flex-direction: column;
+        }
+    }
