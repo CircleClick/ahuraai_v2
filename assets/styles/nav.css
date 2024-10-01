@@ -53,21 +53,21 @@
 }
 
 /* Request Demo Button Styles */
-.request-demo {
-  background-color: black; 
-  color: white; 
-  padding: 10px 20px; 
-  border-radius: 50px;
-  border: 2px solid turquoise;
-  font-weight: bold; 
-  text-align: center;
-  transition: background 0.3s ease, border-color 0.3s ease;
+.request-demo:hover {
+  background-color: turquoise; /* Change background on hover */
+  color: white !important; /* Keep text white on hover */
+  border-color: black; /* Change border color on hover */
 }
 
-.request-demo:hover {
-  background-color: turquoise; 
-  color: white !important; 
-  border-color: black;
+.request-demo {
+  background-color: black; /* Initial button color */
+  color: white !important; /* Initial text color */
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 2px solid turquoise;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 /* Button adjustment for mobile */
