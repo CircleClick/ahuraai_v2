@@ -1,182 +1,171 @@
 /* General Navbar Styles */
 .navbar {
-    width: 100%; /* Ensure the navbar spans the full width */
-    margin-left: 0; /* Remove the margin to ensure it aligns with the screen */
-    background-color: black !important;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    box-sizing: border-box;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%; 
+  margin-left: 0; 
+  background-color: black !important;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Navbar Links */
 .navbar a {
-    color: white !important;
-    padding: 10px 15px;
-    display: inline-block;
-    text-decoration: none;
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  color: white !important;
+  padding: 10px 15px;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 /* Hover Effect for Navbar Links */
 .navbar a:hover {
-    color: #68c2b7 !important; /* Turquoise color on hover */
+  color: #68c2b7 !important;
 }
 
 /* Flexbox for contact info and Request Demo button */
 .navbar-contact-demo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Align elements with space between */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* Responsive Styles for Tablet and Mobile */
 @media (max-width: 1200px) {
-    .navbar-contact-demo {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
+  .navbar-contact-demo {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+  }
 
-    .navbar-contact-demo .contact-info,
-    .navbar-contact-demo .request-demo {
-        margin: 10px 0;
-        text-align: center;
-    }
+  .navbar-contact-demo .contact-info,
+  .navbar-contact-demo .request-demo {
+      margin: 10px 0;
+      text-align: center;
+  }
 
-    .navbar-contact-demo .request-demo {
-        width: 100%; /* Full width on smaller screens */
-    }
+  .navbar-contact-demo .request-demo {
+      width: 100%;
+  }
 }
 
 /* Request Demo Button Styles */
 .request-demo {
-    background-color: #68c2b7;
-    background-image: linear-gradient(90deg, #68c2b7, #3db5c2);
-    padding: 10px 20px;
-    border-radius: 50px;
-    color: black;
-    text-align: center;
-    font-weight: bold;
-    border: 2px solid transparent;
-    transition: background-image 0.3s ease, border 0.3s ease;
+  background-color: black; 
+  color: white; 
+  padding: 10px 20px; 
+  border-radius: 50px;
+  border: 2px solid turquoise;
+  font-weight: bold; 
+  text-align: center;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .request-demo:hover {
-    background-image: linear-gradient(135deg, #FFDDC1 0%, #FF8192 50%, #FFEC85 100%);
-    color: white;
-    border-color: transparent;
+  background-color: turquoise; 
+  color: white !important; 
+  border-color: black;
 }
 
-/* Smaller button on mobile */
+/* Button adjustment for mobile */
 @media (max-width: 768px) {
-    .request-demo {
-        padding: 6px 12px; /* Reduce padding for smaller screens */
-        font-size: 12px; /* Smaller text size */
-        border-radius: 25px; /* Smaller border radius */
-        width: 50%; /* Smaller button width on mobile */
-        max-width: 200px; /* Set a max-width */
-    }
+.request-demo {
+  padding: 6px 12px; 
+  width: 40%;
+  font-size: 12px; 
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 }
 
 /* Icon Styles for Phone */
 .phone-icon-wrapper {
-    background-color: transparent;
-    border: 2px solid #68c2b7;
-    border-radius: 50%;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease, border-color 0.3s ease;
+  background-color: transparent;
+  border: 2px solid #68c2b7;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  display: none;
 }
 
 .phone-icon-wrapper i {
-    color: #68c2b7;
+  color: #68c2b7;
 }
 
-/* Hover Effect for Phone Icon */
-.phone-icon-wrapper:hover {
-    background: linear-gradient(135deg, #FFDDC1 0%, #FF8192 50%, #FFEC85 100%);
-    border-color: transparent;
-    color: white;
-}
-
-/* Gradient hover effect for both elements */
-.request-demo:hover, .phone-icon-wrapper:hover {
-    background: linear-gradient(135deg, #FFDDC1 0%, #FF8192 50%, #FFEC85 100%);
-    color: white;
-    border-color: transparent;
+/* Hide contact text */
+.contact-text {
+display: none;
 }
 
 /* Navbar Dropdown Styling */
 .navbar-dark .dropdown-menu {
-    background-color: rgba(0, 0, 0, 0.9) !important; /* Set dropdown background to black */
-    border: none; /* Remove border */
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  border: none;
 }
 
 /* Navbar Dropdown Text */
 .navbar-dark .dropdown-item {
-    color: #ffffff !important; /* Set dropdown text to white */
+  color: #ffffff !important;
 }
 
 /* Navbar Dropdown Text Hover */
 .navbar-dark .dropdown-item:hover {
-    background-color: rgba(255, 255, 255, 0.1) !important; /* Slight hover effect */
-    color: #68c2b7 !important; /* Change text color to turquoise on hover */
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #68c2b7 !important;
 }
 
 .logo-img {
-    max-width: 200px;  /* Set a max width */
-    height: auto;      /* Ensures the height adjusts to maintain aspect ratio */
-    object-fit: contain; /* Ensures the image fits inside the container without stretching */
+  max-width: 200px; 
+  height: auto; 
+  object-fit: contain;
 }
 
 /* Slide down animation */
 @keyframes slideDown {
-  0% {
-    transform: translateY(-10%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+0% {
+  transform: translateY(-10%);
+  opacity: 0;
+}
+100% {
+  transform: translateY(0);
+  opacity: 1;
+}
 }
 
 /* Slide up animation */
 @keyframes slideUp {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-10%);
-    opacity: 0;
-  }
+0% {
+  transform: translateY(0);
+  opacity: 1;
+}
+100% {
+  transform: translateY(-10%);
+  opacity: 0;
+}
 }
 
 .dropdown-menu {
-  display: none;
+display: none;
 }
 
 .dropdown-menu.slide-down {
-  display: block;
-  animation: slideDown 0.2s forwards;
+display: block;
+animation: slideDown 0.2s forwards;
 }
 
 .dropdown-menu.slide-up {
-  animation: slideUp 0.2s forwards;
+animation: slideUp 0.2s forwards;
 }
 
-
 @media (max-width: 1024px) {
-    .navbar-contact-demo {
-      display: none !important;
-    }
+  .navbar-contact-demo {
+    display: none !important;
   }
-  
-  
+}
