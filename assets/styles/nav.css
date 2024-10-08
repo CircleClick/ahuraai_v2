@@ -1,7 +1,7 @@
 /* General Navbar Styles */
 .navbar {
-  width: 100%; 
-  margin-left: 0; 
+  width: 100%; /* Ensure the navbar spans the full width */
+  margin-left: 0; /* Remove the margin to ensure it aligns with the screen */
   background-color: black !important;
   position: fixed;
   top: 0;
@@ -17,7 +17,8 @@
   padding: 10px 15px;
   display: inline-block;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  font-size: 102%; /* Increase font size by 2% */
 }
 
 /* Hover Effect for Navbar Links */
@@ -92,7 +93,7 @@
   align-items: center;
   justify-content: center;
   transition: background 0.3s ease, border-color 0.3s ease;
-  display: none;
+  /* display: none; */
 }
 
 .phone-icon-wrapper i {
@@ -101,7 +102,7 @@
 
 /* Hide contact text */
 .contact-text {
-display: none;
+/* display: none; */
 }
 
 /* Navbar Dropdown Styling */
@@ -164,8 +165,8 @@ animation: slideDown 0.2s forwards;
 animation: slideUp 0.2s forwards;
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .navbar-contact-demo {
     display: none !important;
   }
-}
+} */
