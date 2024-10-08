@@ -54,12 +54,6 @@
 }
 
 /* Request Demo Button Styles */
-.request-demo:hover {
-  background-color: turquoise; /* Change background on hover */
-  color: white !important; /* Keep text white on hover */
-  border-color: black; /* Change border color on hover */
-}
-
 .request-demo {
   background-color: black; /* Initial button color */
   color: white !important; /* Initial text color */
@@ -68,19 +62,31 @@
   border: 2px solid turquoise;
   font-weight: bold;
   text-align: center;
-  transition: background 0.3s ease, border-color 0.3s ease;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Request Demo Button Hover Styles */
+.request-demo:hover {
+  background-color: turquoise; /* Change background on hover */
+  color: black !important; /* Change text color to black on hover */
+  border-color: black; /* Change border color on hover */
+}
+
+/* Added specificity to handle anchor tag within the request-demo button */
+.request-demo  a:hover {
+  color: black !important; /* Ensure the anchor text inside request-demo turns black on hover */
 }
 
 /* Button adjustment for mobile */
 @media (max-width: 768px) {
-.request-demo {
-  padding: 6px 12px; 
-  width: 40%;
-  font-size: 12px; 
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
+  .request-demo {
+    padding: 6px 12px; 
+    width: 40%;
+    font-size: 12px; 
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 /* Icon Styles for Phone */
@@ -93,7 +99,6 @@
   align-items: center;
   justify-content: center;
   transition: background 0.3s ease, border-color 0.3s ease;
-  /* display: none; */
 }
 
 .phone-icon-wrapper i {
@@ -102,7 +107,7 @@
 
 /* Hide contact text */
 .contact-text {
-/* display: none; */
+  /* display: none; */
 }
 
 /* Navbar Dropdown Styling */
@@ -130,39 +135,39 @@
 
 /* Slide down animation */
 @keyframes slideDown {
-0% {
-  transform: translateY(-10%);
-  opacity: 0;
-}
-100% {
-  transform: translateY(0);
-  opacity: 1;
-}
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Slide up animation */
 @keyframes slideUp {
-0% {
-  transform: translateY(0);
-  opacity: 1;
-}
-100% {
-  transform: translateY(-10%);
-  opacity: 0;
-}
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
 }
 
 .dropdown-menu {
-display: none;
+  display: none;
 }
 
 .dropdown-menu.slide-down {
-display: block;
-animation: slideDown 0.2s forwards;
+  display: block;
+  animation: slideDown 0.2s forwards;
 }
 
 .dropdown-menu.slide-up {
-animation: slideUp 0.2s forwards;
+  animation: slideUp 0.2s forwards;
 }
 
 /* @media (max-width: 1024px) {
@@ -170,3 +175,45 @@ animation: slideUp 0.2s forwards;
     display: none !important;
   }
 } */
+/* General hover effect for all other navbar links */
+.navbar-nav .nav-link:hover {
+  color: #68c2b7 !important; /* Turquoise color for general navbar links on hover */
+}
+
+/* Request Demo button specific styles (desktop) */
+.navbar-contact-demo .request-demo {
+  background-color: black; /* Initial button color */
+  color: white !important; /* Initial text color */
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 2px solid turquoise;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Request Demo button hover effect (desktop) */
+.navbar-contact-demo .request-demo:hover {
+  background-color: turquoise !important; /* Turquoise background on hover */
+  color: black !important; /* Black text on hover */
+  border-color: black !important; /* Change border color to black on hover */
+}
+
+/* Request Demo button specific styles (mobile) */
+.collapse .request-demo {
+  background-color: black; /* Initial button color */
+  color: white !important; /* Initial text color */
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 2px solid turquoise;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Request Demo button hover effect (mobile) */
+.collapse .request-demo:hover {
+  background-color: turquoise !important; /* Turquoise background on hover */
+  color: black !important; /* Black text on hover */
+  border-color: black !important; /* Change border color to black on hover */
+}
