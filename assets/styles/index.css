@@ -78,10 +78,10 @@
         background-size: cover, cover;
     }
     
-    #footer {
+    /* #footer {
         background: url('https://blog.ahuraai.com/wp-content/uploads/2024/08/bottom_bg.png') no-repeat center center; 
         background-size: cover, cover;
-    }
+    } */
     
     .gradient-border-tailored {
         border-radius: 15px; /* To round the corners */
