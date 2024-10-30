@@ -1,78 +1,34 @@
 function loadFooter() {
-    const footer = document.createElement('footer');
-    footer.classList.add('container-fluid', 'py-4', 'bg-light');
-    footer.id = 'footer';
-    
-    footer.innerHTML = `
-        <div class="success-call-to-action text-center mt-4">
-            <h3>Start Customizing Your AI Training Today</h3>
-            <button class="mt-4 btn-lg btn-primary" style="background: linear-gradient(to right, black, #ff9966); border-color: yellow; border-radius: 50px;">
-                <a href="manager-gen-ai-training.html" style="text-decoration: none !important; color: white;">
-                    Fill Out The Form
-                </a>
-            </button>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-                <img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/ahura_logo_bottom.png" alt="Ahura Logo" class="img-fluid">
+    const footerHTML = `
+        <footer id="footer" class="container-fluid py-4" style="background-color: #000; color: #fff;">
+            <div class="row" style="padding-top:50px; flex-wrap: wrap;">
+                <div class="col-md-6 col-12" style="padding: 0 20px; text-align: center; margin-bottom: 40px;">
+                    <h5 style="font-weight: bold; color: #fff; margin-bottom: 15px; padding-right: 50px;">USEFUL LINKS</h5>
+                    <ul style="list-style-type: none; padding: 0; font-size: 14px; color: #fff; display: inline-block; text-align: left;">
+                        <li><a href="index.html" style="color: #fff; text-decoration: none;">HOME</a></li>
+                        <li><a href="#" style="color: #fff; text-decoration: none;">SOLUTIONS</a></li>
+                        <li style="padding-left: 20px;"><a href="features-and-use-cases.html" style="color: #fff; text-decoration: none;">TOP USES FOR LEARNERS</a></li>
+                        <li><a href="company.html" style="color: #fff; text-decoration: none;">COMPANY</a></li>
+                        <li><a href="https://blog.ahuraai.com" style="color: #fff; text-decoration: none;">THINKING</a></li>
+                        <li><a href="sign-up.html" style="color: #fff; text-decoration: none;">GET IN TOUCH</a></li>
+                        <li><a href="privacy-policy.html" style="color: #fff; text-decoration: none;">PRIVACY POLICY</a></li>
+                        <li><a href="terms-of-use.html" style="color: #fff; text-decoration: none;">TERMS OF USE</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-12 text-center" style="padding: 0 20px;">
+                    <div style="display: inline-block; text-align: left;">
+                        <img src="assets/images/ahura-logo.png" alt="Ahura Logo" class="img-fluid mb-3" style="max-width: 200px; display: block; margin-bottom: 10px;">
+                        <p style="font-size: 14px; line-height: 1.5; color: #fff; margin-bottom: 10px;">2831 Mission College Blvd.<br>Santa Clara, CA 95054<br><br><a style="text-decoration:none; color:white;" href="tel:+019493224716">+01 949-322-4716</p>
+                        <div>
+                                     <a href="https://www.facebook.com/ahuraai/" target="_blank"><img src="https://img.icons8.com/?size=100&id=118467&format=png&color=FFFFFF" style="width: 25px; margin: 0 5px;"></a>
+                                                        <a href="https://www.linkedin.com/company/ahuraai/" target="_blank"><img src="https://img.icons8.com/?size=100&id=8808&format=png&color=FFFFFF"style="width: 25px; margin: 0 5px;"></a>
+                                                        <a href="https://twitter.com/AhuraAi" target="_blank"><img src="https://img.icons8.com/?size=100&id=bxZLggOb1L5G&format=png&color=FFFFFF"style="width: 25px; margin: 0 5px;"></a>
+                                                        <a href="https://www.instagram.com/ahuraai/" target="_blank"><img src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/48/FFFFFF/external-instagram-social-media-tanah-basah-glyph-tanah-basah.png"style="width: 25px; margin: 0 5px;"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4 text-center">
-                <p class="mb-0" style="color: #003366; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
-                    Boost your learning power. Meet your future.
-                </p>
-            </div>
-            <div class="col-md-4 text-center text-md-end mt-2 mt-md-0">
-                <a href="https://www.facebook.com/ahuraai/"><img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/fb.png" alt="Facebook" class="img-fluid mx-1" style="width: 30px;"></a>
-                <a href="https://twitter.com/AhuraAi"><img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/twitter.png" alt="Twitter" class="img-fluid mx-1" style="width: 30px;"></a>
-                <a href="https://www.linkedin.com/company/ahuraai/"><img src="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/custom-landing-page-gradient/in.png" alt="LinkedIn" class="img-fluid mx-1" style="width: 30px;"></a>
-            </div>
-        </div>
-        
-        <!-- Tracking scripts -->
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-        <!-- jQuery Script to Prevent Dropdown from Closing on Click -->
-        <script>
-        $(document).ready(function () {
-            $('.dropdown-menu').on('click', function (e) {
-                e.stopPropagation();
-            });
-        });
-        </script>
-        
-        <!-- Smooth scrolling -->
-        <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        </script>
-        
-        <!-- Lazy Loading for images -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
-        <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const lazyLoadInstance = new LazyLoad({
-                elements_selector: ".lazy"
-            });
-        });
-        </script>
-        
-        <!-- Google Tag Manager and tracking -->
-        <iframe allow="join-ad-interest-group" data-tagging-id="G-GLS0RMX4P2" data-load-time="1723557527106" height="0" width="0" src="https://td.doubleclick.net/td/ga/rul?tid=G-GLS0RMX4P2&gacid=1217672706.1722954732&..."></iframe>
-        <iframe allow="join-ad-interest-group" data-tagging-id="AW-10986366392" data-load-time="1723557523188" height="0" width="0" src="https://td.doubleclick.net/td/rul/10986366392?random=1723557523181&cv=11&fmt=3..."></iframe>
+        </footer>
     `;
-
-    document.body.appendChild(footer);  // Append the footer to the body
+    document.getElementById('footer-container').innerHTML = footerHTML;
 }
-
-// Load the footer when the DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-    loadFooter();
-});
