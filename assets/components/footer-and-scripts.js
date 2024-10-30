@@ -3,7 +3,7 @@ function loadFooter() {
         <footer id="footer" class="container-fluid py-4" style="background-color: #000; color: #fff;">
             <div class="row" style="padding-top:50px; flex-wrap: wrap;">
                 <div class="col-md-6 col-12" style="padding: 0 20px; text-align: center; margin-bottom: 40px;">
-                    <h5 style="font-weight: bold; color: #fff; margin-bottom: 15px; padding-right: 50px;">USEFUL LINKS</h5>
+                    <h5 style="font-weight: bold; color: #fff; margin-bottom: 15px; padding-right:55px;">USEFUL LINKS</h5>
                     <ul style="list-style-type: none; padding: 0; font-size: 14px; color: #fff; display: inline-block; text-align: left;">
                         <li><a href="index.html" style="color: #fff; text-decoration: none;">HOME</a></li>
                         <li><a href="#" style="color: #fff; text-decoration: none;">SOLUTIONS</a></li>
