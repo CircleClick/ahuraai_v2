@@ -66,10 +66,11 @@ function loadNavbar() {
                         </ul>
 
                         <!-- Mobile buttons -->
-                      <a href="sign-up.html" class="btn btn-outline-light btn-demo d-lg-none">Request Demo</a>
-<a href="#" class="btn btn-outline-light btn-demo sign-in-button d-lg-none">
-    <i class="fas fa-graduation-cap"></i>
-</a>
+                        <a href="sign-up.html" class="btn btn-outline-light btn-demo d-lg-none" style="padding-right: 30px !important; margin-left: -8px !important; font-size: 12px !important;">Request Demo</a>
+                        <a href="#" class="btn btn-outline-light btn-demo sign-in-button d-lg-none" style="font-size: 12px !important;">
+                            <i class="fas fa-graduation-cap"></i>Sign In
+                        </a>
+
                     </div>
 
                   <!-- Desktop buttons and contact info -->
