@@ -17,13 +17,13 @@ function loadFooter() {
                 </div>
                 <div class="col-md-6 col-12 text-center" style="padding: 0 20px;">
                     <div style="display: inline-block; text-align: left;">
-                        <img src="assets/images/ahura-logo.png" alt="Ahura Logo" class="img-fluid mb-3" style="max-width: 200px; display: block; margin-bottom: 10px;">
+                        <img src="assets/images/ahura-logo.png" alt="Ahura Logo" class="img-fluid mb-3" style="max-width: 200px; display: block; margin-bottom: 33px !important;">
                         <p style="font-size: 14px; line-height: 1.5; color: #fff; margin-bottom: 10px;">2831 Mission College Blvd.<br>Santa Clara, CA 95054<br><br><a style="text-decoration:none; color:white;" href="tel:+019493224716">+01 949-322-4716</p>
-                        <div>
-                                     <a href="https://www.facebook.com/ahuraai/" target="_blank"><img src="https://img.icons8.com/?size=100&id=118467&format=png&color=FFFFFF" style="width: 25px; margin: 0 5px;"></a>
-                                                        <a href="https://www.linkedin.com/company/ahuraai/" target="_blank"><img src="https://img.icons8.com/?size=100&id=8808&format=png&color=FFFFFF"style="width: 25px; margin: 0 5px;"></a>
-                                                        <a href="https://twitter.com/AhuraAi" target="_blank"><img src="https://img.icons8.com/?size=100&id=bxZLggOb1L5G&format=png&color=FFFFFF"style="width: 25px; margin: 0 5px;"></a>
-                                                        <a href="https://www.instagram.com/ahuraai/" target="_blank"><img src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/48/FFFFFF/external-instagram-social-media-tanah-basah-glyph-tanah-basah.png"style="width: 25px; margin: 0 5px;"></a>
+                        <div style="margin-top: 33px;"> <!-- Added margin-top to move icons down -->
+                            <a href="https://www.facebook.com/ahuraai/" target="_blank"><img src="https://img.icons8.com/?size=100&id=118467&format=png&color=FFFFFF" style="width: 25px; margin: 0 5px;"></a>
+                            <a href="https://www.linkedin.com/company/ahuraai/" target="_blank"><img src="https://img.icons8.com/?size=100&id=8808&format=png&color=FFFFFF" style="width: 25px; margin: 0 5px;"></a>
+                            <a href="https://twitter.com/AhuraAi" target="_blank"><img src="https://img.icons8.com/?size=100&id=bxZLggOb1L5G&format=png&color=FFFFFF" style="width: 25px; margin: 0 5px;"></a>
+                            <a href="https://www.instagram.com/ahuraai/" target="_blank"><img src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/48/FFFFFF/external-instagram-social-media-tanah-basah-glyph-tanah-basah.png" style="width: 25px; margin: 0 5px;"></a>
                         </div>
                     </div>
                 </div>
