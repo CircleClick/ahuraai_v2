@@ -488,3 +488,125 @@
             flex-direction: column;
         }
     }
+
+
+    /* new section */
+
+    .text-dark {
+        color: #000000;
+    }
+    
+    .text-black-50 {
+        color: rgba(0, 0, 0, 0.7);
+    }
+    
+    .font-weight-semibold {
+        font-weight: 600;
+    }
+    
+    .img-fluid.rounded {
+        transition: transform 0.3s ease;
+        border-radius: 12px; /* Slight rounding */
+    }
+    
+    .img-fluid.rounded:hover {
+        transform: scale(1.05);
+    }
+    
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .feature-section {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px; /* Add spacing between columns */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.feature-item {
+    flex: 1;
+    max-width: 30%;
+    padding: 20px;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    border-radius: 8px; /* Slight rounding for a modern look */
+    transition: transform 0.3s ease;
+}
+
+.feature-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.feature-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.feature-text {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+.feature-section {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px; /* Space between columns */
+    padding: 40px 20px;
+    text-align: center;
+    flex-wrap: wrap; /* Allows columns to wrap to the next line */
+}
+
+.feature-item {
+    flex: 1;
+    max-width: 30%;
+    padding: 20px;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    border-radius: 8px; /* Slight rounding for a modern look */
+    transition: transform 0.3s ease;
+}
+
+.feature-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.feature-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.feature-text {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Mobile responsive styling */
+@media (max-width: 768px) {
+    .feature-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .feature-item {
+        max-width: 100%;
+        padding: 15px;
+    }
+}

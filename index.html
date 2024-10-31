@@ -45,113 +45,15 @@
         </iframe>
     </noscript>
 
-    <header class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-            <div class="container">
-                <!-- Add the logo here -->
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/ahura-logo.png" alt="Ahura Logo" class="logo-img">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- Navbar component -->
+    <div id="navbar-container"></div>
+    <script src="assets/components/header-nav.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', loadNavbar);
+    </script>
+    <!-- End of Navbar component -->
     
-                <!-- Main Navigation Links shifted to the left -->
-                <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="thinkingDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Company</a>
-                            <div class="dropdown-menu" aria-labelledby="thinkingDropdown">
-                                <a class="dropdown-item" href="company.html" target="" rel="noopener noreferrer">Team</a>
-                                <a class="dropdown-item" href="privacy-policy.html" target="" rel="noopener noreferrer">Privacy Policy</a>
-                                <a class="dropdown-item" href="terms-of-use.html" target="" rel="noopener noreferrer">Terms of Use</a>
-                                <a class="dropdown-item" href="sign-up.html" target="" rel="noopener noreferrer">Contact Us</a>
-                                <a class="dropdown-item" href="" target="" rel="noopener noreferrer">Site Map</a>
-                            </div>
-                        </li>
-
-
-                        <!-- Solutions Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solutions</a>
-                            <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                                <!-- <a class="dropdown-item" href="employee-retention.html">Employee Retention</a> -->
-                                <div class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">AI Tutor</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="features-and-use-cases.html">Use Cases</a></li>
-                                        <li><a class="dropdown-item" href="benefits-and-learning.html">Learner Benefits</a></li>
-                                        <li><a class="dropdown-item" href="benefits-for-supervisors.html">Mentor Benefits</a></li>
-                                    </ul>
-                                </div>
-                                <!-- <a class="dropdown-item" href="manager-gen-ai-training.html">Manager Gen AI Training</a> -->
-                                <div class="dropdown-submenu">
-                                    <!-- <a class="dropdown-item dropdown-toggle" href="#">Events On Responsible Tech</a> -->
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="davos-2024-the-ai-and-crypto-lounge.html">Davos 2024: The AI & Crypto Lounge</a></li>
-                                    </ul>
-                                </div>
-                                <a class="dropdown-item" href="manager-gen-ai-training.html">Gen AI Workshops</a>
-                            </div>
-                        </li>
     
-                        <!-- Learn Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="thinkingDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Learn More</a>
-                            <div class="dropdown-menu" aria-labelledby="thinkingDropdown">
-                                <a class="dropdown-item" href="success-stories.html">Success Stories</a>
-                                <a class="dropdown-item" href="https://blog.ahuraai.com" target="_blank" rel="noopener noreferrer">Insights</a>
-                                <a class="dropdown-item" href="https://blog.ahuraai.com/how-i-learn/" target="_blank" rel="noopener noreferrer">"How I Learn"</a>
-                            </div>
-                        </li>
-
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="thinkingDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Responsible AI</a>
-                            <div class="dropdown-menu" aria-labelledby="thinkingDropdown">
-                                <a class="dropdown-item" href="">Declaration of AI</a>
-                                <a class="dropdown-item" href="" target="_blank" rel="noopener noreferrer">FoHS DC 2024</a>
-                                <a class="dropdown-item" href="davos-2024-the-ai-and-crypto-lounge.html">Davos 2024: The AI & Crypto Lounge</a>
-                                <a class="dropdown-item" href="necker-legacy-guardians.html">Legacy Guardians</a>
-                                <a class="dropdown-item" href="" target="_blank" rel="noopener noreferrer">Future Events</a>
-                            </div>
-                        </li>
-                    </ul>
-    
-                    <!-- Request Demo button for mobile (inside the collapse) -->
-                    <a href="sign-up.html" style="color: white !important;" style="color: white !important;" class="request-demo btn btn-outline-light btn-demo ml-3 d-lg-none">Request Demo</a>
-                    <a href="" style="color: white !important;" style="color: white !important;" class="request-demo btn btn-outline-light btn-demo ml-3 d-lg-none">Sign In</a>
-            
-                </div>
-    
-                <!-- Contact Us and Request Demo for desktop -->
-                <div class="navbar-contact-demo ml-auto d-none d-lg-flex align-items-center">
-                    <div class="contact-info d-flex align-items-center">
-                        <div class="phone-icon-wrapper">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <span class="contact-text ml-2">
-                           <a href="tel:1-855-AHURA-AI">CONTACT US<br>1-855-AHURA-AI</a>
-                        </span>
-                        
-                    </div>
-                    <!-- Add FontAwesome CDN for icons (if not already included in your site) -->
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/kTc3VoWm4MdP6QUdV0yO6hbXg2L/Fa3qDkhf/1vK4IlYTktP5ntB7O1RVfdMxKoeDoHg5Bf6tU4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-                    <a href="#" style="color: white !important; margin-right: 10px; display: inline-flex; align-items: center;" class="request-demo btn btn-outline-light btn-demo ml-3">
-                        <i class="fas fa-school" style="margin-right: 8px;"></i> Sign In
-                    </a>
-                    <a href="sign-up.html" style="color: white !important;" class="request-demo btn btn-outline-light btn-demo ml-3">Request Demo</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    
-<!-- End of -->
-
-
-
-
 
     <!-- Content Section(s) Begin -->
     <!-- Hero Section -->
@@ -225,7 +127,6 @@
                         }
                     }
                 </style>
-            
                 <div class="container">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-md-8 text-center text-md-start">
@@ -347,56 +248,55 @@
             
             <!-- Personalized learning section -->
             <section class="container py-5">
-                <div class="row">
+                <div class="row align-items-center">
                     <!-- First Row: Left Column (Text) -->
                     <div class="col-md-6 mb-4 d-flex align-items-center justify-content-center">
                         <div>
-                            <h3 class="font-weight-bold">Personalized Learning Experiences:</h3>
-                            <p>Every course is tailored to fit the unique needs and learning styles of each individual, ensuring maximum engagement and retention.</p>
+                            <h3 class="font-weight-semibold text-dark">Personalized Learning Experiences</h3>
+                            <p class="text-black-50">Every course is tailored to fit the unique needs and learning styles of each individual, ensuring maximum engagement and retention.</p>
                         </div>
                     </div>
                     <!-- First Row: Right Column (Image) -->
                     <div class="col-md-6 mb-4 text-center">
-                        <img src="https://blog.ahuraai.com/wp-content/uploads/2024/01/gridimage.webp" alt="3x faster learning" class="img-fluid">
-                        <p class="font-weight-bold mt-3" style="font-size: 20px;">Get up to <span style="font-size: 24px;">3x</span> faster learning</p>
+                        <img src="https://blog.ahuraai.com/wp-content/uploads/2024/01/gridimage.webp" alt="3x faster learning" class="img-fluid rounded" style="border-radius: 12px;">
+                        <p class="font-weight-bold mt-3 text-dark" style="font-size: 20px;">Get up to <span style="font-size: 24px; color: #007bff;">3x</span> faster learning</p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mt-4">
                     <!-- Second Row: Left Column (Text) -->
                     <div class="col-md-6 mb-4">
-                        <h3 class="font-weight-bold">Interactive and Immersive Content:</h3>
-                        <p>Our content is designed to be interactive and immersive, keeping learners engaged through real-world scenarios, gamification, and interactive assessments.</p>
+                        <h3 class="font-weight-semibold text-dark">Interactive and Immersive Content</h3>
+                        <p class="text-black-50">Our content is designed to be interactive and immersive, keeping learners engaged through real-world scenarios, gamification, and interactive assessments.</p>
                     </div>
-
                     <!-- Second Row: Right Column (Text) -->
                     <div class="col-md-6 mb-4">
-                        <h3 class="font-weight-bold">Skills for the Future:</h3>
-                        <p>We focus on equipping your team with skills that are critical in the evolving business world, such as digital literacy, critical thinking, and adaptive leadership.</p>
+                        <h3 class="font-weight-semibold text-dark">Skills for the Future</h3>
+                        <p class="text-black-50">We focus on equipping your team with skills that are critical in the evolving business world, such as digital literacy, critical thinking, and adaptive leadership.</p>
                     </div>
-                </div>
-            </section>
-
-            <section style="display: flex; justify-content: space-around; padding: 40px 20px; text-align: center;">
-                <!-- First Column -->
-                <div style="flex: 1; max-width: 30%; padding: 10px;">
-                    <img src="https://blog.ahuraai.com/wp-content/uploads/2024/01/homeBlurbs1.webp" alt="Tailored Learning Icon" style="width: 60px; height: 60px; margin-bottom: 15px;">
-                    <h3 style="font-size: 20px; font-weight: bold;">Tailored Learning Journeys</h3>
-                    <p style="font-size: 16px;">Custom courses align with your business goals and employee career paths, ensuring relevant and impactful learning.</p>
-                </div>
-                <!-- Second Column -->
-                <div style="flex: 1; max-width: 30%; padding: 10px;">
-                    <img src="https://blog.ahuraai.com/wp-content/uploads/2024/01/homeBlurbs2.webp" alt="Engagement Icon" style="width: 60px; height: 60px; margin-bottom: 15px;">
-                    <h3 style="font-size: 20px; font-weight: bold;">Engagement & Motivation</h3>
-                    <p style="font-size: 16px;">Our interactive and immersive content keeps learners engaged and motivated, fostering a culture of continuous learning and improvement.</p>
-                </div>
-                <!-- Third Column -->
-                <div style="flex: 1; max-width: 30%; padding: 10px;">
-                    <img src="https://blog.ahuraai.com/wp-content/uploads/2024/01/homeBlurbs3.webp" alt="Future-Proof Icon" style="width: 60px; height: 60px; margin-bottom: 15px;">
-                    <h3 style="font-size: 20px; font-weight: bold;">Future-Proof Your Workplace</h3>
-                    <p style="font-size: 16px;">Stay ahead in an ever-evolving business landscape with courses designed to equip your team with forward-thinking skills and knowledge.</p>
                 </div>
             </section>
             
+            <section class="feature-section container py-5 text-center">
+                <!-- First Column -->
+                <div class="feature-item">
+                    <img src="https://blog.ahuraai.com/wp-content/uploads/2024/01/homeBlurbs1.webp" alt="Tailored Learning Icon" class="feature-icon">
+                    <h3 class="feature-title">Tailored Learning Journeys</h3>
+                    <p class="feature-text">Custom courses align with your business goals and employee career paths, ensuring relevant and impactful learning.</p>
+                </div>
+                <!-- Second Column -->
+                <div class="feature-item">
+                    <img src="https://blog.ahuraai.com/wp-content/uploads/2024/01/homeBlurbs2.webp" alt="Engagement Icon" class="feature-icon">
+                    <h3 class="feature-title">Engagement & Motivation</h3>
+                    <p class="feature-text">Our interactive and immersive content keeps learners engaged and motivated, fostering a culture of continuous learning and improvement.</p>
+                </div>
+                <!-- Third Column -->
+                <div class="feature-item">
+                    <img src="https://blog.ahuraai.com/wp-content/uploads/2024/01/homeBlurbs3.webp" alt="Future-Proof Icon" class="feature-icon">
+                    <h3 class="feature-title">Future-Proof Your Workplace</h3>
+                    <p class="feature-text">Stay ahead in an ever-evolving business landscape with courses designed to equip your team with forward-thinking skills and knowledge.</p>
+                </div>
+            </section>
+                
             <!-- Reach new heights section -->
             <section class="position-relative text-white" style="height: 600px; overflow: hidden;">
                 <!-- Background Video -->
@@ -459,7 +359,7 @@
             <section style="padding: 50px 20px; font-family: Arial, sans-serif; text-align: center;">
                 <p style="color: #b08d57; font-size: 18px; margin-bottom: 10px;">How it works</p>
                 <h1 style="font-size: 36px; font-weight: bold; margin: 10px 0;">
-                    Tomorrow's jobs need <span style="background: linear-gradient(90deg, #ff5e62, #ff9966); -webkit-background-clip: text; color: transparent;">Tomorrow's education.</span>
+                    Tomorrow's Jobs Need <span style="background: linear-gradient(90deg, #ff5e62, #ff9966); -webkit-background-clip: text; color: transparent;">Tomorrow's Education.</span>
                 </h1>
             
                 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 30px 0;">
@@ -489,13 +389,11 @@
             </section>            
         </div> 
     </main>
-<!-- Content ends here -->
 
     <!-- Footer Component (assets/footer-and-scripts.js) -->
     <div id="footer-container"></div>
     <script src="assets/components/footer-and-scripts.js"></script>
     <script>loadFooter();</script>
-
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

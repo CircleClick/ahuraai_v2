@@ -1,219 +1,169 @@
-/* General Navbar Styles */
-.navbar {
-  width: 100%; /* Ensure the navbar spans the full width */
-  margin-left: 0; /* Remove the margin to ensure it aligns with the screen */
-  background-color: black !important;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  box-sizing: border-box;
-  padding: 10px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Navbar Links */
-.navbar a {
-  color: white !important;
-  padding: 10px 15px;
-  display: inline-block;
-  text-decoration: none;
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
-  font-size: 102%; /* Increase font size by 2% */
-}
-
-/* Hover Effect for Navbar Links */
-.navbar a:hover {
-  color: #68c2b7 !important;
-}
-
-/* Flexbox for contact info and Request Demo button */
-.navbar-contact-demo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Responsive Styles for Tablet and Mobile */
-@media (max-width: 1200px) {
-  .navbar-contact-demo {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-  }
-
-  .navbar-contact-demo .contact-info,
-  .navbar-contact-demo .request-demo {
-      margin: 10px 0;
-      text-align: center;
-  }
-
-  .navbar-contact-demo .request-demo {
-      width: 100%;
-  }
-}
-
-/* Request Demo Button Styles */
-.request-demo {
-  background-color: black; /* Initial button color */
-  color: white !important; /* Initial text color */
-  padding: 10px 20px;
-  border-radius: 50px;
-  border: 2px solid turquoise;
-  font-weight: bold;
-  text-align: center;
-  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-}
-
-/* Request Demo Button Hover Styles */
-.request-demo:hover {
-  background-color: turquoise; /* Change background on hover */
-  color: black !important; /* Change text color to black on hover */
-  border-color: black; /* Change border color on hover */
-}
-
-/* Added specificity to handle anchor tag within the request-demo button */
-.request-demo  a:hover {
-  color: black !important; /* Ensure the anchor text inside request-demo turns black on hover */
-}
-
-/* Button adjustment for mobile */
-@media (max-width: 768px) {
-  .request-demo {
-    padding: 6px 12px; 
-    width: 40%;
-    font-size: 12px; 
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-/* Icon Styles for Phone */
-.phone-icon-wrapper {
-  background-color: transparent;
-  border: 2px solid #68c2b7;
-  border-radius: 50%;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s ease, border-color 0.3s ease;
-}
-
-.phone-icon-wrapper i {
-  color: #68c2b7;
-}
-
-/* Hide contact text */
-.contact-text {
-  /* display: none; */
-}
-
-/* Navbar Dropdown Styling */
-.navbar-dark .dropdown-menu {
-  background-color: rgba(0, 0, 0, 0.9) !important;
-  border: none;
-}
-
-/* Navbar Dropdown Text */
-.navbar-dark .dropdown-item {
-  color: #ffffff !important;
-}
-
-/* Navbar Dropdown Text Hover */
-.navbar-dark .dropdown-item:hover {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  color: #68c2b7 !important;
+/* Navbar styles */
+.custom-navbar {
+    background-color: black;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .logo-img {
-  max-width: 200px; 
-  height: auto; 
-  object-fit: contain;
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
 }
 
-/* Slide down animation */
-@keyframes slideDown {
-  0% {
-    transform: translateY(-10%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+/* Button styling for mobile and desktop */
+.btn-demo {
+    color: white !important;
+    border: 2px solid turquoise;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-left: 10px;
 }
 
-/* Slide up animation */
-@keyframes slideUp {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-10%);
-    opacity: 0;
-  }
+/* Contact information styling */
+.contact-info {
+    margin-right: 15px;
 }
 
-.dropdown-menu {
-  display: none;
+.phone-icon-wrapper {
+    background-color: transparent;
+    border: 2px solid #68c2b7;
+    border-radius: 50%;
+    padding: 10px;
 }
 
-.dropdown-menu.slide-down {
-  display: block;
-  animation: slideDown 0.2s forwards;
+.contact-text a {
+    color: white !important;
+    text-decoration: none;
 }
 
-.dropdown-menu.slide-up {
-  animation: slideUp 0.2s forwards;
+/* Dropdown styling */
+.navbar-nav .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
 }
 
-/* @media (max-width: 1024px) {
-  .navbar-contact-demo {
-    display: none !important;
-  }
-} */
-/* General hover effect for all other navbar links */
-.navbar-nav .nav-link:hover {
-  color: #68c2b7 !important; /* Turquoise color for general navbar links on hover */
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .btn-demo {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    .navbar-nav .dropdown-menu {
+        padding: 5px;
+    }
 }
 
-/* Request Demo button specific styles (desktop) */
-.navbar-contact-demo .request-demo {
-  background-color: black; /* Initial button color */
-  color: white !important; /* Initial text color */
-  padding: 10px 20px;
-  border-radius: 50px;
-  border: 2px solid turquoise;
-  font-weight: bold;
-  text-align: center;
-  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+/* Set all navbar links to white */
+.navbar .nav-link,
+.navbar .nav-link:visited,
+.navbar .dropdown-item,
+.navbar .dropdown-item:visited {
+    color: white !important;
 }
 
-/* Request Demo button hover effect (desktop) */
-.navbar-contact-demo .request-demo:hover {
-  background-color: turquoise !important; /* Turquoise background on hover */
-  color: black !important; /* Black text on hover */
-  border-color: black !important; /* Change border color to black on hover */
+/* Hover and active states */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+    color: #ddd !important; /* Light grey on hover for better visibility */
 }
 
-/* Request Demo button specific styles (mobile) */
-.collapse .request-demo {
-  background-color: black; /* Initial button color */
-  color: white !important; /* Initial text color */
-  padding: 10px 20px;
-  border-radius: 50px;
-  border: 2px solid turquoise;
-  font-weight: bold;
-  text-align: center;
-  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+/* Ensure phone icon color is white */
+.phone-icon-wrapper i {
+    color: white !important;
 }
 
-/* Request Demo button hover effect (mobile) */
-.collapse .request-demo:hover {
-  background-color: turquoise !important; /* Turquoise background on hover */
-  color: black !important; /* Black text on hover */
-  border-color: black !important; /* Change border color to black on hover */
+/* Add 3px space between phone icon and text */
+.contact-text {
+    margin-left: 10px;
+}
+
+/* Default styling for the Sign In button (visible outside the specified range) */
+.btn-demo.sign-in-button {
+    font-size: 14px; /* Set normal font size to display text */
+    padding: 6px 12px; /* Default padding */
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Specific styling within the 1000px - 1199px range */
+@media (min-width: 991px) and (max-width: 1199px) {
+    .contact-text {
+        display: none !important; /* Hide the contact text */
+    }
+
+    /* Adjust the Request Demo button for smaller size */
+    .btn-demo {
+        padding: 6px 12px; /* Adjust padding */
+        font-size: 14px; /* Set font size */
+        display: flex;
+        align-items: center;
+    }
+
+    /* Target only the "Sign In" button within this range */
+    .btn-demo.sign-in-button {
+        font-size: 0; /* Hide the "Sign In" text */
+        width: 40px; /* Increase width for larger icon button */
+        height: 40px; /* Increase height for larger icon button */
+        padding: 0; /* Remove padding around the icon */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%; /* Make the button circular */
+    }
+
+    .btn-demo.sign-in-button .fa-graduation-cap {
+        font-size: 20px; /* Increase the icon size */
+        margin: 0; /* Remove any margin around the icon */
+    }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .contact-text {
+        font-size: 12px; /* Decrease font size for CONTACT US text */
+    }
+
+    .btn-demo {
+        font-size: 12px; /* Decrease font size for Sign In and Request Demo buttons */
+        padding: 4px 10px; /* Adjust padding to make the buttons smaller */
+    }
+
+    .btn-demo .fa-graduation-cap {
+        font-size: 16px; /* Adjust icon size if needed */
+        margin-right: 2px; /* Add 2px of space to the right of the icon */
+    }
+}
+
+.btn-demo .fa-graduation-cap {
+    font-size: 16px; /* Adjust icon size if needed */
+    margin-right: 2px; /* Add 2px of space to the right of the icon */
+}
+
+/* Additional styling for navbar separation and alignment */
+.navbar-contact-demo {
+    margin-left: 20px; /* Space between navbar links and contact section */
+}
+
+.phone-icon-wrapper i {
+    color: white !important;
+}
+
+/* Adjust space between phone icon and text */
+.contact-text {
+    margin-left: 6px; /* Slight increase for improved alignment */
+}
+
+/* General responsive adjustments */
+@media (max-width: 992px) {
+    .btn-demo {
+        padding: 8px 16px;
+        font-size: 10px;
+    }
+    .navbar-nav .dropdown-menu {
+        padding: 5px;
+    }
 }
