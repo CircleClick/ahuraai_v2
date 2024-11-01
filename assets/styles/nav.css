@@ -12,7 +12,7 @@
     object-fit: contain;
 }
 
-/* Unified button styling for desktop and mobile */
+/* Unified button styling for "Request Demo" and "Sign In" */
 .btn-demo,
 .btn-demo.sign-in-button {
     color: white !important;
@@ -23,15 +23,17 @@
     font-size: 14px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-/* Icon adjustments for Sign In button */
-.btn-demo.sign-in-button .fa-graduation-cap {
-    font-size: 16px;
-    margin-right: 5px;
+/* Contact information styling */
+.contact-info {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
 }
 
-/* Contact icon and text styling */
+/* Phone icon styling */
 .phone-icon-wrapper {
     background-color: transparent;
     border: 2px solid #68c2b7;
@@ -40,26 +42,44 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 8px; /* Adjust spacing between icon and text */
 }
 
 .phone-icon-wrapper i {
     color: white !important;
 }
 
-.contact-text {
-    margin-left: 6px;
-}
-
+/* Contact text styling */
 .contact-text a {
     color: white !important;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px; /* Decrease font size */
+    line-height: 1.2; /* Reduce space between lines */
+    display: block;
+}
+
+/* Reduce space between "CONTACT US" and phone number */
+.contact-text a span {
+    display: block;
+    margin-bottom: -4px; /* Adjust this value to control spacing */
 }
 
 /* Dropdown styling */
 .navbar-nav .dropdown-menu {
     background-color: rgba(0, 0, 0, 0.9);
     padding: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .btn-demo,
+    .btn-demo.sign-in-button {
+        padding: 8px 16px;
+        font-size: 10px;
+    }
+    .navbar-nav .dropdown-menu {
+        padding: 5px;
+    }
 }
 
 /* Set all navbar links to white */
@@ -78,30 +98,26 @@
     color: #ddd !important; /* Light grey on hover for better visibility */
 }
 
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .btn-demo,
-    .btn-demo.sign-in-button {
-        padding: 8px 16px;
-        font-size: 10px;
-    }
-    .navbar-nav .dropdown-menu {
-        padding: 5px;
-    }
+/* Icon adjustments for Sign In button */
+.btn-demo.sign-in-button .fa-graduation-cap {
+    font-size: 16px;
+    margin-right: 2px;
 }
 
 /* Specific styling within the 991px - 1199px range */
 @media (min-width: 991px) and (max-width: 1199px) {
     .contact-text {
-        display: none !important;
+        display: none !important; /* Hide the contact text */
     }
 
+    /* Adjust buttons for smaller size */
     .btn-demo,
     .btn-demo.sign-in-button {
         padding: 6px 12px;
         font-size: 14px;
     }
 
+    /* Icon-only styling for Sign In button */
     .btn-demo.sign-in-button {
         font-size: 0;
         width: 40px;
@@ -119,7 +135,7 @@
 /* Specific styling within the 1200px - 1400px range */
 @media (min-width: 1200px) and (max-width: 1400px) {
     .contact-text {
-        font-size: 12px;
+        font-size: 12px; /* Smaller font size for Contact Us */
     }
 
     .btn-demo,
@@ -134,27 +150,37 @@
     }
 }
 
-/* Dropdown item hover styling */
-.navbar .dropdown-item:hover,
-.navbar .dropdown-item:focus {
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent dark overlay */
-    color: #68c2b7 !important; /* Turquoise color for text */
+@media (max-width: 992px) {
+    /* Container for the buttons */
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; /* Adds space between the buttons */
+    }
+
+    /* Styling for each button */
+    .btn-demo,
+    .sign-in-button {
+        flex: 1; /* Makes both buttons equal width */
+        max-width: 140px; /* Limits the width of each button */
+        padding: 8px 16px; /* Adjust padding for a balanced look */
+        font-size: 14px; /* Ensures consistent font size */
+        text-align: center;
+        margin-left: -5px !important;
+        margin-top: 10px;
+    }
+
+    .sign-in-button {
+        margin-left: 0; /* Removes extra margin if there was any */
+    }
 }
 
-.contact-text {
-    line-height: 1; /* Reduces vertical spacing between lines */
+@media (min-width: 993px) {
+    .contact-info {
+        margin-left: 50px; /* Moves the contact icon and text to the right */
+    }
 }
 
-.contact-text a {
-    color: white !important;
-    text-decoration: none;
-    font-size: 14px;
-    margin-left: 6px;
-    display: block;
-}
 
-/* Optional: Adjusting spacing between text elements */
-.contact-text a span {
-    display: block;
-    margin-bottom: -5px; /* Fine-tune this value to reduce spacing */
-}
+
