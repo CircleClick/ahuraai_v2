@@ -12,47 +12,54 @@
     object-fit: contain;
 }
 
-/* Button styling for mobile and desktop */
-.btn-demo {
+/* Unified button styling for desktop and mobile */
+.btn-demo,
+.btn-demo.sign-in-button {
     color: white !important;
     border: 2px solid turquoise;
     padding: 10px 20px;
     border-radius: 50px;
     margin-left: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
 }
 
-/* Contact information styling */
-.contact-info {
-    margin-right: 15px;
+/* Icon adjustments for Sign In button */
+.btn-demo.sign-in-button .fa-graduation-cap {
+    font-size: 16px;
+    margin-right: 5px;
 }
 
+/* Contact icon and text styling */
 .phone-icon-wrapper {
     background-color: transparent;
     border: 2px solid #68c2b7;
     border-radius: 50%;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-icon-wrapper i {
+    color: white !important;
+}
+
+.contact-text {
+    margin-left: 6px;
 }
 
 .contact-text a {
     color: white !important;
     text-decoration: none;
+    font-size: 14px;
 }
 
 /* Dropdown styling */
 .navbar-nav .dropdown-menu {
     background-color: rgba(0, 0, 0, 0.9);
     padding: 10px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .btn-demo {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-    .navbar-nav .dropdown-menu {
-        padding: 5px;
-    }
 }
 
 /* Set all navbar links to white */
@@ -71,99 +78,83 @@
     color: #ddd !important; /* Light grey on hover for better visibility */
 }
 
-/* Ensure phone icon color is white */
-.phone-icon-wrapper i {
-    color: white !important;
-}
-
-/* Add 3px space between phone icon and text */
-.contact-text {
-    margin-left: 10px;
-}
-
-/* Default styling for the Sign In button (visible outside the specified range) */
-.btn-demo.sign-in-button {
-    font-size: 14px; /* Set normal font size to display text */
-    padding: 6px 12px; /* Default padding */
-    display: inline-flex;
-    align-items: center;
-}
-
-/* Specific styling within the 1000px - 1199px range */
-@media (min-width: 991px) and (max-width: 1199px) {
-    .contact-text {
-        display: none !important; /* Hide the contact text */
-    }
-
-    /* Adjust the Request Demo button for smaller size */
-    .btn-demo {
-        padding: 6px 12px; /* Adjust padding */
-        font-size: 14px; /* Set font size */
-        display: flex;
-        align-items: center;
-    }
-
-    /* Target only the "Sign In" button within this range */
-    .btn-demo.sign-in-button {
-        font-size: 0; /* Hide the "Sign In" text */
-        width: 40px; /* Increase width for larger icon button */
-        height: 40px; /* Increase height for larger icon button */
-        padding: 0; /* Remove padding around the icon */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%; /* Make the button circular */
-    }
-
-    .btn-demo.sign-in-button .fa-graduation-cap {
-        font-size: 20px; /* Increase the icon size */
-        margin: 0; /* Remove any margin around the icon */
-    }
-}
-
-
-@media (min-width: 1200px) and (max-width: 1400px) {
-    .contact-text {
-        font-size: 12px; /* Decrease font size for CONTACT US text */
-    }
-
-    .btn-demo {
-        font-size: 12px; /* Decrease font size for Sign In and Request Demo buttons */
-        padding: 4px 10px; /* Adjust padding to make the buttons smaller */
-    }
-
-    .btn-demo .fa-graduation-cap {
-        font-size: 16px; /* Adjust icon size if needed */
-        margin-right: 2px; /* Add 2px of space to the right of the icon */
-    }
-}
-
-.btn-demo .fa-graduation-cap {
-    font-size: 16px; /* Adjust icon size if needed */
-    margin-right: 2px; /* Add 2px of space to the right of the icon */
-}
-
-/* Additional styling for navbar separation and alignment */
-.navbar-contact-demo {
-    margin-left: 20px; /* Space between navbar links and contact section */
-}
-
-.phone-icon-wrapper i {
-    color: white !important;
-}
-
-/* Adjust space between phone icon and text */
-.contact-text {
-    margin-left: 6px; /* Slight increase for improved alignment */
-}
-
-/* General responsive adjustments */
+/* Responsive adjustments */
 @media (max-width: 992px) {
-    .btn-demo {
+    .btn-demo,
+    .btn-demo.sign-in-button {
         padding: 8px 16px;
         font-size: 10px;
     }
     .navbar-nav .dropdown-menu {
         padding: 5px;
     }
+}
+
+/* Specific styling within the 991px - 1199px range */
+@media (min-width: 991px) and (max-width: 1199px) {
+    .contact-text {
+        display: none !important;
+    }
+
+    .btn-demo,
+    .btn-demo.sign-in-button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .btn-demo.sign-in-button {
+        font-size: 0;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border-radius: 50%;
+    }
+
+    .btn-demo.sign-in-button .fa-graduation-cap {
+        font-size: 20px;
+        margin: 0;
+    }
+}
+
+/* Specific styling within the 1200px - 1400px range */
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .contact-text {
+        font-size: 12px;
+    }
+
+    .btn-demo,
+    .btn-demo.sign-in-button {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+
+    .btn-demo .fa-graduation-cap {
+        font-size: 16px;
+        margin-right: 2px;
+    }
+}
+
+/* Dropdown item hover styling */
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent dark overlay */
+    color: #68c2b7 !important; /* Turquoise color for text */
+}
+
+.contact-text {
+    line-height: 1; /* Reduces vertical spacing between lines */
+}
+
+.contact-text a {
+    color: white !important;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 6px;
+    display: block;
+}
+
+/* Optional: Adjusting spacing between text elements */
+.contact-text a span {
+    display: block;
+    margin-bottom: -5px; /* Fine-tune this value to reduce spacing */
 }
